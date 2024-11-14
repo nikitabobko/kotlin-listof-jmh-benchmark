@@ -25,6 +25,13 @@ open class MyBenchmark {
     }
 
     @Benchmark
+    fun kotlinMutableListOfVararg100(): List<Int> {
+        return mutableListOf(
+            x++,
+        )
+    }
+
+    @Benchmark
     fun javaUtilListOfVararg100(): List<Int> {
         return java.util.List.of(
             x++,
@@ -48,7 +55,44 @@ open class MyBenchmark {
     }
 
     @Benchmark
-    fun javaUtilListOfVararg10(): List<Int> {
+    fun kotlinMutableListOfVararg10(): List<Int> {
+        return mutableListOf(
+            x++,
+        )
+    }
+
+    @Benchmark
+    fun javaUtilListOf10(): List<Int> {
+        return java.util.List.of(
+            x++,
+        )
+    }
+
+    // ---
+
+    @Benchmark
+    fun manualAddToArrayList5(): ArrayList<Int> {
+        val arrayList = ArrayList<Int>(5)
+        arrayList.add(x++)
+        return arrayList
+    }
+
+    @Benchmark
+    fun kotlinListOfVararg5(): List<Int> {
+        return listOf(
+            x++,
+        )
+    }
+
+    @Benchmark
+    fun kotlinMutableListOfVararg5(): List<Int> {
+        return mutableListOf(
+            x++,
+        )
+    }
+
+    @Benchmark
+    fun javaUtilListOf5(): List<Int> {
         return java.util.List.of(
             x++,
         )
@@ -64,6 +108,13 @@ open class MyBenchmark {
     }
 
     @Benchmark
+    fun manualAddHashMap100(): java.util.HashMap<Int, Int> {
+        val foo = HashMap<Int, Int>(134) // Optimal capacity for 100 elements according to mapCapacity in kotlin-stdlib
+        foo.put(x++, x++)
+        return foo
+    }
+
+    @Benchmark
     fun kotlinMapOfVararg100(): Map<Int, Int> {
         return mapOf(
             x++ to x++,
@@ -71,7 +122,7 @@ open class MyBenchmark {
     }
 
     @Benchmark
-    fun javaUtilMapOfVararg100(): Map<Int, Int> {
+    fun javaUtilMapOfEntriesVararg100(): Map<Int, Int> {
         return java.util.Map.ofEntries(
             java.util.Map.entry(x++, x++),
         )
@@ -87,6 +138,13 @@ open class MyBenchmark {
     }
 
     @Benchmark
+    fun manualAddHashMap10(): java.util.HashMap<Int, Int> {
+        val foo = HashMap<Int, Int>(14) // Optimal capacity for 10 elements according to mapCapacity in kotlin-stdlib
+        foo.put(x++, x++)
+        return foo
+    }
+
+    @Benchmark
     fun kotlinMapOfVararg10(): Map<Int, Int> {
         return mapOf(
             x++ to x++,
@@ -94,9 +152,9 @@ open class MyBenchmark {
     }
 
     @Benchmark
-    fun javaUtilMapOfVararg10(): Map<Int, Int> {
-        return java.util.Map.ofEntries(
-            java.util.Map.entry(x++, x++),
+    fun javaUtilMapOf10(): Map<Int, Int> {
+        return java.util.Map.of(
+            x++, x++,
         )
     }
 }
