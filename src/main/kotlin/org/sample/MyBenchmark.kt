@@ -35,7 +35,7 @@ open class MyBenchmark {
 
     @Benchmark
     fun manualAddToArrayList10(): ArrayList<Int> {
-        val arrayList = ArrayList<Int>(100)
+        val arrayList = ArrayList<Int>(10)
         arrayList.add(x++)
         return arrayList
     }
@@ -81,7 +81,7 @@ open class MyBenchmark {
 
     @Benchmark
     fun manualAddLinkedHashMap10(): java.util.LinkedHashMap<Int, Int> {
-        val foo = LinkedHashMap<Int, Int>(134) // Optimal capacity for 100 elements according to mapCapacity in kotlin-stdlib
+        val foo = LinkedHashMap<Int, Int>(14) // Optimal capacity for 10 elements according to mapCapacity in kotlin-stdlib
         foo.put(x++, x++)
         return foo
     }
