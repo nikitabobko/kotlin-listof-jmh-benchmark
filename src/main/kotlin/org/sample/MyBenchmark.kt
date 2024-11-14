@@ -14,12 +14,210 @@ open class MyBenchmark {
     fun manualAddToArrayList100(): ArrayList<String> {
         val arrayList = ArrayList<String>(100)
         arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
         return arrayList
     }
 
     @Benchmark
     fun kotlinListOfVararg100(): List<String> {
         return listOf(
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
             x,
         )
     }
@@ -28,12 +226,210 @@ open class MyBenchmark {
     fun kotlinMutableListOfVararg100(): List<String> {
         return mutableListOf(
             x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
         )
     }
 
     @Benchmark
     fun javaUtilListOfVararg100(): List<String> {
         return java.util.List.of(
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
             x,
         )
     }
@@ -44,12 +440,30 @@ open class MyBenchmark {
     fun manualAddToArrayList10(): ArrayList<String> {
         val arrayList = ArrayList<String>(10)
         arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
         return arrayList
     }
 
     @Benchmark
     fun kotlinListOfVararg10(): List<String> {
         return listOf(
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
             x,
         )
     }
@@ -58,12 +472,30 @@ open class MyBenchmark {
     fun kotlinMutableListOfVararg10(): List<String> {
         return mutableListOf(
             x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
         )
     }
 
     @Benchmark
     fun javaUtilListOf10(): List<String> {
         return java.util.List.of(
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
             x,
         )
     }
@@ -74,12 +506,20 @@ open class MyBenchmark {
     fun manualAddToArrayList5(): ArrayList<String> {
         val arrayList = ArrayList<String>(5)
         arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
         return arrayList
     }
 
     @Benchmark
     fun kotlinListOfVararg5(): List<String> {
         return listOf(
+            x,
+            x,
+            x,
+            x,
             x,
         )
     }
@@ -88,12 +528,20 @@ open class MyBenchmark {
     fun kotlinMutableListOfVararg5(): List<String> {
         return mutableListOf(
             x,
+            x,
+            x,
+            x,
+            x,
         )
     }
 
     @Benchmark
     fun javaUtilListOf5(): List<String> {
         return java.util.List.of(
+            x,
+            x,
+            x,
+            x,
             x,
         )
     }
@@ -104,12 +552,210 @@ open class MyBenchmark {
     fun manualAddLinkedHashMap100(): java.util.LinkedHashMap<String, String> {
         val foo = LinkedHashMap<String, String>(134) // Optimal capacity for 100 elements according to mapCapacity in kotlin-stdlib
         foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
         return foo
     }
 
     @Benchmark
     fun manualAddHashMap100(): java.util.HashMap<String, String> {
         val foo = HashMap<String, String>(134) // Optimal capacity for 100 elements according to mapCapacity in kotlin-stdlib
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
         foo.put(x, x)
         return foo
     }
@@ -118,12 +764,210 @@ open class MyBenchmark {
     fun kotlinMapOfVararg100(): Map<String, String> {
         return mapOf(
             x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
         )
     }
 
     @Benchmark
     fun javaUtilMapOfEntriesVararg100(): Map<String, String> {
         return java.util.Map.ofEntries(
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
+            java.util.Map.entry(x, x),
             java.util.Map.entry(x, x),
         )
     }
@@ -134,12 +978,30 @@ open class MyBenchmark {
     fun manualAddLinkedHashMap10(): java.util.LinkedHashMap<String, String> {
         val foo = LinkedHashMap<String, String>(14) // Optimal capacity for 10 elements according to mapCapacity in kotlin-stdlib
         foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
         return foo
     }
 
     @Benchmark
     fun manualAddHashMap10(): java.util.HashMap<String, String> {
         val foo = HashMap<String, String>(14) // Optimal capacity for 10 elements according to mapCapacity in kotlin-stdlib
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
+        foo.put(x, x)
         foo.put(x, x)
         return foo
     }
@@ -148,12 +1010,30 @@ open class MyBenchmark {
     fun kotlinMapOfVararg10(): Map<String, String> {
         return mapOf(
             x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
+            x to x,
         )
     }
 
     @Benchmark
     fun javaUtilMapOf10(): Map<String, String> {
         return java.util.Map.of(
+            x, x,
+            x, x,
+            x, x,
+            x, x,
+            x, x,
+            x, x,
+            x, x,
+            x, x,
+            x, x,
             x, x,
         )
     }
