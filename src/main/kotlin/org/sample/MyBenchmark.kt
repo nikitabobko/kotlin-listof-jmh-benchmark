@@ -2,7 +2,6 @@ package org.sample
 
 import org.openjdk.jmh.annotations.*
 
-@BenchmarkMode(Mode.All)
 @State(Scope.Thread)
 open class MyBenchmark {
     var x = 0
