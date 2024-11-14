@@ -7379,160 +7379,24 @@ works, and factor in a small probability of new VM bugs. Additionally, while com
 different JVMs are already problematic, the performance difference caused by different Blackhole
 modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
-Benchmark                                        Mode      Cnt           Score           Error  Units
-MyBenchmark.baseline                            thrpt       25  3551640936,357 ± 206092822,116  ops/s
-MyBenchmark.javaUtilListOfVararg10              thrpt       25    54269981,754 ±     83387,026  ops/s
-MyBenchmark.javaUtilListOfVararg100             thrpt       25     3108975,250 ±      2564,173  ops/s
-MyBenchmark.javaUtilMapOfVararg10               thrpt       25    10734944,368 ±     95320,715  ops/s
-MyBenchmark.javaUtilMapOfVararg100              thrpt       25      944125,363 ±      6607,023  ops/s
-MyBenchmark.kotlinListOfVararg10                thrpt       25    48066756,858 ±    183803,987  ops/s
-MyBenchmark.kotlinListOfVararg100               thrpt       25     4167672,957 ±     23822,704  ops/s
-MyBenchmark.kotlinMapOfVararg10                 thrpt       25     9901710,212 ±     34542,280  ops/s
-MyBenchmark.kotlinMapOfVararg100                thrpt       25      860903,505 ±     12062,188  ops/s
-MyBenchmark.manualAddLinkedHashMap10            thrpt       25    10856759,372 ±     24418,410  ops/s
-MyBenchmark.manualAddLinkedHashMap100           thrpt       25     1346684,021 ±      2009,797  ops/s
-MyBenchmark.manualAddToArrayList10              thrpt       25     7122660,121 ±     88023,869  ops/s
-MyBenchmark.manualAddToArrayList100             thrpt       25     4226713,551 ±     21675,236  ops/s
-MyBenchmark.baseline                             avgt       25         ≈ 10⁻¹⁰                   s/op
-MyBenchmark.javaUtilListOfVararg10               avgt       25          ≈ 10⁻⁸                   s/op
-MyBenchmark.javaUtilListOfVararg100              avgt       25          ≈ 10⁻⁶                   s/op
-MyBenchmark.javaUtilMapOfVararg10                avgt       25          ≈ 10⁻⁷                   s/op
-MyBenchmark.javaUtilMapOfVararg100               avgt       25          ≈ 10⁻⁶                   s/op
-MyBenchmark.kotlinListOfVararg10                 avgt       25          ≈ 10⁻⁸                   s/op
-MyBenchmark.kotlinListOfVararg100                avgt       25          ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinMapOfVararg10                  avgt       25          ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinMapOfVararg100                 avgt       25          ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddLinkedHashMap10             avgt       25          ≈ 10⁻⁷                   s/op
-MyBenchmark.manualAddLinkedHashMap100            avgt       25          ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddToArrayList10               avgt       25          ≈ 10⁻⁷                   s/op
-MyBenchmark.manualAddToArrayList100              avgt       25          ≈ 10⁻⁷                   s/op
-MyBenchmark.baseline                           sample  5839790          ≈ 10⁻⁸                   s/op
-MyBenchmark.baseline:p0.00                     sample                      ≈ 0                   s/op
-MyBenchmark.baseline:p0.50                     sample                      ≈ 0                   s/op
-MyBenchmark.baseline:p0.90                     sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.baseline:p0.95                     sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.baseline:p0.99                     sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.baseline:p0.999                    sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.baseline:p0.9999                   sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.baseline:p1.00                     sample                   ≈ 10⁻⁴                   s/op
-MyBenchmark.javaUtilListOfVararg10             sample  6261917          ≈ 10⁻⁷                   s/op
-MyBenchmark.javaUtilListOfVararg10:p0.00       sample                      ≈ 0                   s/op
-MyBenchmark.javaUtilListOfVararg10:p0.50       sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.javaUtilListOfVararg10:p0.90       sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.javaUtilListOfVararg10:p0.95       sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.javaUtilListOfVararg10:p0.99       sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.javaUtilListOfVararg10:p0.999      sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.javaUtilListOfVararg10:p0.9999     sample                   ≈ 10⁻⁵                   s/op
-MyBenchmark.javaUtilListOfVararg10:p1.00       sample                    0,001                   s/op
-MyBenchmark.javaUtilListOfVararg100            sample  5946067          ≈ 10⁻⁶                   s/op
-MyBenchmark.javaUtilListOfVararg100:p0.00      sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.javaUtilListOfVararg100:p0.50      sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.javaUtilListOfVararg100:p0.90      sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.javaUtilListOfVararg100:p0.95      sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.javaUtilListOfVararg100:p0.99      sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.javaUtilListOfVararg100:p0.999     sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.javaUtilListOfVararg100:p0.9999    sample                   ≈ 10⁻⁵                   s/op
-MyBenchmark.javaUtilListOfVararg100:p1.00      sample                    0,001                   s/op
-MyBenchmark.javaUtilMapOfVararg10              sample  5071138          ≈ 10⁻⁷                   s/op
-MyBenchmark.javaUtilMapOfVararg10:p0.00        sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.javaUtilMapOfVararg10:p0.50        sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.javaUtilMapOfVararg10:p0.90        sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.javaUtilMapOfVararg10:p0.95        sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.javaUtilMapOfVararg10:p0.99        sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.javaUtilMapOfVararg10:p0.999       sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.javaUtilMapOfVararg10:p0.9999      sample                   ≈ 10⁻⁵                   s/op
-MyBenchmark.javaUtilMapOfVararg10:p1.00        sample                    0,001                   s/op
-MyBenchmark.javaUtilMapOfVararg100             sample  7404851          ≈ 10⁻⁶                   s/op
-MyBenchmark.javaUtilMapOfVararg100:p0.00       sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.javaUtilMapOfVararg100:p0.50       sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.javaUtilMapOfVararg100:p0.90       sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.javaUtilMapOfVararg100:p0.95       sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.javaUtilMapOfVararg100:p0.99       sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.javaUtilMapOfVararg100:p0.999      sample                   ≈ 10⁻⁵                   s/op
-MyBenchmark.javaUtilMapOfVararg100:p0.9999     sample                   ≈ 10⁻⁵                   s/op
-MyBenchmark.javaUtilMapOfVararg100:p1.00       sample                    0,001                   s/op
-MyBenchmark.kotlinListOfVararg10               sample  5828008          ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinListOfVararg10:p0.00         sample                      ≈ 0                   s/op
-MyBenchmark.kotlinListOfVararg10:p0.50         sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinListOfVararg10:p0.90         sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinListOfVararg10:p0.95         sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinListOfVararg10:p0.99         sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinListOfVararg10:p0.999        sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinListOfVararg10:p0.9999       sample                   ≈ 10⁻⁵                   s/op
-MyBenchmark.kotlinListOfVararg10:p1.00         sample                    0,001                   s/op
-MyBenchmark.kotlinListOfVararg100              sample  8034874          ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinListOfVararg100:p0.00        sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinListOfVararg100:p0.50        sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinListOfVararg100:p0.90        sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinListOfVararg100:p0.95        sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinListOfVararg100:p0.99        sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.kotlinListOfVararg100:p0.999       sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.kotlinListOfVararg100:p0.9999      sample                   ≈ 10⁻⁵                   s/op
-MyBenchmark.kotlinListOfVararg100:p1.00        sample                    0,001                   s/op
-MyBenchmark.kotlinMapOfVararg10                sample  9343486          ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinMapOfVararg10:p0.00          sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinMapOfVararg10:p0.50          sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinMapOfVararg10:p0.90          sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinMapOfVararg10:p0.95          sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinMapOfVararg10:p0.99          sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.kotlinMapOfVararg10:p0.999         sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.kotlinMapOfVararg10:p0.9999        sample                   ≈ 10⁻⁵                   s/op
-MyBenchmark.kotlinMapOfVararg10:p1.00          sample                    0,001                   s/op
-MyBenchmark.kotlinMapOfVararg100               sample  6653735          ≈ 10⁻⁶                   s/op
-MyBenchmark.kotlinMapOfVararg100:p0.00         sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.kotlinMapOfVararg100:p0.50         sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.kotlinMapOfVararg100:p0.90         sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.kotlinMapOfVararg100:p0.95         sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.kotlinMapOfVararg100:p0.99         sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.kotlinMapOfVararg100:p0.999        sample                   ≈ 10⁻⁵                   s/op
-MyBenchmark.kotlinMapOfVararg100:p0.9999       sample                   ≈ 10⁻⁵                   s/op
-MyBenchmark.kotlinMapOfVararg100:p1.00         sample                    0,001                   s/op
-MyBenchmark.manualAddLinkedHashMap10           sample  9116857          ≈ 10⁻⁷                   s/op
-MyBenchmark.manualAddLinkedHashMap10:p0.00     sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.manualAddLinkedHashMap10:p0.50     sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.manualAddLinkedHashMap10:p0.90     sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.manualAddLinkedHashMap10:p0.95     sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.manualAddLinkedHashMap10:p0.99     sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.manualAddLinkedHashMap10:p0.999    sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddLinkedHashMap10:p0.9999   sample                   ≈ 10⁻⁵                   s/op
-MyBenchmark.manualAddLinkedHashMap10:p1.00     sample                    0,001                   s/op
-MyBenchmark.manualAddLinkedHashMap100          sample  5106642          ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddLinkedHashMap100:p0.00    sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddLinkedHashMap100:p0.50    sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddLinkedHashMap100:p0.90    sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddLinkedHashMap100:p0.95    sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddLinkedHashMap100:p0.99    sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddLinkedHashMap100:p0.999   sample                   ≈ 10⁻⁵                   s/op
-MyBenchmark.manualAddLinkedHashMap100:p0.9999  sample                   ≈ 10⁻⁵                   s/op
-MyBenchmark.manualAddLinkedHashMap100:p1.00    sample                    0,001                   s/op
-MyBenchmark.manualAddToArrayList10             sample  7017372          ≈ 10⁻⁷                   s/op
-MyBenchmark.manualAddToArrayList10:p0.00       sample                      ≈ 0                   s/op
-MyBenchmark.manualAddToArrayList10:p0.50       sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.manualAddToArrayList10:p0.90       sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddToArrayList10:p0.95       sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddToArrayList10:p0.99       sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddToArrayList10:p0.999      sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddToArrayList10:p0.9999     sample                   ≈ 10⁻⁵                   s/op
-MyBenchmark.manualAddToArrayList10:p1.00       sample                    0,001                   s/op
-MyBenchmark.manualAddToArrayList100            sample  6086023          ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddToArrayList100:p0.00      sample                   ≈ 10⁻⁷                   s/op
-MyBenchmark.manualAddToArrayList100:p0.50      sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddToArrayList100:p0.90      sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddToArrayList100:p0.95      sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddToArrayList100:p0.99      sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddToArrayList100:p0.999     sample                   ≈ 10⁻⁶                   s/op
-MyBenchmark.manualAddToArrayList100:p0.9999    sample                   ≈ 10⁻⁵                   s/op
-MyBenchmark.manualAddToArrayList100:p1.00      sample                    0,001                   s/op
-MyBenchmark.baseline                               ss        5          ≈ 10⁻⁶                   s/op
-MyBenchmark.javaUtilListOfVararg10                 ss        5          ≈ 10⁻³                   s/op
-MyBenchmark.javaUtilListOfVararg100                ss        5          ≈ 10⁻³                   s/op
-MyBenchmark.javaUtilMapOfVararg10                  ss        5          ≈ 10⁻³                   s/op
-MyBenchmark.javaUtilMapOfVararg100                 ss        5          ≈ 10⁻³                   s/op
-MyBenchmark.kotlinListOfVararg10                   ss        5           0,006 ±         0,001   s/op
-MyBenchmark.kotlinListOfVararg100                  ss        5           0,006 ±         0,001   s/op
-MyBenchmark.kotlinMapOfVararg10                    ss        5           0,001 ±         0,001   s/op
-MyBenchmark.kotlinMapOfVararg100                   ss        5           0,001 ±         0,001   s/op
-MyBenchmark.manualAddLinkedHashMap10               ss        5          ≈ 10⁻⁵                   s/op
-MyBenchmark.manualAddLinkedHashMap100              ss        5          ≈ 10⁻⁴                   s/op
-MyBenchmark.manualAddToArrayList10                 ss        5          ≈ 10⁻⁵                   s/op
-MyBenchmark.manualAddToArrayList100                ss        5          ≈ 10⁻⁵                   s/op
+Benchmark                                        Mode      Cnt           Score           Error  Units  Speedup
+
+MyBenchmark.baseline                            thrpt       25  3551640936.357 ± 206092822,116  ops/s
+
+MyBenchmark.javaUtilListOfVararg10              thrpt       25    54269981.754 ±     83387,026  ops/s  1.12905436733
+MyBenchmark.kotlinListOfVararg10                thrpt       25    48066756.858 ±    183803,987  ops/s  6.74842769997
+MyBenchmark.manualAddToArrayList10              thrpt       25     7122660.121 ±     88023,869  ops/s
+
+# I don't understand why manualAddToArrayList10 has so bad performance
+
+MyBenchmark.manualAddToArrayList100             thrpt       25     4226713.551 ±     21675,236  ops/s  1.01416632126
+MyBenchmark.kotlinListOfVararg100               thrpt       25     4167672.957 ±     23822,704  ops/s  1.34052947414
+MyBenchmark.javaUtilListOfVararg100             thrpt       25     3108975.250 ±      2564,173  ops/s
+
+MyBenchmark.manualAddLinkedHashMap10            thrpt       25    10856759.372 ±     24418,410  ops/s  1.01134752075
+MyBenchmark.javaUtilMapOfVararg10               thrpt       25    10734944.368 ±     95320,715  ops/s  1.08415052937
+MyBenchmark.kotlinMapOfVararg10                 thrpt       25     9901710.212 ±     34542,280  ops/s
+
+MyBenchmark.manualAddLinkedHashMap100           thrpt       25     1346684.021 ±      2009,797  ops/s  1.42638263283
+MyBenchmark.javaUtilMapOfVararg100              thrpt       25      944125.363 ±      6607,023  ops/s  1.09666804411
+MyBenchmark.kotlinMapOfVararg100                thrpt       25      860903.505 ±     12062,188  ops/s
