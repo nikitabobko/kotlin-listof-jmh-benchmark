@@ -39,7 +39,7 @@
         <!--
             Java source/target to use for compilation.
           -->
-        <javac.target>1.8</javac.target>
+        <javac.target>9</javac.target>
 
         <kotlin.version>2.0.21</kotlin.version>
 

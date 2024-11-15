@@ -3,7 +3,7 @@ package org.sample
 import org.openjdk.jmh.annotations.*
 
 @State(Scope.Thread)
-@Fork(1)
+@Fork(1) // todo drop fork for final testing
 open class KotlinBenchmark {
     @field:Volatile
     var x: String = "foo"
@@ -125,21 +125,21 @@ open class KotlinBenchmark {
     //     )
     // }
 
-    // @Benchmark
-    // fun javaUtilListOf010(): List<String> {
-    //     return java.util.List.of(
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //     )
-    // }
+    @Benchmark
+    fun javaUtilListOf010(): List<String> {
+        return java.util.List.of(
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+        )
+    }
 
     // ---
 

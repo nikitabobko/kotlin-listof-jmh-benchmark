@@ -9,13 +9,29 @@ import org.openjdk.jmh.annotations.State;
 import java.util.List;
 
 @State(Scope.Thread)
-@Fork(1)
+@Fork(1) // todo drop fork for final testing
 public class JavaBenchmark {
     volatile String x = "foo";
 
     @Benchmark
     public List<String> kotlinListOfVararg010() {
         return CollectionsKt.listOf(
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x
+        );
+    }
+
+    @Benchmark
+    public List<String> javaUtilListOf010() {
+        return List.of(
                 x,
                 x,
                 x,
