@@ -1886,21 +1886,26 @@ modes can be very significant. Please make sure you use the consistent Blackhole
 
 Benchmark                                  Mode  Cnt           Score           Error  Units
 MyBenchmark.baseline                      thrpt   25  3574457817,067 ± 190460737,093  ops/s
-MyBenchmark.javaUtilListOf10              thrpt   25   146047937,576 ±    571940,991  ops/s
+
 MyBenchmark.javaUtilListOf5               thrpt   25   234068853,768 ±   2403518,025  ops/s
-MyBenchmark.javaUtilListOfVararg100       thrpt   25     6067329,361 ±     30406,801  ops/s
-MyBenchmark.kotlinListOfVararg10          thrpt   25   109819060,000 ±   1073487,245  ops/s
-MyBenchmark.kotlinListOfVararg100         thrpt   25    12324298,290 ±    143847,001  ops/s
 MyBenchmark.kotlinListOfVararg5           thrpt   25   201731778,974 ±    643769,996  ops/s
-MyBenchmark.kotlinMapOfVararg10           thrpt   25    15775593,739 ±     87654,591  ops/s
-MyBenchmark.kotlinMapOfVararg100          thrpt   25     1891407,218 ±    135484,188  ops/s
-MyBenchmark.kotlinMutableListOfVararg10   thrpt   25    78369956,271 ±    589870,331  ops/s
-MyBenchmark.kotlinMutableListOfVararg100  thrpt   25    10085147,607 ±     82538,950  ops/s
 MyBenchmark.kotlinMutableListOfVararg5    thrpt   25   101913068,900 ±    249037,834  ops/s
-MyBenchmark.manualAddHashMap10            thrpt   25    26176447,323 ±    110306,588  ops/s
-MyBenchmark.manualAddHashMap100           thrpt   25     1941409,191 ±      7615,489  ops/s
-MyBenchmark.manualAddLinkedHashMap10      thrpt   25    23032513,079 ±    127907,230  ops/s
-MyBenchmark.manualAddLinkedHashMap100     thrpt   25     1702283,722 ±     21246,416  ops/s
-MyBenchmark.manualAddToArrayList10        thrpt   25    43275919,530 ±   1269366,928  ops/s
-MyBenchmark.manualAddToArrayList100       thrpt   25     6076328,251 ±     22746,945  ops/s
 MyBenchmark.manualAddToArrayList5         thrpt   25    86522495,520 ±    781711,352  ops/s
+
+MyBenchmark.javaUtilListOf10              thrpt   25   146047937,576 ±    571940,991  ops/s
+MyBenchmark.kotlinListOfVararg10          thrpt   25   109819060,000 ±   1073487,245  ops/s
+MyBenchmark.kotlinMutableListOfVararg10   thrpt   25    78369956,271 ±    589870,331  ops/s
+MyBenchmark.manualAddToArrayList10        thrpt   25    43275919,530 ±   1269366,928  ops/s
+
+MyBenchmark.kotlinListOfVararg100         thrpt   25    12324298,290 ±    143847,001  ops/s
+MyBenchmark.kotlinMutableListOfVararg100  thrpt   25    10085147,607 ±     82538,950  ops/s
+MyBenchmark.manualAddToArrayList100       thrpt   25     6076328,251 ±     22746,945  ops/s
+MyBenchmark.javaUtilListOfVararg100       thrpt   25     6067329,361 ±     30406,801  ops/s
+
+MyBenchmark.manualAddHashMap10            thrpt   25    26176447,323 ±    110306,588  ops/s
+MyBenchmark.manualAddLinkedHashMap10      thrpt   25    23032513,079 ±    127907,230  ops/s
+MyBenchmark.kotlinMapOfVararg10           thrpt   25    15775593,739 ±     87654,591  ops/s
+
+MyBenchmark.manualAddHashMap100           thrpt   25     1941409,191 ±      7615,489  ops/s
+MyBenchmark.kotlinMapOfVararg100          thrpt   25     1891407,218 ±    135484,188  ops/s
+MyBenchmark.manualAddLinkedHashMap100     thrpt   25     1702283,722 ±     21246,416  ops/s
