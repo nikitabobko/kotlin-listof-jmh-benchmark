@@ -3,6 +3,7 @@ package org.sample
 import org.openjdk.jmh.annotations.*
 
 @State(Scope.Thread)
+@Fork(1)
 open class KotlinBenchmark {
     @field:Volatile
     var x: String = "foo"
