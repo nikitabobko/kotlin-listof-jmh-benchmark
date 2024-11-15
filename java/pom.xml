@@ -21,6 +21,11 @@
             <version>${jmh.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
     </dependencies>
 
     <properties>
@@ -35,6 +40,8 @@
             Java source/target to use for compilation.
           -->
         <javac.target>1.8</javac.target>
+
+        <kotlin.version>2.0.21</kotlin.version>
 
         <!--
             Name of the benchmark Uber-JAR to generate.
