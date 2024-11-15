@@ -41,28 +41,28 @@ open class MyBenchmark {
     // ---
 
     @Benchmark
-    fun manualAddToArrayList10(): ArrayList<String> {
+    fun manualAddToArrayList010(): ArrayList<String> {
         val arrayList = ArrayList<String>(10)
         arrayList.add(x)
         return arrayList
     }
 
     @Benchmark
-    fun kotlinListOfVararg10(): List<String> {
+    fun kotlinListOfVararg010(): List<String> {
         return listOf(
             x,
         )
     }
 
     @Benchmark
-    fun kotlinMutableListOfVararg10(): List<String> {
+    fun kotlinMutableListOfVararg010(): List<String> {
         return mutableListOf(
             x,
         )
     }
 
     @Benchmark
-    fun javaUtilListOf10(): List<String> {
+    fun javaUtilListOf010(): List<String> {
         return java.util.List.of(
             x,
         )
@@ -71,28 +71,28 @@ open class MyBenchmark {
     // ---
 
     @Benchmark
-    fun manualAddToArrayList5(): ArrayList<String> {
+    fun manualAddToArrayList005(): ArrayList<String> {
         val arrayList = ArrayList<String>(5)
         arrayList.add(x)
         return arrayList
     }
 
     @Benchmark
-    fun kotlinListOfVararg5(): List<String> {
+    fun kotlinListOfVararg005(): List<String> {
         return listOf(
             x,
         )
     }
 
     @Benchmark
-    fun kotlinMutableListOfVararg5(): List<String> {
+    fun kotlinMutableListOfVararg005(): List<String> {
         return mutableListOf(
             x,
         )
     }
 
     @Benchmark
-    fun javaUtilListOf5(): List<String> {
+    fun javaUtilListOf005(): List<String> {
         return java.util.List.of(
             x,
         )
@@ -131,28 +131,28 @@ open class MyBenchmark {
     // ---
 
     @Benchmark
-    fun manualAddLinkedHashMap10(): java.util.LinkedHashMap<String, String> {
+    fun manualAddLinkedHashMap010(): java.util.LinkedHashMap<String, String> {
         val foo = LinkedHashMap<String, String>(14) // Optimal capacity for 10 elements according to mapCapacity in kotlin-stdlib
         foo.put(x, x)
         return foo
     }
 
     @Benchmark
-    fun manualAddHashMap10(): java.util.HashMap<String, String> {
+    fun manualAddHashMap010(): java.util.HashMap<String, String> {
         val foo = HashMap<String, String>(14) // Optimal capacity for 10 elements according to mapCapacity in kotlin-stdlib
         foo.put(x, x)
         return foo
     }
 
     @Benchmark
-    fun kotlinMapOfVararg10(): Map<String, String> {
+    fun kotlinMapOfVararg010(): Map<String, String> {
         return mapOf(
             x to x,
         )
     }
 
     @Benchmark
-    fun javaUtilMapOf10(): Map<String, String> {
+    fun javaUtilMapOf010(): Map<String, String> {
         return java.util.Map.of(
             x, x,
         )
