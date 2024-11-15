@@ -8,26 +8,26 @@
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Throughput, ops/time
-# Benchmark: org.sample.KotlinBenchmark.kotlinListOfVararg010
+# Benchmark: org.sample.JavaBenchmark.kotlinListOfVararg010
 
 # Run progress: 0,00% complete, ETA 00:01:40
 # Fork: 1 of 1
-# Warmup Iteration   1: 120369202,429 ops/s
-# Warmup Iteration   2: 121458180,165 ops/s
-# Warmup Iteration   3: 109329423,081 ops/s
-# Warmup Iteration   4: 109351892,609 ops/s
-# Warmup Iteration   5: 109198260,356 ops/s
-Iteration   1: 109282887,991 ops/s
-Iteration   2: 109300478,741 ops/s
-Iteration   3: 109271033,649 ops/s
-Iteration   4: 109256240,061 ops/s
-Iteration   5: 109311095,526 ops/s
+# Warmup Iteration   1: 124542519,674 ops/s
+# Warmup Iteration   2: 125512439,349 ops/s
+# Warmup Iteration   3: 112851317,192 ops/s
+# Warmup Iteration   4: 112628667,038 ops/s
+# Warmup Iteration   5: 112629821,099 ops/s
+Iteration   1: 112803373,196 ops/s
+Iteration   2: 112788394,947 ops/s
+Iteration   3: 112761542,996 ops/s
+Iteration   4: 112797534,814 ops/s
+Iteration   5: 112503673,671 ops/s
 
 
-Result "org.sample.KotlinBenchmark.kotlinListOfVararg010":
-  109284347,193 ±(99.9%) 84912,827 ops/s [Average]
-  (min, avg, max) = (109256240,061, 109284347,193, 109311095,526), stdev = 22051,592
-  CI (99.9%): [109199434,366, 109369260,021] (assumes normal distribution)
+Result "org.sample.JavaBenchmark.kotlinListOfVararg010":
+  112730903,925 ±(99.9%) 493006,610 ops/s [Average]
+  (min, avg, max) = (112503673,671, 112730903,925, 112803373,196), stdev = 128032,251
+  CI (99.9%): [112237897,314, 113223910,535] (assumes normal distribution)
 
 
 # Run complete. Total time: 00:01:40
@@ -44,5 +44,5 @@ works, and factor in a small probability of new VM bugs. Additionally, while com
 different JVMs are already problematic, the performance difference caused by different Blackhole
 modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
-Benchmark                               Mode  Cnt          Score       Error  Units
-KotlinBenchmark.kotlinListOfVararg010  thrpt    5  109284347,193 ± 84912,827  ops/s
+Benchmark                             Mode  Cnt          Score        Error  Units
+JavaBenchmark.kotlinListOfVararg010  thrpt    5  112730903,925 ± 493006,610  ops/s
