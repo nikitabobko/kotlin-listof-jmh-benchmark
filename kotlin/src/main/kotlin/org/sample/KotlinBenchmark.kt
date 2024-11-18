@@ -27,21 +27,21 @@ open class KotlinBenchmark {
     //     return arrayList
     // }
 
-    // @Benchmark
-    // fun kotlinListOfVararg100(): List<String> {
-    //     return listOf(
-    //         x, x, x, x, x, x, x, x, x, x,
-    //         x, x, x, x, x, x, x, x, x, x,
-    //         x, x, x, x, x, x, x, x, x, x,
-    //         x, x, x, x, x, x, x, x, x, x,
-    //         x, x, x, x, x, x, x, x, x, x,
-    //         x, x, x, x, x, x, x, x, x, x,
-    //         x, x, x, x, x, x, x, x, x, x,
-    //         x, x, x, x, x, x, x, x, x, x,
-    //         x, x, x, x, x, x, x, x, x, x,
-    //         x, x, x, x, x, x, x, x, x, x,
-    //     )
-    // }
+    @Benchmark
+    fun kotlinListOfVararg100(): List<String> {
+        return listOf(
+            x, x, x, x, x, x, x, x, x, x,
+            x, x, x, x, x, x, x, x, x, x,
+            x, x, x, x, x, x, x, x, x, x,
+            x, x, x, x, x, x, x, x, x, x,
+            x, x, x, x, x, x, x, x, x, x,
+            x, x, x, x, x, x, x, x, x, x,
+            x, x, x, x, x, x, x, x, x, x,
+            x, x, x, x, x, x, x, x, x, x,
+            x, x, x, x, x, x, x, x, x, x,
+            x, x, x, x, x, x, x, x, x, x,
+        )
+    }
 
     // @Benchmark
     // fun kotlinMutableListOfVararg100(): List<String> {
