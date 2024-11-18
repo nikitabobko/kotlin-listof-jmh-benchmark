@@ -110,5 +110,5 @@ modes can be very significant. Please make sure you use the consistent Blackhole
 
 Benchmark                             Mode  Cnt          Score         Error  Units
 JavaBenchmark.javaUtilListOf010      thrpt    5  146955798,336 ±  424779,761  ops/s
-JavaBenchmark.kotlinListOfVararg010  thrpt    5  109159404,357 ± 2684317,194  ops/s
 JavaBenchmark.myJavaListMimicOf010   thrpt    5  146006188,829 ±  782019,875  ops/s
+JavaBenchmark.kotlinListOfVararg010  thrpt    5  109159404,357 ± 2684317,194  ops/s
