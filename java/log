@@ -8,7 +8,7 @@
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Throughput, ops/time
-# Benchmark: org.sample.JavaBenchmark.MyJavaListMimic_OfVararg_010
+# Benchmark: org.sample.JavaBenchmark.MyJavaListMimic_ofVararg_010
 
 # Run progress: 0,00% complete, ETA 00:06:40
 # Fork: 1 of 1
@@ -24,7 +24,7 @@ Iteration   4: 111720822,718 ops/s
 Iteration   5: 111740818,747 ops/s
 
 
-Result "org.sample.JavaBenchmark.MyJavaListMimic_OfVararg_010":
+Result "org.sample.JavaBenchmark.MyJavaListMimic_ofVararg_010":
   111632846,597 ±(99.9%) 373530,919 ops/s [Average]
   (min, avg, max) = (111509883,707, 111632846,597, 111740818,747), stdev = 97004,793
   CI (99.9%): [111259315,678, 112006377,516] (assumes normal distribution)
@@ -40,7 +40,7 @@ Result "org.sample.JavaBenchmark.MyJavaListMimic_OfVararg_010":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Throughput, ops/time
-# Benchmark: org.sample.JavaBenchmark.MyJavaListMimic_Of_010
+# Benchmark: org.sample.JavaBenchmark.MyJavaListMimic_of_010
 
 # Run progress: 25,00% complete, ETA 00:05:00
 # Fork: 1 of 1
@@ -56,7 +56,7 @@ Iteration   4: 147000750,372 ops/s
 Iteration   5: 146742717,488 ops/s
 
 
-Result "org.sample.JavaBenchmark.MyJavaListMimic_Of_010":
+Result "org.sample.JavaBenchmark.MyJavaListMimic_of_010":
   146841829,545 ±(99.9%) 373678,847 ops/s [Average]
   (min, avg, max) = (146742717,488, 146841829,545, 147000750,372), stdev = 97043,210
   CI (99.9%): [146468150,698, 147215508,392] (assumes normal distribution)
@@ -141,7 +141,7 @@ different JVMs are already problematic, the performance difference caused by dif
 modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
 Benchmark                                                Mode  Cnt          Score        Error  Units
-JavaBenchmark.MyJavaListMimic_Of_010                    thrpt    5  146841829,545 ± 373678,847  ops/s
+JavaBenchmark.MyJavaListMimic_of_010                    thrpt    5  146841829,545 ± 373678,847  ops/s
 JavaBenchmark.java_util_List_of_010                     thrpt    5  146663490,999 ± 831393,032  ops/s
 JavaBenchmark.MyJavaListMimic_listFromTrustedArray_010  thrpt    5  116434902,311 ± 605823,210  ops/s
-JavaBenchmark.MyJavaListMimic_OfVararg_010              thrpt    5  111632846,597 ± 373530,919  ops/s
+JavaBenchmark.MyJavaListMimic_ofVararg_010              thrpt    5  111632846,597 ± 373530,919  ops/s

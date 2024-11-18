@@ -47,7 +47,7 @@ public class JavaBenchmark {
     }
 
     @Benchmark
-    public List<String> MyJavaListMimic_Of_010() {
+    public List<String> MyJavaListMimic_of_010() {
         return MyJavaListMimic.of(
                 x,
                 x,
@@ -63,7 +63,7 @@ public class JavaBenchmark {
     }
 
     @Benchmark
-    public List<String> MyJavaListMimic_OfVararg_010() {
+    public List<String> MyJavaListMimic_ofVararg_010() {
         return MyJavaListMimic.ofVararg(
                 x,
                 x,
