@@ -63,6 +63,22 @@ public class JavaBenchmark {
     }
 
     @Benchmark
+    public List<String> myJavaListMimicOfVararg010() {
+        return MyJavaListMimic.ofVararg(
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x
+        );
+    }
+
+    @Benchmark
     public List<String> arraysAsList010() {
         return Arrays.asList(
                 x,

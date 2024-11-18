@@ -13,6 +13,10 @@ public class MyJavaListMimic {
         return MyJavaListMimic.listFromTrustedArray(a01, a02, a03, a04, a05, a06, a07, a08, a09, a10);
     }
 
+    public static <T> List<T> ofVararg(T... elements) {
+        return MyJavaListMimic.listFromTrustedArray(elements);
+    }
+
     private static  <E> List<E> listFromTrustedArray(Object... input) {
         assert input.getClass() == Object[].class;
         for (Object o : input) { // implicit null check of 'input' array
