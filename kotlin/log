@@ -8,26 +8,26 @@
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Throughput, ops/time
-# Benchmark: org.sample.KotlinBenchmark.baseline
+# Benchmark: org.sample.KotlinBenchmark._010_kotlin_listOf_vararg
 
 # Run progress: 0,00% complete, ETA 00:03:20
 # Fork: 1 of 1
-# Warmup Iteration   1: 3590122449,504 ops/s
-# Warmup Iteration   2: 3617059583,546 ops/s
-# Warmup Iteration   3: 3614067110,332 ops/s
-# Warmup Iteration   4: 2620359453,264 ops/s
-# Warmup Iteration   5: 2564336963,080 ops/s
-Iteration   1: 3617024716,585 ops/s
-Iteration   2: 2563093512,289 ops/s
-Iteration   3: 3618593774,493 ops/s
-Iteration   4: 3621990019,374 ops/s
-Iteration   5: 3620037349,535 ops/s
+# Warmup Iteration   1: 123282775,835 ops/s
+# Warmup Iteration   2: 125306897,238 ops/s
+# Warmup Iteration   3: 112237218,591 ops/s
+# Warmup Iteration   4: 112597251,144 ops/s
+# Warmup Iteration   5: 112614979,104 ops/s
+Iteration   1: 112691402,823 ops/s
+Iteration   2: 112588918,091 ops/s
+Iteration   3: 112678992,644 ops/s
+Iteration   4: 112557281,589 ops/s
+Iteration   5: 112683190,850 ops/s
 
 
-Result "org.sample.KotlinBenchmark.baseline":
-  3408147874,455 ±(99.9%) 1819056886,975 ops/s [Average]
-  (min, avg, max) = (2563093512,289, 3408147874,455, 3621990019,374), stdev = 472403296,885
-  CI (99.9%): [1589090987,480, 5227204761,430] (assumes normal distribution)
+Result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg":
+  112639957,199 ±(99.9%) 239544,515 ops/s [Average]
+  (min, avg, max) = (112557281,589, 112639957,199, 112691402,823), stdev = 62208,950
+  CI (99.9%): [112400412,685, 112879501,714] (assumes normal distribution)
 
 
 # JMH version: 1.37
@@ -40,26 +40,26 @@ Result "org.sample.KotlinBenchmark.baseline":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Throughput, ops/time
-# Benchmark: org.sample.KotlinBenchmark.kotlinListOfVararg100
+# Benchmark: org.sample.KotlinBenchmark._010_kotlin_myListOf10_vararg
 
 # Run progress: 50,00% complete, ETA 00:01:40
 # Fork: 1 of 1
-# Warmup Iteration   1: 12038915,805 ops/s
-# Warmup Iteration   2: 12142400,779 ops/s
-# Warmup Iteration   3: 12162348,017 ops/s
-# Warmup Iteration   4: 12175664,979 ops/s
-# Warmup Iteration   5: 12174356,501 ops/s
-Iteration   1: 12172108,769 ops/s
-Iteration   2: 12176596,213 ops/s
-Iteration   3: 12168027,548 ops/s
-Iteration   4: 12171965,635 ops/s
-Iteration   5: 12160331,955 ops/s
+# Warmup Iteration   1: 171301624,717 ops/s
+# Warmup Iteration   2: 175808945,727 ops/s
+# Warmup Iteration   3: 175429707,658 ops/s
+# Warmup Iteration   4: 175244018,212 ops/s
+# Warmup Iteration   5: 175211783,597 ops/s
+Iteration   1: 175314520,393 ops/s
+Iteration   2: 175177111,063 ops/s
+Iteration   3: 175813589,485 ops/s
+Iteration   4: 175649132,509 ops/s
+Iteration   5: 176031189,521 ops/s
 
 
-Result "org.sample.KotlinBenchmark.kotlinListOfVararg100":
-  12169806,024 ±(99.9%) 23501,090 ops/s [Average]
-  (min, avg, max) = (12160331,955, 12169806,024, 12176596,213), stdev = 6103,158
-  CI (99.9%): [12146304,934, 12193307,114] (assumes normal distribution)
+Result "org.sample.KotlinBenchmark._010_kotlin_myListOf10_vararg":
+  175597108,594 ±(99.9%) 1353558,486 ops/s [Average]
+  (min, avg, max) = (175177111,063, 175597108,594, 176031189,521), stdev = 351514,840
+  CI (99.9%): [174243550,108, 176950667,080] (assumes normal distribution)
 
 
 # Run complete. Total time: 00:03:20
@@ -76,6 +76,6 @@ works, and factor in a small probability of new VM bugs. Additionally, while com
 different JVMs are already problematic, the performance difference caused by different Blackhole
 modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
-Benchmark                               Mode  Cnt           Score            Error  Units
-KotlinBenchmark.baseline               thrpt    5  3408147874,455 ± 1819056886,975  ops/s
-KotlinBenchmark.kotlinListOfVararg100  thrpt    5    12169806,024 ±      23501,090  ops/s
+Benchmark                                       Mode  Cnt          Score         Error  Units
+KotlinBenchmark._010_kotlin_listOf_vararg      thrpt    5  112639957,199 ±  239544,515  ops/s
+KotlinBenchmark._010_kotlin_myListOf10_vararg  thrpt    5  175597108,594 ± 1353558,486  ops/s
