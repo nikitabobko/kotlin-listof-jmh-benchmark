@@ -10,24 +10,24 @@
 # Benchmark mode: Throughput, ops/time
 # Benchmark: org.sample.JavaBenchmark.arraysAsList010
 
-# Run progress: 0,00% complete, ETA 00:06:40
+# Run progress: 0,00% complete, ETA 00:08:20
 # Fork: 1 of 1
-# Warmup Iteration   1: 117796076,540 ops/s
-# Warmup Iteration   2: 121555189,930 ops/s
-# Warmup Iteration   3: 109240917,948 ops/s
-# Warmup Iteration   4: 109279442,951 ops/s
-# Warmup Iteration   5: 109237921,902 ops/s
-Iteration   1: 109397071,056 ops/s
-Iteration   2: 109204919,189 ops/s
-Iteration   3: 109268202,061 ops/s
-Iteration   4: 109276429,455 ops/s
-Iteration   5: 109336508,985 ops/s
+# Warmup Iteration   1: 123150634,383 ops/s
+# Warmup Iteration   2: 125347142,258 ops/s
+# Warmup Iteration   3: 112889983,847 ops/s
+# Warmup Iteration   4: 112815211,929 ops/s
+# Warmup Iteration   5: 112751444,068 ops/s
+Iteration   1: 112872927,145 ops/s
+Iteration   2: 112877189,458 ops/s
+Iteration   3: 112833758,671 ops/s
+Iteration   4: 112754868,689 ops/s
+Iteration   5: 112849948,496 ops/s
 
 
 Result "org.sample.JavaBenchmark.arraysAsList010":
-  109296626,149 ±(99.9%) 281029,888 ops/s [Average]
-  (min, avg, max) = (109204919,189, 109296626,149, 109397071,056), stdev = 72982,570
-  CI (99.9%): [109015596,261, 109577656,037] (assumes normal distribution)
+  112837738,492 ±(99.9%) 190859,016 ops/s [Average]
+  (min, avg, max) = (112754868,689, 112837738,492, 112877189,458), stdev = 49565,480
+  CI (99.9%): [112646879,475, 113028597,508] (assumes normal distribution)
 
 
 # JMH version: 1.37
@@ -42,24 +42,24 @@ Result "org.sample.JavaBenchmark.arraysAsList010":
 # Benchmark mode: Throughput, ops/time
 # Benchmark: org.sample.JavaBenchmark.javaUtilListOf010
 
-# Run progress: 25,00% complete, ETA 00:05:00
+# Run progress: 20,00% complete, ETA 00:06:40
 # Fork: 1 of 1
-# Warmup Iteration   1: 145172338,676 ops/s
-# Warmup Iteration   2: 147230846,574 ops/s
-# Warmup Iteration   3: 146816877,898 ops/s
-# Warmup Iteration   4: 147312818,500 ops/s
-# Warmup Iteration   5: 147147341,801 ops/s
-Iteration   1: 147218777,115 ops/s
-Iteration   2: 147242455,666 ops/s
-Iteration   3: 146971252,095 ops/s
-Iteration   4: 147064140,502 ops/s
-Iteration   5: 147140001,493 ops/s
+# Warmup Iteration   1: 143822283,497 ops/s
+# Warmup Iteration   2: 145347610,888 ops/s
+# Warmup Iteration   3: 145151175,598 ops/s
+# Warmup Iteration   4: 145131614,612 ops/s
+# Warmup Iteration   5: 145135434,342 ops/s
+Iteration   1: 145262085,823 ops/s
+Iteration   2: 144704160,677 ops/s
+Iteration   3: 144870749,417 ops/s
+Iteration   4: 145047792,053 ops/s
+Iteration   5: 145090483,884 ops/s
 
 
 Result "org.sample.JavaBenchmark.javaUtilListOf010":
-  147127325,374 ±(99.9%) 431075,613 ops/s [Average]
-  (min, avg, max) = (146971252,095, 147127325,374, 147242455,666), stdev = 111948,968
-  CI (99.9%): [146696249,762, 147558400,987] (assumes normal distribution)
+  144995054,371 ±(99.9%) 824219,323 ops/s [Average]
+  (min, avg, max) = (144704160,677, 144995054,371, 145262085,823), stdev = 214047,141
+  CI (99.9%): [144170835,047, 145819273,694] (assumes normal distribution)
 
 
 # JMH version: 1.37
@@ -74,24 +74,24 @@ Result "org.sample.JavaBenchmark.javaUtilListOf010":
 # Benchmark mode: Throughput, ops/time
 # Benchmark: org.sample.JavaBenchmark.kotlinListOfVararg010
 
-# Run progress: 50,00% complete, ETA 00:03:20
+# Run progress: 40,00% complete, ETA 00:05:00
 # Fork: 1 of 1
-# Warmup Iteration   1: 120319166,438 ops/s
-# Warmup Iteration   2: 121400516,968 ops/s
-# Warmup Iteration   3: 109364919,681 ops/s
-# Warmup Iteration   4: 109240669,877 ops/s
-# Warmup Iteration   5: 109166717,926 ops/s
-Iteration   1: 109186332,935 ops/s
-Iteration   2: 109411988,205 ops/s
-Iteration   3: 109383983,965 ops/s
-Iteration   4: 109531865,960 ops/s
-Iteration   5: 109403212,711 ops/s
+# Warmup Iteration   1: 120023903,097 ops/s
+# Warmup Iteration   2: 121504161,111 ops/s
+# Warmup Iteration   3: 109196412,407 ops/s
+# Warmup Iteration   4: 109144827,039 ops/s
+# Warmup Iteration   5: 109196900,703 ops/s
+Iteration   1: 109251690,424 ops/s
+Iteration   2: 109247051,005 ops/s
+Iteration   3: 109368176,498 ops/s
+Iteration   4: 109468659,650 ops/s
+Iteration   5: 109458712,011 ops/s
 
 
 Result "org.sample.JavaBenchmark.kotlinListOfVararg010":
-  109383476,755 ±(99.9%) 479740,281 ops/s [Average]
-  (min, avg, max) = (109186332,935, 109383476,755, 109531865,960), stdev = 124587,028
-  CI (99.9%): [108903736,474, 109863217,036] (assumes normal distribution)
+  109358857,917 ±(99.9%) 413383,053 ops/s [Average]
+  (min, avg, max) = (109247051,005, 109358857,917, 109468659,650), stdev = 107354,266
+  CI (99.9%): [108945474,864, 109772240,970] (assumes normal distribution)
 
 
 # JMH version: 1.37
@@ -106,27 +106,59 @@ Result "org.sample.JavaBenchmark.kotlinListOfVararg010":
 # Benchmark mode: Throughput, ops/time
 # Benchmark: org.sample.JavaBenchmark.myJavaListMimicOf010
 
-# Run progress: 75,00% complete, ETA 00:01:40
+# Run progress: 60,00% complete, ETA 00:03:20
 # Fork: 1 of 1
-# Warmup Iteration   1: 145840216,768 ops/s
-# Warmup Iteration   2: 147307457,790 ops/s
-# Warmup Iteration   3: 147345123,831 ops/s
-# Warmup Iteration   4: 147257231,030 ops/s
-# Warmup Iteration   5: 147208500,528 ops/s
-Iteration   1: 147024678,504 ops/s
-Iteration   2: 147329085,200 ops/s
-Iteration   3: 147048177,458 ops/s
-Iteration   4: 147117073,636 ops/s
-Iteration   5: 147014490,832 ops/s
+# Warmup Iteration   1: 145852026,635 ops/s
+# Warmup Iteration   2: 147501393,722 ops/s
+# Warmup Iteration   3: 145287374,646 ops/s
+# Warmup Iteration   4: 144885195,058 ops/s
+# Warmup Iteration   5: 145370266,143 ops/s
+Iteration   1: 145300634,172 ops/s
+Iteration   2: 145615513,079 ops/s
+Iteration   3: 145121000,042 ops/s
+Iteration   4: 145258648,689 ops/s
+Iteration   5: 145194849,592 ops/s
 
 
 Result "org.sample.JavaBenchmark.myJavaListMimicOf010":
-  147106701,126 ±(99.9%) 502865,695 ops/s [Average]
-  (min, avg, max) = (147014490,832, 147106701,126, 147329085,200), stdev = 130592,624
-  CI (99.9%): [146603835,431, 147609566,821] (assumes normal distribution)
+  145298129,115 ±(99.9%) 731467,616 ops/s [Average]
+  (min, avg, max) = (145121000,042, 145298129,115, 145615513,079), stdev = 189959,817
+  CI (99.9%): [144566661,499, 146029596,731] (assumes normal distribution)
 
 
-# Run complete. Total time: 00:06:40
+# JMH version: 1.37
+# VM version: JDK 17.0.10, OpenJDK 64-Bit Server VM, 17.0.10+7-LTS
+# VM invoker: /Users/Nikita.Bobko/.sdkman/candidates/java/17.0.10-amzn/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.sample.JavaBenchmark.myJavaListMimicOfVararg010
+
+# Run progress: 80,00% complete, ETA 00:01:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 110524447,131 ops/s
+# Warmup Iteration   2: 111758488,884 ops/s
+# Warmup Iteration   3: 111738799,399 ops/s
+# Warmup Iteration   4: 111777081,530 ops/s
+# Warmup Iteration   5: 111765862,593 ops/s
+Iteration   1: 111775667,075 ops/s
+Iteration   2: 111711604,905 ops/s
+Iteration   3: 111722898,557 ops/s
+Iteration   4: 111522760,105 ops/s
+Iteration   5: 111671880,002 ops/s
+
+
+Result "org.sample.JavaBenchmark.myJavaListMimicOfVararg010":
+  111680962,129 ±(99.9%) 369225,534 ops/s [Average]
+  (min, avg, max) = (111522760,105, 111680962,129, 111775667,075), stdev = 95886,699
+  CI (99.9%): [111311736,594, 112050187,663] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:08:21
 
 REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
 why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
@@ -140,8 +172,9 @@ works, and factor in a small probability of new VM bugs. Additionally, while com
 different JVMs are already problematic, the performance difference caused by different Blackhole
 modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
-Benchmark                             Mode  Cnt          Score        Error  Units
-JavaBenchmark.javaUtilListOf010      thrpt    5  147127325,374 ± 431075,613  ops/s
-JavaBenchmark.myJavaListMimicOf010   thrpt    5  147106701,126 ± 502865,695  ops/s
-JavaBenchmark.kotlinListOfVararg010  thrpt    5  109383476,755 ± 479740,281  ops/s
-JavaBenchmark.arraysAsList010        thrpt    5  109296626,149 ± 281029,888  ops/s
+Benchmark                                  Mode  Cnt          Score        Error  Units
+JavaBenchmark.arraysAsList010             thrpt    5  112837738,492 ± 190859,016  ops/s
+JavaBenchmark.javaUtilListOf010           thrpt    5  144995054,371 ± 824219,323  ops/s
+JavaBenchmark.kotlinListOfVararg010       thrpt    5  109358857,917 ± 413383,053  ops/s
+JavaBenchmark.myJavaListMimicOf010        thrpt    5  145298129,115 ± 731467,616  ops/s
+JavaBenchmark.myJavaListMimicOfVararg010  thrpt    5  111680962,129 ± 369225,534  ops/s
