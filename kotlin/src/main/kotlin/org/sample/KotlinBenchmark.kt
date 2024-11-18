@@ -77,21 +77,21 @@ open class KotlinBenchmark {
 
     // ---
 
-    // @Benchmark
-    // fun manualAddToArrayList010(): ArrayList<String> {
-    //     val arrayList = ArrayList<String>(10)
-    //     arrayList.add(x)
-    //     arrayList.add(x)
-    //     arrayList.add(x)
-    //     arrayList.add(x)
-    //     arrayList.add(x)
-    //     arrayList.add(x)
-    //     arrayList.add(x)
-    //     arrayList.add(x)
-    //     arrayList.add(x)
-    //     arrayList.add(x)
-    //     return arrayList
-    // }
+    @Benchmark
+    fun manualAddToArrayList010(): ArrayList<String> {
+        val arrayList = ArrayList<String>(10)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        arrayList.add(x)
+        return arrayList
+    }
 
     @Benchmark
     fun kotlinListOfVararg010(): List<String> {
@@ -109,21 +109,21 @@ open class KotlinBenchmark {
         )
     }
 
-    // @Benchmark
-    // fun kotlinMutableListOfVararg010(): List<String> {
-    //     return mutableListOf(
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //     )
-    // }
+    @Benchmark
+    fun kotlinMutableListOfVararg010(): List<String> {
+        return mutableListOf(
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+        )
+    }
 
     @Benchmark
     fun javaUtilListOf010(): List<String> {
