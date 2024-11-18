@@ -14,21 +14,21 @@ import java.util.List;
 public class JavaBenchmark {
     volatile String x = "foo";
 
-    @Benchmark
-    public List<String> kotlin_listOf_vararg_010() {
-        return CollectionsKt.listOf(
-                x,
-                x,
-                x,
-                x,
-                x,
-                x,
-                x,
-                x,
-                x,
-                x
-        );
-    }
+    // @Benchmark
+    // public List<String> kotlin_listOf_vararg_010() {
+    //     return CollectionsKt.listOf(
+    //             x,
+    //             x,
+    //             x,
+    //             x,
+    //             x,
+    //             x,
+    //             x,
+    //             x,
+    //             x,
+    //             x
+    //     );
+    // }
 
     @Benchmark
     public List<String> java_util_List_of_010() {
@@ -94,19 +94,20 @@ public class JavaBenchmark {
         );
     }
 
-    @Benchmark
-    public List<String> Arrays_asList_010() {
-        return Arrays.asList(
-                x,
-                x,
-                x,
-                x,
-                x,
-                x,
-                x,
-                x,
-                x,
-                x
-        );
-    }
+    // @Benchmark
+    // public List<String> Arrays_asList_010() {
+    //     return Arrays.asList(
+    //             x,
+    //             x,
+    //             x,
+    //             x,
+    //             x,
+    //             x,
+    //             x,
+    //             x,
+    //             x,
+    //             x
+    //     );
+    // }
+
 }
