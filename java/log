@@ -141,7 +141,7 @@ different JVMs are already problematic, the performance difference caused by dif
 modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
 Benchmark                             Mode  Cnt          Score        Error  Units
-JavaBenchmark.arraysAsList010        thrpt    5  109296626,149 ± 281029,888  ops/s
 JavaBenchmark.javaUtilListOf010      thrpt    5  147127325,374 ± 431075,613  ops/s
-JavaBenchmark.kotlinListOfVararg010  thrpt    5  109383476,755 ± 479740,281  ops/s
 JavaBenchmark.myJavaListMimicOf010   thrpt    5  147106701,126 ± 502865,695  ops/s
+JavaBenchmark.kotlinListOfVararg010  thrpt    5  109383476,755 ± 479740,281  ops/s
+JavaBenchmark.arraysAsList010        thrpt    5  109296626,149 ± 281029,888  ops/s
