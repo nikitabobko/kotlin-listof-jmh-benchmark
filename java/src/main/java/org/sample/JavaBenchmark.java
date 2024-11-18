@@ -14,7 +14,7 @@ public class JavaBenchmark {
     volatile String x = "foo";
 
     @Benchmark
-    List<String> kotlinListOfVararg010() {
+    public List<String> kotlinListOfVararg010() {
         return CollectionsKt.listOf(
                 x,
                 x,
