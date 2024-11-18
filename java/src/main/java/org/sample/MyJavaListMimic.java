@@ -17,7 +17,7 @@ public class MyJavaListMimic {
         return MyJavaListMimic.listFromTrustedArray(elements);
     }
 
-    private static <E> List<E> listFromTrustedArray(Object... input) {
+    public static <E> List<E> listFromTrustedArray(Object... input) {
         assert input.getClass() == Object[].class;
         for (Object o : input) { // implicit null check of 'input' array
             Objects.requireNonNull(o);
