@@ -9,7 +9,7 @@ import org.openjdk.jmh.annotations.State;
 import java.util.List;
 
 @State(Scope.Thread)
-@Fork(2) // todo drop fork for final testing
+@Fork(1) // todo drop fork for final testing
 public class JavaBenchmark {
     volatile String x = "foo";
 
@@ -32,6 +32,22 @@ public class JavaBenchmark {
     @Benchmark
     public List<String> javaUtilListOf010() {
         return List.of(
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x
+        );
+    }
+
+    @Benchmark
+    public List<String> myJavaListMimicOf010() {
+        return MyJavaListMimic.of(
                 x,
                 x,
                 x,

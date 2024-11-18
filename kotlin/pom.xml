@@ -31,7 +31,7 @@
         <!--
             Java source/target to use for compilation.
           -->
-        <javac.target>9</javac.target>
+        <javac.target>17</javac.target>
 
         <!--
            Put an approriate Kotlin compiler and stdlib version here.

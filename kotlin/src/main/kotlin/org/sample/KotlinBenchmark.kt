@@ -3,13 +3,13 @@ package org.sample
 import org.openjdk.jmh.annotations.*
 
 @State(Scope.Thread)
-@Fork(2) // todo drop fork for final testing
+@Fork(1) // todo drop fork for final testing
 open class KotlinBenchmark {
     @field:Volatile
     var x: String = "foo"
 
-    // @Benchmark()
-    // fun baseline() {}
+    @Benchmark()
+    fun baseline() {}
 
     // @Benchmark
     // fun manualAddToArrayList100(): ArrayList<String> {
@@ -77,69 +77,69 @@ open class KotlinBenchmark {
 
     // ---
 
-    @Benchmark
-    fun manualAddToArrayList010(): ArrayList<String> {
-        val arrayList = ArrayList<String>(10)
-        arrayList.add(x)
-        arrayList.add(x)
-        arrayList.add(x)
-        arrayList.add(x)
-        arrayList.add(x)
-        arrayList.add(x)
-        arrayList.add(x)
-        arrayList.add(x)
-        arrayList.add(x)
-        arrayList.add(x)
-        return arrayList
-    }
+    // @Benchmark
+    // fun manualAddToArrayList010(): ArrayList<String> {
+    //     val arrayList = ArrayList<String>(10)
+    //     arrayList.add(x)
+    //     arrayList.add(x)
+    //     arrayList.add(x)
+    //     arrayList.add(x)
+    //     arrayList.add(x)
+    //     arrayList.add(x)
+    //     arrayList.add(x)
+    //     arrayList.add(x)
+    //     arrayList.add(x)
+    //     arrayList.add(x)
+    //     return arrayList
+    // }
 
-    @Benchmark
-    fun kotlinListOfVararg010(): List<String> {
-        return listOf(
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-        )
-    }
+    // @Benchmark
+    // fun kotlinListOfVararg010(): List<String> {
+    //     return listOf(
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //     )
+    // }
 
-    @Benchmark
-    fun kotlinMutableListOfVararg010(): List<String> {
-        return mutableListOf(
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-        )
-    }
+    // @Benchmark
+    // fun kotlinMutableListOfVararg010(): List<String> {
+    //     return mutableListOf(
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //     )
+    // }
 
-    @Benchmark
-    fun javaUtilListOf010(): List<String> {
-        return java.util.List.of(
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-        )
-    }
+    // @Benchmark
+    // fun javaUtilListOf010(): List<String> {
+    //     return java.util.List.of(
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //     )
+    // }
 
     // ---
 
