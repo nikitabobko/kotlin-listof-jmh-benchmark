@@ -3,10 +3,13 @@ package org.sample
 import org.openjdk.jmh.annotations.*
 
 @State(Scope.Thread)
-@Fork(1) // todo drop fork for final testing
+// @Fork(1) // todo drop fork for final testing
 open class KotlinBenchmark {
     @field:Volatile
     var x: String = "foo"
+
+    var y: Int = 0
+        get() = field++ % 128
 
     // @Benchmark()
     // fun baseline() {}
@@ -122,6 +125,38 @@ open class KotlinBenchmark {
             x,
             x,
             x,
+        )
+    }
+
+    @Benchmark
+    fun _010_kotlin_listOf_vararg_int(): List<Int> {
+        return listOf(
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+        )
+    }
+
+    @Benchmark
+    fun _010_kotlin_myListOf10_int(): List<Int> {
+        return myListOf10(
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
         )
     }
 
