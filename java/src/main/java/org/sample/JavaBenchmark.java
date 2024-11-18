@@ -17,7 +17,7 @@ public class JavaBenchmark {
     }
 
     // @Benchmark
-    // public List<String> kotlin_listOf_vararg_010() {
+    // public List<String> _010_kotlin_listOf_vararg() {
     //     return CollectionsKt.listOf(
     //             elem(),
     //             elem(),
@@ -33,7 +33,7 @@ public class JavaBenchmark {
     // }
 
     @Benchmark
-    public List<Integer> java_util_List_of_010() {
+    public List<Integer> _010_java_util_List_of() {
         return List.of(
                 elem(),
                 elem(),
@@ -49,7 +49,7 @@ public class JavaBenchmark {
     }
 
     @Benchmark
-    public List<Integer> MyJavaListMimic_of_010() {
+    public List<Integer> _010_MyJavaListMimic_of() {
         return MyJavaListMimic.of(
                 elem(),
                 elem(),
@@ -65,7 +65,7 @@ public class JavaBenchmark {
     }
 
     @Benchmark
-    public List<Integer> MyJavaListMimic_ofVararg_010() {
+    public List<Integer> _010_MyJavaListMimic_ofVararg() {
         return MyJavaListMimic.ofVararg(
                 elem(),
                 elem(),
@@ -81,7 +81,7 @@ public class JavaBenchmark {
     }
 
     @Benchmark
-    public List<Integer> MyJavaListMimic_listFromTrustedArray_010() {
+    public List<Integer> _010_MyJavaListMimic_listFromTrustedArray() {
         return MyJavaListMimic.listFromTrustedArray(
                 elem(),
                 elem(),
@@ -97,7 +97,7 @@ public class JavaBenchmark {
     }
 
     // @Benchmark
-    // public List<String> Arrays_asList_010() {
+    // public List<String> _010_Arrays_asList() {
     //     return Arrays.asList(
     //             elem(),
     //             elem(),

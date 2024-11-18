@@ -12,7 +12,7 @@ open class KotlinBenchmark {
     fun baseline() {}
 
     // @Benchmark
-    // fun manualAddToArrayList100(): ArrayList<String> {
+    // fun _100_manualAddToArrayList(): ArrayList<String> {
     //     val arrayList = ArrayList<String>(100)
     //     arrayList.add(x); arrayList.add(x); arrayList.add(x); arrayList.add(x); arrayList.add(x); arrayList.add(x); arrayList.add(x); arrayList.add(x); arrayList.add(x); arrayList.add(x)
     //     arrayList.add(x); arrayList.add(x); arrayList.add(x); arrayList.add(x); arrayList.add(x); arrayList.add(x); arrayList.add(x); arrayList.add(x); arrayList.add(x); arrayList.add(x)
@@ -28,7 +28,7 @@ open class KotlinBenchmark {
     // }
 
     @Benchmark
-    fun kotlinListOfVararg100(): List<String> {
+    fun _100_kotlin_listOf_vararg(): List<String> {
         return listOf(
             x, x, x, x, x, x, x, x, x, x,
             x, x, x, x, x, x, x, x, x, x,
@@ -44,7 +44,7 @@ open class KotlinBenchmark {
     }
 
     // @Benchmark
-    // fun kotlinMutableListOfVararg100(): List<String> {
+    // fun _100_kotlin_mutableListOf_vararg(): List<String> {
     //     return mutableListOf(
     //         x, x, x, x, x, x, x, x, x, x,
     //         x, x, x, x, x, x, x, x, x, x,
@@ -60,7 +60,7 @@ open class KotlinBenchmark {
     // }
 
     // @Benchmark
-    // fun javaUtilListOfVararg100(): List<String> {
+    // fun 100_java_util_List_of_vararg(): List<String> {
     //     return java.util.List.of(
     //         x, x, x, x, x, x, x, x, x, x,
     //         x, x, x, x, x, x, x, x, x, x,
@@ -78,7 +78,7 @@ open class KotlinBenchmark {
     // ---
 
     // @Benchmark
-    // fun manualAddToArrayList010(): ArrayList<String> {
+    // fun _010_manualAddToArrayList(): ArrayList<String> {
     //     val arrayList = ArrayList<String>(10)
     //     arrayList.add(x)
     //     arrayList.add(x)
@@ -94,7 +94,7 @@ open class KotlinBenchmark {
     // }
 
     // @Benchmark
-    // fun kotlinListOfVararg010(): List<String> {
+    // fun _010_kotlin_listOf_vararg(): List<String> {
     //     return listOf(
     //         x,
     //         x,
@@ -110,7 +110,7 @@ open class KotlinBenchmark {
     // }
 
     // @Benchmark
-    // fun kotlinMutableListOfVararg010(): List<String> {
+    // fun _010_kotlin_mutableListOf_vararg(): List<String> {
     //     return mutableListOf(
     //         x,
     //         x,
@@ -126,7 +126,7 @@ open class KotlinBenchmark {
     // }
 
     // @Benchmark
-    // fun javaUtilListOf010(): List<String> {
+    // fun _010_java_util_List_of(): List<String> {
     //     return java.util.List.of(
     //         x,
     //         x,
@@ -144,7 +144,7 @@ open class KotlinBenchmark {
     // ---
 
     // @Benchmark
-    // fun manualAddToArrayList005(): ArrayList<String> {
+    // fun _005_manualAddToArrayList(): ArrayList<String> {
     //     val arrayList = ArrayList<String>(5)
     //     arrayList.add(x)
     //     arrayList.add(x)
@@ -155,7 +155,7 @@ open class KotlinBenchmark {
     // }
 
     // @Benchmark
-    // fun kotlinListOfVararg005(): List<String> {
+    // fun _005_kotlinListOfVararg(): List<String> {
     //     return listOf(
     //         x,
     //         x,
@@ -166,7 +166,7 @@ open class KotlinBenchmark {
     // }
 
     // @Benchmark
-    // fun kotlinMutableListOfVararg005(): List<String> {
+    // fun _005_kotlin_mutableListOf_vararg(): List<String> {
     //     return mutableListOf(
     //         x,
     //         x,
@@ -177,7 +177,7 @@ open class KotlinBenchmark {
     // }
 
     // @Benchmark
-    // fun javaUtilListOf005(): List<String> {
+    // fun _005_java_util_List_of(): List<String> {
     //     return java.util.List.of(
     //         x,
     //         x,
@@ -190,7 +190,7 @@ open class KotlinBenchmark {
     // ---
 
     // @Benchmark
-    // fun manualAddLinkedHashMap100(): java.util.LinkedHashMap<String, String> {
+    // fun _100_manualAddLinkedHashMap100(): java.util.LinkedHashMap<String, String> {
     //     val foo = LinkedHashMap<String, String>(134) // Optimal capacity for 100 elements according to mapCapacity in kotlin-stdlib
     //     foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x)
     //     foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x)
@@ -206,7 +206,7 @@ open class KotlinBenchmark {
     // }
 
     // @Benchmark
-    // fun manualAddHashMap100(): java.util.HashMap<String, String> {
+    // fun _100_manualAddHashMap(): java.util.HashMap<String, String> {
     //     val foo = HashMap<String, String>(134) // Optimal capacity for 100 elements according to mapCapacity in kotlin-stdlib
     //     foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x)
     //     foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x); foo.put(x, x)
@@ -222,7 +222,7 @@ open class KotlinBenchmark {
     // }
 
     // @Benchmark
-    // fun kotlinMapOfVararg100(): Map<String, String> {
+    // fun _100_kotlin_mapOf_vararg(): Map<String, String> {
     //     return mapOf(
     //         x to x, x to x, x to x, x to x, x to x, x to x, x to x, x to x, x to x, x to x,
     //         x to x, x to x, x to x, x to x, x to x, x to x, x to x, x to x, x to x, x to x,
@@ -238,7 +238,7 @@ open class KotlinBenchmark {
     // }
 
     // @Benchmark
-    // fun javaUtilMapOfEntriesVararg100(): Map<String, String> {
+    // fun _100_java_util_Map_ofEntries_vararg(): Map<String, String> {
     //     return java.util.Map.ofEntries(
     //         java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x),
     //         java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x), java.util.Map.entry(x, x),
@@ -256,7 +256,7 @@ open class KotlinBenchmark {
     // ---
 
     // @Benchmark
-    // fun manualAddLinkedHashMap010(): java.util.LinkedHashMap<String, String> {
+    // fun _010_manualAddLinkedHashMap(): java.util.LinkedHashMap<String, String> {
     //     val foo = LinkedHashMap<String, String>(14) // Optimal capacity for 10 elements according to mapCapacity in kotlin-stdlib
     //     foo.put(x, x)
     //     foo.put(x, x)
@@ -272,7 +272,7 @@ open class KotlinBenchmark {
     // }
 
     // @Benchmark
-    // fun manualAddHashMap010(): java.util.HashMap<String, String> {
+    // fun _010_manualAddHashMap(): java.util.HashMap<String, String> {
     //     val foo = HashMap<String, String>(14) // Optimal capacity for 10 elements according to mapCapacity in kotlin-stdlib
     //     foo.put(x, x)
     //     foo.put(x, x)
@@ -288,7 +288,7 @@ open class KotlinBenchmark {
     // }
 
     // @Benchmark
-    // fun kotlinMapOfVararg010(): Map<String, String> {
+    // fun _010_kotlin_mapOf_vararg(): Map<String, String> {
     //     return mapOf(
     //         x to x,
     //         x to x,
@@ -304,7 +304,7 @@ open class KotlinBenchmark {
     // }
 
     // @Benchmark
-    // fun javaUtilMapOf010(): Map<String, String> {
+    // fun _010_java_util_Map_of(): Map<String, String> {
     //     return java.util.Map.of(
     //         x, x,
     //         x, x,
@@ -318,4 +318,5 @@ open class KotlinBenchmark {
     //         x, x,
     //     )
     // }
+
 }
