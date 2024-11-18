@@ -12,7 +12,7 @@ import java.util.List;
 @State(Scope.Thread)
 @Fork(1) // todo drop fork for final testing
 public class JavaBenchmark {
-    volatile String x = "foo";
+    String x = "foo";
 
     // @Benchmark
     // public List<String> kotlin_listOf_vararg_010() {
