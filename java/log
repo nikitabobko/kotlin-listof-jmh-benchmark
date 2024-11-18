@@ -141,7 +141,7 @@ different JVMs are already problematic, the performance difference caused by dif
 modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
 Benchmark                                                Mode  Cnt          Score         Error  Units
-JavaBenchmark.MyJavaListMimic_listFromTrustedArray_010  thrpt    5  299668477,259 ± 1414600,272  ops/s
-JavaBenchmark.MyJavaListMimic_ofVararg_010              thrpt    5  299745821,670 ± 1856968,497  ops/s
 JavaBenchmark.MyJavaListMimic_of_010                    thrpt    5  311765868,584 ± 1489883,061  ops/s
 JavaBenchmark.java_util_List_of_010                     thrpt    5  311747796,212 ± 2275768,449  ops/s
+JavaBenchmark.MyJavaListMimic_ofVararg_010              thrpt    5  299745821,670 ± 1856968,497  ops/s
+JavaBenchmark.MyJavaListMimic_listFromTrustedArray_010  thrpt    5  299668477,259 ± 1414600,272  ops/s
