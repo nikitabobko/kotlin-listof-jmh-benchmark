@@ -15,7 +15,7 @@ public class JavaBenchmark {
     volatile String x = "foo";
 
     @Benchmark
-    public List<String> kotlinListOfVararg010() {
+    public List<String> kotlin_listOf_vararg_010() {
         return CollectionsKt.listOf(
                 x,
                 x,
@@ -31,7 +31,7 @@ public class JavaBenchmark {
     }
 
     @Benchmark
-    public List<String> javaUtilListOf010() {
+    public List<String> java_util_List_of_010() {
         return List.of(
                 x,
                 x,
@@ -47,7 +47,7 @@ public class JavaBenchmark {
     }
 
     @Benchmark
-    public List<String> myJavaListMimicOf010() {
+    public List<String> MyJavaListMimic_Of_010() {
         return MyJavaListMimic.of(
                 x,
                 x,
@@ -63,7 +63,7 @@ public class JavaBenchmark {
     }
 
     @Benchmark
-    public List<String> myJavaListMimicOfVararg010() {
+    public List<String> MyJavaListMimic_OfVararg_010() {
         return MyJavaListMimic.ofVararg(
                 x,
                 x,
@@ -79,7 +79,23 @@ public class JavaBenchmark {
     }
 
     @Benchmark
-    public List<String> arraysAsList010() {
+    public List<String> MyJavaListMimic_listFromTrustedArray_010() {
+        return MyJavaListMimic.listFromTrustedArray(
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x,
+                x
+        );
+    }
+
+    @Benchmark
+    public List<String> Arrays_asList_010() {
         return Arrays.asList(
                 x,
                 x,
