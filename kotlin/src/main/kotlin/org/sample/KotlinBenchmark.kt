@@ -8,8 +8,8 @@ open class KotlinBenchmark {
     @field:Volatile
     var x: String = "foo"
 
-    @Benchmark()
-    fun baseline() {}
+    // @Benchmark()
+    // fun baseline() {}
 
     // @Benchmark
     // fun _100_manualAddToArrayList(): ArrayList<String> {
@@ -27,21 +27,21 @@ open class KotlinBenchmark {
     //     return arrayList
     // }
 
-    @Benchmark
-    fun _100_kotlin_listOf_vararg(): List<String> {
-        return listOf(
-            x, x, x, x, x, x, x, x, x, x,
-            x, x, x, x, x, x, x, x, x, x,
-            x, x, x, x, x, x, x, x, x, x,
-            x, x, x, x, x, x, x, x, x, x,
-            x, x, x, x, x, x, x, x, x, x,
-            x, x, x, x, x, x, x, x, x, x,
-            x, x, x, x, x, x, x, x, x, x,
-            x, x, x, x, x, x, x, x, x, x,
-            x, x, x, x, x, x, x, x, x, x,
-            x, x, x, x, x, x, x, x, x, x,
-        )
-    }
+    // @Benchmark
+    // fun _100_kotlin_listOf_vararg(): List<String> {
+    //     return listOf(
+    //         x, x, x, x, x, x, x, x, x, x,
+    //         x, x, x, x, x, x, x, x, x, x,
+    //         x, x, x, x, x, x, x, x, x, x,
+    //         x, x, x, x, x, x, x, x, x, x,
+    //         x, x, x, x, x, x, x, x, x, x,
+    //         x, x, x, x, x, x, x, x, x, x,
+    //         x, x, x, x, x, x, x, x, x, x,
+    //         x, x, x, x, x, x, x, x, x, x,
+    //         x, x, x, x, x, x, x, x, x, x,
+    //         x, x, x, x, x, x, x, x, x, x,
+    //     )
+    // }
 
     // @Benchmark
     // fun _100_kotlin_mutableListOf_vararg(): List<String> {
@@ -93,21 +93,37 @@ open class KotlinBenchmark {
     //     return arrayList
     // }
 
-    // @Benchmark
-    // fun _010_kotlin_listOf_vararg(): List<String> {
-    //     return listOf(
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //         x,
-    //     )
-    // }
+    @Benchmark
+    fun _010_kotlin_listOf_vararg(): List<String> {
+        return listOf(
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+        )
+    }
+
+    @Benchmark
+    fun _010_kotlin_myListOf10_vararg(): List<String> {
+        return myListOf10(
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+            x,
+        )
+    }
 
     // @Benchmark
     // fun _010_kotlin_mutableListOf_vararg(): List<String> {
@@ -319,4 +335,8 @@ open class KotlinBenchmark {
     //     )
     // }
 
+}
+
+fun <T> myListOf10(_01: T, _02: T, _03: T, _04: T, _05: T, _06: T, _07: T, _08: T, _09: T, _10: T): List<T> {
+    return listOf(_01, _02, _03, _04, _05, _06, _07, _08, _09, _10)
 }
