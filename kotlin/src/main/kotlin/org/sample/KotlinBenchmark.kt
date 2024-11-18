@@ -110,7 +110,7 @@ open class KotlinBenchmark {
     }
 
     @Benchmark
-    fun _010_kotlin_myListOf10_vararg(): List<String> {
+    fun _010_kotlin_myListOf10(): List<String> {
         return myListOf10(
             x,
             x,
