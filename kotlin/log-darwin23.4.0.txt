@@ -12,22 +12,22 @@
 
 # Run progress: 0,00% complete, ETA 00:05:00
 # Fork: 1 of 1
-# Warmup Iteration   1: 189757785,550 ops/s
-# Warmup Iteration   2: 191360093,278 ops/s
-# Warmup Iteration   3: 292095742,166 ops/s
-# Warmup Iteration   4: 291460804,294 ops/s
-# Warmup Iteration   5: 290727271,900 ops/s
-Iteration   1: 291574534,167 ops/s
-Iteration   2: 290416117,762 ops/s
-Iteration   3: 291382665,660 ops/s
-Iteration   4: 290046245,547 ops/s
-Iteration   5: 290437248,522 ops/s
+# Warmup Iteration   1: 506626263,313 ops/s
+# Warmup Iteration   2: 531939820,539 ops/s
+# Warmup Iteration   3: 417894514,113 ops/s
+# Warmup Iteration   4: 415958016,677 ops/s
+# Warmup Iteration   5: 417612517,096 ops/s
+Iteration   1: 424017409,140 ops/s
+Iteration   2: 424444832,260 ops/s
+Iteration   3: 424294568,455 ops/s
+Iteration   4: 424237836,178 ops/s
+Iteration   5: 424239940,792 ops/s
 
 
 Result "org.sample.KotlinBenchmark._010_arr10":
-  290771362,332 ±(99.9%) 2570432,344 ops/s [Average]
-  (min, avg, max) = (290046245,547, 290771362,332, 291574534,167), stdev = 667533,117
-  CI (99.9%): [288200929,988, 293341794,675] (assumes normal distribution)
+  424246917,365 ±(99.9%) 591064,743 ops/s [Average]
+  (min, avg, max) = (424017409,140, 424246917,365, 424444832,260), stdev = 153497,637
+  CI (99.9%): [423655852,622, 424837982,108] (assumes normal distribution)
 
 
 # JMH version: 1.37
@@ -44,22 +44,22 @@ Result "org.sample.KotlinBenchmark._010_arr10":
 
 # Run progress: 33,33% complete, ETA 00:03:20
 # Fork: 1 of 1
-# Warmup Iteration   1: 245689095,530 ops/s
-# Warmup Iteration   2: 251496975,746 ops/s
-# Warmup Iteration   3: 252260907,457 ops/s
-# Warmup Iteration   4: 252677995,357 ops/s
-# Warmup Iteration   5: 252693973,953 ops/s
-Iteration   1: 252958016,654 ops/s
-Iteration   2: 252004731,846 ops/s
-Iteration   3: 251342360,532 ops/s
-Iteration   4: 251799524,451 ops/s
-Iteration   5: 252385353,455 ops/s
+# Warmup Iteration   1: 321089165,354 ops/s
+# Warmup Iteration   2: 331369584,220 ops/s
+# Warmup Iteration   3: 297729149,215 ops/s
+# Warmup Iteration   4: 298286413,598 ops/s
+# Warmup Iteration   5: 298675504,460 ops/s
+Iteration   1: 297841687,707 ops/s
+Iteration   2: 298208362,297 ops/s
+Iteration   3: 298816041,975 ops/s
+Iteration   4: 296771823,580 ops/s
+Iteration   5: 298142781,151 ops/s
 
 
 Result "org.sample.KotlinBenchmark._010_varargArr":
-  252097997,388 ±(99.9%) 2350926,335 ops/s [Average]
-  (min, avg, max) = (251342360,532, 252097997,388, 252958016,654), stdev = 610528,103
-  CI (99.9%): [249747071,053, 254448923,722] (assumes normal distribution)
+  297956139,342 ±(99.9%) 2890284,152 ops/s [Average]
+  (min, avg, max) = (296771823,580, 297956139,342, 298816041,975), stdev = 750597,616
+  CI (99.9%): [295065855,190, 300846423,494] (assumes normal distribution)
 
 
 # JMH version: 1.37
@@ -76,22 +76,22 @@ Result "org.sample.KotlinBenchmark._010_varargArr":
 
 # Run progress: 66,67% complete, ETA 00:01:40
 # Fork: 1 of 1
-# Warmup Iteration   1: 189882160,862 ops/s
-# Warmup Iteration   2: 190713705,972 ops/s
-# Warmup Iteration   3: 290676153,365 ops/s
-# Warmup Iteration   4: 290364127,265 ops/s
-# Warmup Iteration   5: 289736915,579 ops/s
-Iteration   1: 290987345,549 ops/s
-Iteration   2: 290447626,270 ops/s
-Iteration   3: 290607157,733 ops/s
-Iteration   4: 290325336,373 ops/s
-Iteration   5: 290956626,773 ops/s
+# Warmup Iteration   1: 515202996,775 ops/s
+# Warmup Iteration   2: 533649908,065 ops/s
+# Warmup Iteration   3: 423759068,563 ops/s
+# Warmup Iteration   4: 426462336,504 ops/s
+# Warmup Iteration   5: 424996095,087 ops/s
+Iteration   1: 425111275,511 ops/s
+Iteration   2: 425357098,271 ops/s
+Iteration   3: 424706657,126 ops/s
+Iteration   4: 425533048,485 ops/s
+Iteration   5: 425290873,469 ops/s
 
 
 Result "org.sample.KotlinBenchmark._010_varargArr_inter_vars":
-  290664818,539 ±(99.9%) 1147015,482 ops/s [Average]
-  (min, avg, max) = (290325336,373, 290664818,539, 290987345,549), stdev = 297876,278
-  CI (99.9%): [289517803,057, 291811834,022] (assumes normal distribution)
+  425199790,573 ±(99.9%) 1210227,055 ops/s [Average]
+  (min, avg, max) = (424706657,126, 425199790,573, 425533048,485), stdev = 314292,123
+  CI (99.9%): [423989563,518, 426410017,628] (assumes normal distribution)
 
 
 # Run complete. Total time: 00:05:00
@@ -109,6 +109,6 @@ different JVMs are already problematic, the performance difference caused by dif
 modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
 Benchmark                                   Mode  Cnt          Score         Error  Units
-KotlinBenchmark._010_arr10                 thrpt    5  290771362,332 ± 2570432,344  ops/s
-KotlinBenchmark._010_varargArr             thrpt    5  252097997,388 ± 2350926,335  ops/s
-KotlinBenchmark._010_varargArr_inter_vars  thrpt    5  290664818,539 ± 1147015,482  ops/s
+KotlinBenchmark._010_arr10                 thrpt    5  424246917,365 ±  591064,743  ops/s
+KotlinBenchmark._010_varargArr             thrpt    5  297956139,342 ± 2890284,152  ops/s
+KotlinBenchmark._010_varargArr_inter_vars  thrpt    5  425199790,573 ± 1210227,055  ops/s
