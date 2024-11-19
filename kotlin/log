@@ -12,22 +12,67 @@
 
 # Run progress: 0,00% complete, ETA 00:05:00
 # Fork: 1 of 1
-# Warmup Iteration   1: 118660280,161 ops/s
-# Warmup Iteration   2: 121507966,820 ops/s
-# Warmup Iteration   3: 109580172,387 ops/s
-# Warmup Iteration   4: 109568397,695 ops/s
-# Warmup Iteration   5: 109480037,389 ops/s
-Iteration   1: 109385969,161 ops/s
-Iteration   2: 109476011,503 ops/s
-Iteration   3: 109596436,261 ops/s
-Iteration   4: 109544048,173 ops/s
-Iteration   5: 109706066,669 ops/s
+# Warmup Iteration   1: 119788614,632 ops/s
+# Warmup Iteration   2: 121954259,395 ops/s
+# Warmup Iteration   3: 109704123,846 ops/s
+# Warmup Iteration   4: 109596650,092 ops/s
+# Warmup Iteration   5: 109672477,956 ops/s
+Iteration   1: 109653452,412 ops/s
+                 gc.alloc.rate:      8365,803 MB/sec
+                 gc.alloc.rate.norm: 80,000 B/op
+                 gc.count:           72,000 counts
+                 gc.time:            43,000 ms
+
+Iteration   2: 109692825,121 ops/s
+                 gc.alloc.rate:      8368,805 MB/sec
+                 gc.alloc.rate.norm: 80,000 B/op
+                 gc.count:           72,000 counts
+                 gc.time:            43,000 ms
+
+Iteration   3: 109722513,465 ops/s
+                 gc.alloc.rate:      8371,071 MB/sec
+                 gc.alloc.rate.norm: 80,000 B/op
+                 gc.count:           72,000 counts
+                 gc.time:            42,000 ms
+
+Iteration   4: 109766421,864 ops/s
+                 gc.alloc.rate:      8374,374 MB/sec
+                 gc.alloc.rate.norm: 80,000 B/op
+                 gc.count:           71,000 counts
+                 gc.time:            41,000 ms
+
+Iteration   5: 109667858,541 ops/s
+                 gc.alloc.rate:      8366,890 MB/sec
+                 gc.alloc.rate.norm: 80,000 B/op
+                 gc.count:           72,000 counts
+                 gc.time:            42,000 ms
+
 
 
 Result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg":
-  109541706,354 ±(99.9%) 466011,630 ops/s [Average]
-  (min, avg, max) = (109385969,161, 109541706,354, 109706066,669), stdev = 121021,740
-  CI (99.9%): [109075694,723, 110007717,984] (assumes normal distribution)
+  109700614,280 ±(99.9%) 174005,479 ops/s [Average]
+  (min, avg, max) = (109653452,412, 109700614,280, 109766421,864), stdev = 45188,670
+  CI (99.9%): [109526608,802, 109874619,759] (assumes normal distribution)
+
+Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg:gc.alloc.rate":
+  8369,388 ±(99.9%) 13,217 MB/sec [Average]
+  (min, avg, max) = (8365,803, 8369,388, 8374,374), stdev = 3,432
+  CI (99.9%): [8356,171, 8382,606] (assumes normal distribution)
+
+Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg:gc.alloc.rate.norm":
+  80,000 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (80,000, 80,000, 80,000), stdev = 0,001
+  CI (99.9%): [80,000, 80,000] (assumes normal distribution)
+
+Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg:gc.count":
+  359,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (71,000, 71,800, 72,000), stdev = 0,447
+  CI (99.9%): [359,000, 359,000] (assumes normal distribution)
+
+Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg:gc.time":
+  211,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (41,000, 42,200, 43,000), stdev = 0,837
+  CI (99.9%): [211,000, 211,000] (assumes normal distribution)
 
 
 # JMH version: 1.37
@@ -44,22 +89,67 @@ Result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg":
 
 # Run progress: 33,33% complete, ETA 00:03:20
 # Fork: 1 of 1
-# Warmup Iteration   1: 168765703,571 ops/s
-# Warmup Iteration   2: 175425334,504 ops/s
-# Warmup Iteration   3: 174719837,446 ops/s
-# Warmup Iteration   4: 175278484,654 ops/s
-# Warmup Iteration   5: 174926575,715 ops/s
-Iteration   1: 175324429,105 ops/s
-Iteration   2: 175110905,735 ops/s
-Iteration   3: 173580617,399 ops/s
-Iteration   4: 171461670,093 ops/s
-Iteration   5: 174213491,743 ops/s
+# Warmup Iteration   1: 169752826,956 ops/s
+# Warmup Iteration   2: 174501420,549 ops/s
+# Warmup Iteration   3: 174960258,971 ops/s
+# Warmup Iteration   4: 173906932,544 ops/s
+# Warmup Iteration   5: 174620703,669 ops/s
+Iteration   1: 174715144,463 ops/s
+                 gc.alloc.rate:      13329,540 MB/sec
+                 gc.alloc.rate.norm: 80,000 B/op
+                 gc.count:           89,000 counts
+                 gc.time:            57,000 ms
+
+Iteration   2: 174429426,087 ops/s
+                 gc.alloc.rate:      13307,755 MB/sec
+                 gc.alloc.rate.norm: 80,000 B/op
+                 gc.count:           90,000 counts
+                 gc.time:            59,000 ms
+
+Iteration   3: 174624748,956 ops/s
+                 gc.alloc.rate:      13322,666 MB/sec
+                 gc.alloc.rate.norm: 80,000 B/op
+                 gc.count:           90,000 counts
+                 gc.time:            58,000 ms
+
+Iteration   4: 174752528,520 ops/s
+                 gc.alloc.rate:      13332,368 MB/sec
+                 gc.alloc.rate.norm: 80,000 B/op
+                 gc.count:           89,000 counts
+                 gc.time:            58,000 ms
+
+Iteration   5: 175082617,533 ops/s
+                 gc.alloc.rate:      13357,571 MB/sec
+                 gc.alloc.rate.norm: 80,000 B/op
+                 gc.count:           91,000 counts
+                 gc.time:            58,000 ms
+
 
 
 Result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars":
-  173938222,815 ±(99.9%) 5975859,803 ops/s [Average]
-  (min, avg, max) = (171461670,093, 173938222,815, 175324429,105), stdev = 1551911,814
-  CI (99.9%): [167962363,012, 179914082,618] (assumes normal distribution)
+  174720893,112 ±(99.9%) 915439,732 ops/s [Average]
+  (min, avg, max) = (174429426,087, 174720893,112, 175082617,533), stdev = 237736,791
+  CI (99.9%): [173805453,380, 175636332,844] (assumes normal distribution)
+
+Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.alloc.rate":
+  13329,980 ±(99.9%) 69,807 MB/sec [Average]
+  (min, avg, max) = (13307,755, 13329,980, 13357,571), stdev = 18,129
+  CI (99.9%): [13260,173, 13399,787] (assumes normal distribution)
+
+Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.alloc.rate.norm":
+  80,000 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (80,000, 80,000, 80,000), stdev = 0,001
+  CI (99.9%): [80,000, 80,000] (assumes normal distribution)
+
+Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.count":
+  449,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (89,000, 89,800, 91,000), stdev = 0,837
+  CI (99.9%): [449,000, 449,000] (assumes normal distribution)
+
+Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.time":
+  290,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (57,000, 58,000, 59,000), stdev = 0,707
+  CI (99.9%): [290,000, 290,000] (assumes normal distribution)
 
 
 # JMH version: 1.37
@@ -76,22 +166,67 @@ Result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars":
 
 # Run progress: 66,67% complete, ETA 00:01:40
 # Fork: 1 of 1
-# Warmup Iteration   1: 171500361,055 ops/s
-# Warmup Iteration   2: 175575139,850 ops/s
-# Warmup Iteration   3: 175634988,683 ops/s
-# Warmup Iteration   4: 175897355,532 ops/s
-# Warmup Iteration   5: 175114337,599 ops/s
-Iteration   1: 175988763,528 ops/s
-Iteration   2: 175583039,385 ops/s
-Iteration   3: 175999533,775 ops/s
-Iteration   4: 175573555,392 ops/s
-Iteration   5: 175715482,513 ops/s
+# Warmup Iteration   1: 171734741,548 ops/s
+# Warmup Iteration   2: 171925500,287 ops/s
+# Warmup Iteration   3: 174206606,137 ops/s
+# Warmup Iteration   4: 174196941,431 ops/s
+# Warmup Iteration   5: 173913301,479 ops/s
+Iteration   1: 174445061,596 ops/s
+                 gc.alloc.rate:      13308,951 MB/sec
+                 gc.alloc.rate.norm: 80,000 B/op
+                 gc.count:           90,000 counts
+                 gc.time:            60,000 ms
+
+Iteration   2: 173831521,181 ops/s
+                 gc.alloc.rate:      13262,143 MB/sec
+                 gc.alloc.rate.norm: 80,000 B/op
+                 gc.count:           89,000 counts
+                 gc.time:            59,000 ms
+
+Iteration   3: 174168448,309 ops/s
+                 gc.alloc.rate:      13287,861 MB/sec
+                 gc.alloc.rate.norm: 80,000 B/op
+                 gc.count:           90,000 counts
+                 gc.time:            60,000 ms
+
+Iteration   4: 173984629,753 ops/s
+                 gc.alloc.rate:      13273,818 MB/sec
+                 gc.alloc.rate.norm: 80,000 B/op
+                 gc.count:           89,000 counts
+                 gc.time:            59,000 ms
+
+Iteration   5: 174540337,334 ops/s
+                 gc.alloc.rate:      13316,192 MB/sec
+                 gc.alloc.rate.norm: 80,000 B/op
+                 gc.count:           90,000 counts
+                 gc.time:            59,000 ms
+
 
 
 Result "org.sample.KotlinBenchmark._010_kotlin_myListOf10":
-  175772074,918 ±(99.9%) 810097,652 ops/s [Average]
-  (min, avg, max) = (175573555,392, 175772074,918, 175999533,775), stdev = 210379,788
-  CI (99.9%): [174961977,267, 176582172,570] (assumes normal distribution)
+  174193999,635 ±(99.9%) 1153364,533 ops/s [Average]
+  (min, avg, max) = (173831521,181, 174193999,635, 174540337,334), stdev = 299525,107
+  CI (99.9%): [173040635,102, 175347364,167] (assumes normal distribution)
+
+Secondary result "org.sample.KotlinBenchmark._010_kotlin_myListOf10:gc.alloc.rate":
+  13289,793 ±(99.9%) 87,965 MB/sec [Average]
+  (min, avg, max) = (13262,143, 13289,793, 13316,192), stdev = 22,844
+  CI (99.9%): [13201,828, 13377,758] (assumes normal distribution)
+
+Secondary result "org.sample.KotlinBenchmark._010_kotlin_myListOf10:gc.alloc.rate.norm":
+  80,000 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (80,000, 80,000, 80,000), stdev = 0,001
+  CI (99.9%): [80,000, 80,000] (assumes normal distribution)
+
+Secondary result "org.sample.KotlinBenchmark._010_kotlin_myListOf10:gc.count":
+  448,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (89,000, 89,600, 90,000), stdev = 0,548
+  CI (99.9%): [448,000, 448,000] (assumes normal distribution)
+
+Secondary result "org.sample.KotlinBenchmark._010_kotlin_myListOf10:gc.time":
+  297,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (59,000, 59,400, 60,000), stdev = 0,548
+  CI (99.9%): [297,000, 297,000] (assumes normal distribution)
 
 
 # Run complete. Total time: 00:05:00
@@ -108,7 +243,19 @@ works, and factor in a small probability of new VM bugs. Additionally, while com
 different JVMs are already problematic, the performance difference caused by different Blackhole
 modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
-Benchmark                                              Mode  Cnt          Score         Error  Units
-KotlinBenchmark._010_kotlin_listOf_vararg             thrpt    5  109541706,354 ±  466011,630  ops/s
-KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars  thrpt    5  173938222,815 ± 5975859,803  ops/s
-KotlinBenchmark._010_kotlin_myListOf10                thrpt    5  175772074,918 ±  810097,652  ops/s
+Benchmark                                                                 Mode  Cnt          Score         Error   Units
+KotlinBenchmark._010_kotlin_listOf_vararg                                thrpt    5  109700614,280 ±  174005,479   ops/s
+KotlinBenchmark._010_kotlin_listOf_vararg:gc.alloc.rate                  thrpt    5       8369,388 ±      13,217  MB/sec
+KotlinBenchmark._010_kotlin_listOf_vararg:gc.alloc.rate.norm             thrpt    5         80,000 ±       0,001    B/op
+KotlinBenchmark._010_kotlin_listOf_vararg:gc.count                       thrpt    5        359,000                counts
+KotlinBenchmark._010_kotlin_listOf_vararg:gc.time                        thrpt    5        211,000                    ms
+KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars                     thrpt    5  174720893,112 ±  915439,732   ops/s
+KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.alloc.rate       thrpt    5      13329,980 ±      69,807  MB/sec
+KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.alloc.rate.norm  thrpt    5         80,000 ±       0,001    B/op
+KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.count            thrpt    5        449,000                counts
+KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.time             thrpt    5        290,000                    ms
+KotlinBenchmark._010_kotlin_myListOf10                                   thrpt    5  174193999,635 ± 1153364,533   ops/s
+KotlinBenchmark._010_kotlin_myListOf10:gc.alloc.rate                     thrpt    5      13289,793 ±      87,965  MB/sec
+KotlinBenchmark._010_kotlin_myListOf10:gc.alloc.rate.norm                thrpt    5         80,000 ±       0,001    B/op
+KotlinBenchmark._010_kotlin_myListOf10:gc.count                          thrpt    5        448,000                counts
+KotlinBenchmark._010_kotlin_myListOf10:gc.time                           thrpt    5        297,000                    ms
