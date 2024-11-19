@@ -9,7 +9,7 @@ open class KotlinBenchmark {
     var x: String = "foo"
 
     var y: Int = 0
-        get() = field++ % 128
+        get() = field++
 
     // @Benchmark()
     // fun baseline() {}
