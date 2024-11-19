@@ -3,7 +3,7 @@ package org.sample
 import org.openjdk.jmh.annotations.*
 
 @State(Scope.Thread)
-// @Fork(1) // todo drop fork for final testing
+@Fork(1) // todo drop fork for final testing
 open class KotlinBenchmark {
     @field:Volatile
     var x: String = "foo"
@@ -113,6 +113,32 @@ open class KotlinBenchmark {
     }
 
     @Benchmark
+    fun _010_kotlin_listOf_vararg_inter_vars(): List<String> {
+        val _01 = x
+        val _02 = x
+        val _03 = x
+        val _04 = x
+        val _05 = x
+        val _06 = x
+        val _07 = x
+        val _08 = x
+        val _09 = x
+        val _10 = x
+        return listOf(
+            _01,
+            _02,
+            _03,
+            _04,
+            _05,
+            _06,
+            _07,
+            _08,
+            _09,
+            _10,
+        )
+    }
+
+    @Benchmark
     fun _010_kotlin_myListOf10(): List<String> {
         return myListOf10(
             x,
@@ -128,37 +154,37 @@ open class KotlinBenchmark {
         )
     }
 
-    @Benchmark
-    fun _010_kotlin_listOf_vararg_int(): List<Int> {
-        return listOf(
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-        )
-    }
+    // @Benchmark
+    // fun _010_kotlin_listOf_vararg_int(): List<Int> {
+    //     return listOf(
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //     )
+    // }
 
-    @Benchmark
-    fun _010_kotlin_myListOf10_int(): List<Int> {
-        return myListOf10(
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-        )
-    }
+    // @Benchmark
+    // fun _010_kotlin_myListOf10_int(): List<Int> {
+    //     return myListOf10(
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //     )
+    // }
 
     // @Benchmark
     // fun _010_kotlin_mutableListOf_vararg(): List<String> {
