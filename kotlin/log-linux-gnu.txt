@@ -8,295 +8,216 @@
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Throughput, ops/time
-# Benchmark: org.sample.KotlinBenchmark._010_sum10
+# Benchmark: org.sample.KotlinBenchmark._010_arr10
 
 # Run progress: 0.00% complete, ETA 00:05:00
 # Fork: 1 of 1
 # Preparing profilers: LinuxPerfAsmProfiler 
 # Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
-# Warmup Iteration   1: 71314307.192 ops/s
-# Warmup Iteration   2: 71059613.354 ops/s
-# Warmup Iteration   3: 71913386.667 ops/s
-# Warmup Iteration   4: 71569315.632 ops/s
-# Warmup Iteration   5: 71495001.233 ops/s
-Iteration   1: 71513051.783 ops/s
-Iteration   2: 71327264.548 ops/s
-Iteration   3: 71403895.390 ops/s
-Iteration   4: 71386306.438 ops/s
-Iteration   5: 71102541.642 ops/s
+# Warmup Iteration   1: 143198518.281 ops/s
+# Warmup Iteration   2: 119661558.816 ops/s
+# Warmup Iteration   3: 144841292.022 ops/s
+# Warmup Iteration   4: 120019981.912 ops/s
+# Warmup Iteration   5: 119974488.995 ops/s
+Iteration   1: 119957194.547 ops/s
+Iteration   2: 119803084.210 ops/s
+Iteration   3: 120163903.811 ops/s
+Iteration   4: 120030667.043 ops/s
+Iteration   5: 119962013.787 ops/s
 # Processing profiler results: LinuxPerfAsmProfiler 
 
 
-Result "org.sample.KotlinBenchmark._010_sum10":
-  71346611.960 ±(99.9%) 585576.160 ops/s [Average]
-  (min, avg, max) = (71102541.642, 71346611.960, 71513051.783), stdev = 152072.269
-  CI (99.9%): [70761035.800, 71932188.120] (assumes normal distribution)
+Result "org.sample.KotlinBenchmark._010_arr10":
+  119983372.680 ±(99.9%) 503808.146 ops/s [Average]
+  (min, avg, max) = (119803084.210, 119983372.680, 120163903.811), stdev = 130837.376
+  CI (99.9%): [119479564.534, 120487180.826] (assumes normal distribution)
 
-Secondary result "org.sample.KotlinBenchmark._010_sum10:asm":
-PrintAssembly processed: 42344 total address lines.
-Perf output processed (skipped 52.699 seconds):
- Column 1: cycles (50270 events)
+Secondary result "org.sample.KotlinBenchmark._010_arr10:asm":
+PrintAssembly processed: 43013 total address lines.
+Perf output processed (skipped 52.733 seconds):
+ Column 1: cycles (50368 events)
 
 Hottest code regions (>10.00% "cycles" events):
  Event counts are percents of total event count.
 
 ....[Hottest Region 1]..............................................................................
-c2, level 4, org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub, version 6, compile id 639 
+c2, level 4, org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub, version 6, compile id 641 
 
-            0x000078d8d80ffa78: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@33 (line 123)
-            0x000078d8d80ffa78: 0041 ba02 | 0000 004c | 8954 2458 | e941 0100 | 000f 1f80 
-            0x000078d8d80ffa8c: ;*goto {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::varargSum@31 (line 465)
-                                ; - org.sample.KotlinBenchmarkKt::sum10@68 (line 460)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@40 (line 443)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffa8c: 0000 0000 | 4d89 9fb8 | 0100 0041 | 0f0d 8bc0 | 0000 0048 | c700 0100 | 0000 410f | 0d8b 0001 
-            0x000078d8d80ffaac: ;   {metadata({type array int})}
-            0x000078d8d80ffaac: 0000 c740 | 0898 4e16 | 0041 0f0d | 8b40 0100 | 00c7 400c | 0a00 0000 | 410f 0d8b | 8001 0000 
-   0.46%    0x000078d8d80ffacc: 4c89 6010 | 4c89 6018 | 4c89 6020 | 4c89 6028 
-   0.28%    0x000078d8d80ffadc: ;*newarray {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::sum10@2 (line 460)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@40 (line 443)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-   0.28%    0x000078d8d80ffadc: 4c89 6030 
-   0.31%    0x000078d8d80ffae0: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::sum10@10 (line 460)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@40 (line 443)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-   0.31%    0x000078d8d80ffae0: 8968 1044 | 8b54 2450 
-   0.10%    0x000078d8d80ffae8: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::sum10@15 (line 460)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@40 (line 443)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-   0.10%    0x000078d8d80ffae8: 4489 5014 | 448b 5c24 | 4c44 8958 
-            0x000078d8d80ffaf4: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::sum10@20 (line 460)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@40 (line 443)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffaf4: 1844 8b54 | 2440 4489 
-            0x000078d8d80ffafc: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::sum10@25 (line 460)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@40 (line 443)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffafc: 501c 448b | 5c24 3c44 
-            0x000078d8d80ffb04: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::sum10@31 (line 460)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@40 (line 443)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffb04: 8958 2044 | 8b54 2430 
-   0.08%    0x000078d8d80ffb0c: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::sum10@37 (line 460)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@40 (line 443)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-   0.08%    0x000078d8d80ffb0c: 4489 5024 | 448b 5c24 | 2844 8958 
-            0x000078d8d80ffb18: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::sum10@44 (line 460)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@40 (line 443)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffb18: 2844 8b54 | 2424 4489 
-            0x000078d8d80ffb20: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::sum10@51 (line 460)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@40 (line 443)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffb20: 502c 448b | 5c24 1844 
-            0x000078d8d80ffb28: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::sum10@58 (line 460)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@40 (line 443)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffb28: 8958 3044 | 8b54 2414 
-   0.04%    0x000078d8d80ffb30: ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@20 (line 121)
-   0.04%    0x000078d8d80ffb30: 4489 5034 | 4c8b 1424 | 450f b69a 
-            0x000078d8d80ffb3c: ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@30 (line 123)
-            0x000078d8d80ffb3c: 9400 0000 | 448b 4c24 | 5444 034c | 2448 4403 | 4c24 4444 | 034c 2438 | 4403 4c24 | 3444 034c 
-            0x000078d8d80ffb5c: 242c 4403 | 4c24 2044 | 034c 241c | 4403 4c24 | 1044 034c | 240c 4c8b | 5424 5849 
-            0x000078d8d80ffb78: ;*ladd {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@26 (line 122)
-            0x000078d8d80ffb78: 83c2 014c | 8954 2458 | 448b 5424 | 0845 03d2 | 4403 5424 | 0844 0354 | 2408 4403 | 5424 0844 
-            0x000078d8d80ffb98: 0354 2408 | 4403 5424 | 0844 0354 | 2408 4403 | 5424 0844 
-            0x000078d8d80ffbac: ;   {no_reloc}
-            0x000078d8d80ffbac: 0354 2408 | 452b d141 
-            0x000078d8d80ffbb4: ;*goto {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::varargSum@31 (line 465)
-                                ; - org.sample.KotlinBenchmarkKt::sum10@68 (line 460)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@40 (line 443)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffbb4: 83c2 2d4d | 8b97 5004 
-            0x000078d8d80ffbbc: ; ImmutableOopMap {[0]=Oop [144]=Oop [152]=Oop [160]=Oop }
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@20 (line 121)
+            0x0000768af80ff028: 004c 8b44 | 2468 450f | b690 9400 
+            0x0000768af80ff034: ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@30 (line 123)
+            0x0000768af80ff034: 0000 4585 | d20f 855f | 0200 0041 | ba01 0000 | 004c 8944 | 2420 4c89 | 5c24 284c | 8954 2430 
+            0x0000768af80ff054: e9dd 0000 | 000f 1f80 
+            0x0000768af80ff05c: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@33 (line 123)
+            0x0000768af80ff05c: 0000 0000 | 4d89 8fb8 | 0100 0041 | 0f0d 89c0 | 0000 0048 | c700 0100 | 0000 410f | 0d89 0001 
+            0x0000768af80ff07c: ;   {metadata({type array int})}
+            0x0000768af80ff07c: 0000 c740 | 0898 4e16 | 0041 0f0d | 8940 0100 | 00c7 400c | 0a00 0000 | 410f 0d89 | 8001 0000 
+   1.93%    0x0000768af80ff09c: 4c89 6010 | 4c89 6018 | 4c89 6020 | 4c89 6028 
+   1.80%    0x0000768af80ff0ac: ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::arr10@2 (line 460)
+                                ; - org.sample.KotlinBenchmark::_010_arr10@40 (line 443)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@17 (line 121)
+   1.80%    0x0000768af80ff0ac: 4c89 6030 | 448b 5c24 | 7044 8958 
+            0x0000768af80ff0b8: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::arr10@10 (line 460)
+                                ; - org.sample.KotlinBenchmark::_010_arr10@40 (line 443)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@17 (line 121)
+            0x0000768af80ff0b8: 1089 6814 | 448b 5424 | 1844 8950 
+            0x0000768af80ff0c4: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::arr10@20 (line 460)
+                                ; - org.sample.KotlinBenchmark::_010_arr10@40 (line 443)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@17 (line 121)
+            0x0000768af80ff0c4: 1844 8b5c | 2414 4489 
+            0x0000768af80ff0cc: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::arr10@25 (line 460)
+                                ; - org.sample.KotlinBenchmark::_010_arr10@40 (line 443)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@17 (line 121)
+            0x0000768af80ff0cc: 581c 448b | 5424 1044 
+            0x0000768af80ff0d4: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::arr10@31 (line 460)
+                                ; - org.sample.KotlinBenchmark::_010_arr10@40 (line 443)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@17 (line 121)
+            0x0000768af80ff0d4: 8950 2044 | 8b5c 240c 
+   0.12%    0x0000768af80ff0dc: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::arr10@37 (line 460)
+                                ; - org.sample.KotlinBenchmark::_010_arr10@40 (line 443)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@17 (line 121)
+   0.12%    0x0000768af80ff0dc: 4489 5824 | 448b 5424 | 0844 8950 
+            0x0000768af80ff0e8: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::arr10@44 (line 460)
+                                ; - org.sample.KotlinBenchmark::_010_arr10@40 (line 443)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@17 (line 121)
+            0x0000768af80ff0e8: 2844 8b5c | 2404 4489 
+            0x0000768af80ff0f0: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::arr10@51 (line 460)
+                                ; - org.sample.KotlinBenchmark::_010_arr10@40 (line 443)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@17 (line 121)
+            0x0000768af80ff0f0: 582c 448b | 1424 4489 
+            0x0000768af80ff0f8: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::arr10@58 (line 460)
+                                ; - org.sample.KotlinBenchmark::_010_arr10@40 (line 443)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@17 (line 121)
+            0x0000768af80ff0f8: 5030 448b | 5c24 7444 
+            0x0000768af80ff100: ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@20 (line 121)
+            0x0000768af80ff100: 8958 344c | 8b54 2420 | 450f b692 
+            0x0000768af80ff10c: ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@30 (line 123)
+            0x0000768af80ff10c: 9400 0000 | 4c8b 5c24 | 3049 83c3 
+            0x0000768af80ff118: ;*ladd {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@26 (line 122)
+            0x0000768af80ff118: 014c 895c 
+            0x0000768af80ff11c: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@33 (line 123)
+            0x0000768af80ff11c: 2430 4d8b | 9f50 0400 
+            0x0000768af80ff124: ; ImmutableOopMap {[32]=Oop [40]=Oop [96]=Oop [104]=Oop }
                                 ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
-                                ; - (reexecute) org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@33 (line 123)
+                                ; - (reexecute) org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@33 (line 123)
                                 ;   {poll}
-            0x000078d8d80ffbbc: 0000 4185 | 0245 85db | 0f85 2702 
-            0x000078d8d80ffbc8: ;*goto {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::varargSum@31 (line 465)
-                                ; - org.sample.KotlinBenchmarkKt::sum10@68 (line 460)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@40 (line 443)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffbc8: 0000 498b | 87b8 0100 | 004c 8b8c | 24a0 0000 | 0045 8b51 
-            0x000078d8d80ffbdc: ;*getfield y {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@1 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@1 (line 444)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffbdc: 0c4c 8bd8 | 4983 c338 | 418d 4a09 | 458d 420a 
-   0.06%    0x000078d8d80ffbec: ;*putfield y {reexecute=0 rethrow=0 return_oop=0}
+            0x0000768af80ff124: 0041 8503 | 4585 d20f | 85ac 0000 
+            0x0000768af80ff130: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@33 (line 123)
+            0x0000768af80ff130: 004c 8b6c 
+            0x0000768af80ff134: ;*aload_1 {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@36 (line 124)
+            0x0000768af80ff134: 2468 458b 
+            0x0000768af80ff138: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@33 (line 123)
+            0x0000768af80ff138: 450c 498b | 87b8 0100 | 004c 8bc8 | 4983 c138 | 458d 5009 | 4489 5424 | 7445 8d58 | 0a45 895d 
+            0x0000768af80ff158: ;*putfield y {reexecute=0 rethrow=0 return_oop=0}
                                 ; - org.sample.KotlinBenchmark::getY@9 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@37 (line 453)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-   0.06%    0x000078d8d80ffbec: 4589 410c | c1f9 1f45 | 8d4a 08c1 | e919 4103 | ca41 c1f9 | 1f83 c109 | 41c1 e919 | 4503 ca83 
-            0x000078d8d80ffc0c: e180 458b | c289 4c24 | 0c44 2bc1 | 4183 c108 
-   0.23%    0x000078d8d80ffc1c: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@37 (line 453)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-   0.23%    0x000078d8d80ffc1c: 4183 c009 | 4489 4424 | 1441 83e1 | 8041 8bda | 4489 4c24 | 1041 2bd9 | 418d 4a07 
-   0.07%    0x000078d8d80ffc38: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@33 (line 452)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-   0.07%    0x000078d8d80ffc38: 83c3 0889 | 5c24 18c1 | f91f 458d | 4a06 c1e9 | 1941 03ca | 41c1 f91f | 83c1 0741 | c1e9 1945 
-            0x000078d8d80ffc58: 03ca 83e1 | 8044 8954 | 2408 894c | 241c 442b | d141 83c1 | 0641 83c2 
-            0x000078d8d80ffc70: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@29 (line 451)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffc70: 0744 8954 | 2424 4183 | e180 4489 | 4c24 2044 | 8b54 2408 | 452b d144 | 8b4c 2408 | 4183 c105 
-   0.57%    0x000078d8d80ffc90: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@25 (line 450)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-   0.57%    0x000078d8d80ffc90: 4183 c206 | 4489 5424 | 2841 c1f9 | 1f44 8b54 | 2408 4183 | c204 41c1 | e919 4403 | 4c24 0841 
-            0x000078d8d80ffcb0: c1fa 1f41 | 83c1 0541 | c1ea 1944 
-            0x000078d8d80ffcbc: ;   {no_reloc}
-            0x000078d8d80ffcbc: 0354 2408 | 4183 e180 | 4489 4c24 | 2c44 8b4c | 2408 442b | 4c24 2c41 | 83c2 0441 
-            0x000078d8d80ffcd8: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@21 (line 449)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffcd8: 83c1 0544 | 894c 2430 
-   2.99%    0x000078d8d80ffce0: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@17 (line 448)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-   2.99%    0x000078d8d80ffce0: 4183 e280 | 4489 5424 | 3444 8b44 | 2408 4183 | c003 41c1 | f81f 41c1 | e819 4403 | 4424 0841 
-            0x000078d8d80ffd00: 83c0 0341 
-            0x000078d8d80ffd04: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@13 (line 447)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffd04: 83e0 8044 | 8944 2438 | 448b 5424 | 0844 2b54 | 2434 4183 
-            0x000078d8d80ffd18: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@17 (line 448)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffd18: c204 4489 | 5424 3c44 | 8b44 2408 | 442b 4424 | 3841 83c0 
-            0x000078d8d80ffd2c: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@13 (line 447)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffd2c: 0344 8944 | 2440 448b | 5424 0841 | 83c2 0241 | c1fa 1f41 | c1ea 1944 | 0354 2408 | 4183 c202 
-   0.77%    0x000078d8d80ffd4c: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@9 (line 446)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-   0.77%    0x000078d8d80ffd4c: 4183 e280 | 4489 5424 | 4444 8b44 | 2408 41ff | c041 c1f8 | 1f41 c1e8 | 1944 0344 | 2408 41ff 
-            0x000078d8d80ffd6c: c041 83e0 
-            0x000078d8d80ffd70: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@5 (line 445)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffd70: 8044 8944 | 2448 448b | 5424 0844 | 2b54 2444 
-   0.85%    0x000078d8d80ffd80: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@9 (line 446)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-   0.85%    0x000078d8d80ffd80: 4183 c202 | 4489 5424 | 4c44 8b44 | 2408 442b | 4424 4841 
-            0x000078d8d80ffd94: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@5 (line 445)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-            0x000078d8d80ffd94: ffc0 4489 | 4424 5044 | 8b54 2408 | 41c1 fa1f | 41c1 ea19 | 4403 5424 | 0841 83e2 | 8044 8954 
-            0x000078d8d80ffdb4: 2454 8b6c | 2408 412b 
-            0x000078d8d80ffdbc: ;*goto {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::varargSum@31 (line 465)
-                                ; - org.sample.KotlinBenchmarkKt::sum10@68 (line 460)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@40 (line 443)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
-                                ;   {no_reloc}
-            0x000078d8d80ffdbc: ea66 6690 | 4d3b 9fc8 | 0100 000f | 82c3 fcff 
-            0x000078d8d80ffdcc: ;*synchronization entry
-                                ; - org.sample.KotlinBenchmarkKt::sum10@-1 (line 460)
-                                ; - org.sample.KotlinBenchmark::_010_sum10@40 (line 443)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub@17 (line 121)
+                                ; - org.sample.KotlinBenchmark::_010_arr10@37 (line 453)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@17 (line 121)
+            0x0000768af80ff158: 0c4c 896c | 2468 458d | 5008 4489 | 1424 458d | 5807 4489 | 5c24 0445 | 8d50 0644 | 8954 2408 
+   2.01%    0x0000768af80ff178: 458d 5005 | 4489 5424 | 0c45 8d58 | 0444 895c | 2410 4489 | 4424 7041 
+            0x0000768af80ff190: ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::getY@8 (line 12)
+                                ; - org.sample.KotlinBenchmark::_010_arr10@9 (line 446)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@17 (line 121)
+            0x0000768af80ff190: 83c0 0344 | 8944 2414 | 448b 5c24 | 7041 83c3 
+            0x0000768af80ff1a0: ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::getY@8 (line 12)
+                                ; - org.sample.KotlinBenchmark::_010_arr10@5 (line 445)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@17 (line 121)
+            0x0000768af80ff1a0: 0244 895c | 2418 8b6c 
+            0x0000768af80ff1a8: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@33 (line 123)
+            0x0000768af80ff1a8: 2470 ffc5 | 4d3b 8fc8 | 0100 000f | 82a7 feff 
+            0x0000768af80ff1b8: ;*synchronization entry
+                                ; - org.sample.KotlinBenchmarkKt::arr10@-1 (line 460)
+                                ; - org.sample.KotlinBenchmark::_010_arr10@40 (line 443)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub@17 (line 121)
                                 ;   {metadata({type array int})}
-            0x000078d8d80ffdcc: ff48 be98 | 4e16 6ad8 | 7800 00ba | 0a00 0000 
-            0x000078d8d80ffddc: ;   {runtime_call _new_array_Java}
-            0x000078d8d80ffddc: 6666 90e8 
-            0x000078d8d80ffde0: ; ImmutableOopMap {[0]=Oop [144]=Oop [152]=Oop [160]=Oop }
+            0x0000768af80ff1b8: ff48 be98 | 4e16 868a | 7600 00ba | 0a00 0000 
+            0x0000768af80ff1c8: ;   {runtime_call _new_array_Java}
+            0x0000768af80ff1c8: 6666 90e8 
+            0x0000768af80ff1cc: ; ImmutableOopMap {[32]=Oop [40]=Oop [96]=Oop [104]=Oop }
                                 ;*newarray {reexecute=0 rethrow=0 return_oop=1}
-                                ; - org.sample.KotlinBenchmarkKt::sum10@2 (line 460)
+                                ; - org.sample.KotlinBenchmarkKt::arr10@2 (line 460)
 ....................................................................................................
-  99.00%  <total for region 1>
+  98.64%  <total for region 1>
 
 ....[Hottest Regions]...............................................................................
-  99.00%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub, version 6, compile id 639 
-   0.06%                        <unknown> 
-   0.05%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
-   0.05%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+  98.64%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub, version 6, compile id 641 
+   0.07%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+   0.07%                        <unknown> 
+   0.06%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
    0.04%                [vdso]  __vdso_clock_gettime 
+   0.04%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
    0.04%             libjvm.so  SpinPause 
-   0.02%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
-   0.02%  ld-linux-x86-64.so.2  __tls_get_addr 
-   0.02%                kernel  [unknown] 
-   0.02%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
-   0.02%             libjvm.so  G1CodeRootSet::nmethods_do(NMethodClosure*) const 
-   0.02%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
-   0.02%             libjvm.so  RelocIterator::initialize(nmethod*, unsigned char*, unsigned char*) 
-   0.01%             libjvm.so  G1CodeRootSet::length() const 
+   0.04%                        <unknown> 
+   0.03%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
+   0.03%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
+   0.03%                        <unknown> 
+   0.03%             libjvm.so  RelocIterator::initialize(nmethod*, unsigned char*, unsigned char*) 
+   0.02%             libjvm.so  G1FromCardCache::clear(unsigned int) 
+   0.02%             libjvm.so  G1ConcurrentMark::clear_statistics(G1HeapRegion*) 
+   0.02%             libjvm.so  TypeArrayKlass::allocate_common(int, bool, JavaThread*) 
+   0.01%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
+   0.01%             libjvm.so  G1CodeRootSet::nmethods_do(NMethodClosure*) const 
    0.01%             libjvm.so  Rdtsc::elapsed_counter() 
    0.01%                        <unknown> 
-   0.01%             libjvm.so  G1Allocator::unsafe_max_tlab_alloc() 
-   0.01%                        <unknown> 
-   0.01%             libjvm.so  FreeListAllocator::reset() 
-   0.01%             libjvm.so  G1CardSet::reset_table_scanner() 
-   0.56%  <...other 205 warm regions...>
+   0.01%                kernel  [unknown] 
+   0.75%  <...other 253 warm regions...>
 ....................................................................................................
  100.00%  <totals>
 
 ....[Hottest Methods (after inlining)]..............................................................
-  99.00%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_sum10_thrpt_jmhStub, version 6, compile id 639 
-   0.19%                        <unknown> 
-   0.05%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
-   0.05%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
-   0.05%                [vdso]  __vdso_clock_gettime 
+  98.64%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_arr10_jmhTest::_010_arr10_thrpt_jmhStub, version 6, compile id 641 
+   0.30%                        <unknown> 
+   0.07%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+   0.06%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
+   0.06%                [vdso]  __vdso_clock_gettime 
+   0.04%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
+   0.04%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
    0.04%             libjvm.so  SpinPause 
-   0.02%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
-   0.02%  ld-linux-x86-64.so.2  __tls_get_addr 
-   0.02%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
-   0.02%             libjvm.so  RelocIterator::initialize(nmethod*, unsigned char*, unsigned char*) 
-   0.02%                kernel  [unknown] 
-   0.02%             libjvm.so  G1CodeRootSet::nmethods_do(NMethodClosure*) const 
-   0.02%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
-   0.01%             libjvm.so  G1CodeRootSet::length() const 
+   0.03%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
+   0.03%             libjvm.so  G1FromCardCache::clear(unsigned int) 
+   0.03%             libjvm.so  RelocIterator::initialize(nmethod*, unsigned char*, unsigned char*) 
+   0.03%             libc.so.6  [unknown] 
+   0.02%             libjvm.so  G1ConcurrentMark::clear_statistics(G1HeapRegion*) 
+   0.02%             libjvm.so  TypeArrayKlass::allocate_common(int, bool, JavaThread*) 
+   0.02%             libjvm.so  void WeakProcessor::Task::work<G1STWIsAliveClosure, G1KeepAliveClosure>(unsigned int, G1STWIsAliveClosure*, G1KeepAliveClosure*) 
+   0.02%             libjvm.so  G1CollectedHeap::par_iterate_regions_array(HeapRegionClosure*, HeapRegionClaimer*, unsigned int const*, unsigned long, unsigned int) const 
+   0.01%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
+   0.01%             libjvm.so  G1CodeRootSet::nmethods_do(NMethodClosure*) const 
+   0.01%             libc.so.6  _IO_fwrite 
    0.01%             libjvm.so  Rdtsc::elapsed_counter() 
-   0.01%             libjvm.so  void WeakProcessor::Task::work<G1STWIsAliveClosure, G1KeepAliveClosure>(unsigned int, G1STWIsAliveClosure*, G1KeepAliveClosure*) 
-   0.01%             libjvm.so  G1Allocator::unsafe_max_tlab_alloc() 
-   0.01%             libc.so.6  [unknown] 
-   0.01%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
-   0.01%             libc.so.6  write 
-   0.42%  <...other 152 warm methods...>
+   0.50%  <...other 160 warm methods...>
 ....................................................................................................
  100.00%  <totals>
 
 ....[Distribution by Source]........................................................................
-  99.00%           c2, level 4
-   0.67%             libjvm.so
-   0.19%                      
-   0.06%             libc.so.6
-   0.05%                [vdso]
-   0.02%  ld-linux-x86-64.so.2
-   0.02%                kernel
+  98.64%           c2, level 4
+   0.88%             libjvm.so
+   0.30%                      
+   0.09%             libc.so.6
+   0.06%                [vdso]
+   0.01%                kernel
+   0.01%           interpreter
+   0.01%  ld-linux-x86-64.so.2
 ....................................................................................................
  100.00%  <totals>
 
@@ -312,269 +233,189 @@ c2, level 4, org.sample.jmh_generated.KotlinBenchmark__010_sum10_jmhTest::_010_s
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Throughput, ops/time
-# Benchmark: org.sample.KotlinBenchmark._010_varargSum
+# Benchmark: org.sample.KotlinBenchmark._010_varargArr
 
 # Run progress: 33.33% complete, ETA 00:03:27
 # Fork: 1 of 1
 # Preparing profilers: LinuxPerfAsmProfiler 
 # Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
-# Warmup Iteration   1: 65937980.393 ops/s
-# Warmup Iteration   2: 76922822.013 ops/s
-# Warmup Iteration   3: 66430352.242 ops/s
-# Warmup Iteration   4: 78462780.512 ops/s
-# Warmup Iteration   5: 78461724.668 ops/s
-Iteration   1: 78430703.181 ops/s
-Iteration   2: 78366078.549 ops/s
-Iteration   3: 78482799.425 ops/s
-Iteration   4: 78506405.194 ops/s
-Iteration   5: 78105142.350 ops/s
+# Warmup Iteration   1: 179371765.147 ops/s
+# Warmup Iteration   2: 181877277.348 ops/s
+# Warmup Iteration   3: 161142350.905 ops/s
+# Warmup Iteration   4: 160776628.711 ops/s
+# Warmup Iteration   5: 160936978.615 ops/s
+Iteration   1: 161039443.865 ops/s
+Iteration   2: 160577808.650 ops/s
+Iteration   3: 160944434.696 ops/s
+Iteration   4: 161218773.469 ops/s
+Iteration   5: 160008211.919 ops/s
 # Processing profiler results: LinuxPerfAsmProfiler 
 
 
-Result "org.sample.KotlinBenchmark._010_varargSum":
-  78378225.740 ±(99.9%) 623404.867 ops/s [Average]
-  (min, avg, max) = (78105142.350, 78378225.740, 78506405.194), stdev = 161896.264
-  CI (99.9%): [77754820.872, 79001630.607] (assumes normal distribution)
+Result "org.sample.KotlinBenchmark._010_varargArr":
+  160757734.520 ±(99.9%) 1847638.582 ops/s [Average]
+  (min, avg, max) = (160008211.919, 160757734.520, 161218773.469), stdev = 479825.872
+  CI (99.9%): [158910095.938, 162605373.102] (assumes normal distribution)
 
-Secondary result "org.sample.KotlinBenchmark._010_varargSum:asm":
-PrintAssembly processed: 40178 total address lines.
-Perf output processed (skipped 52.558 seconds):
- Column 1: cycles (50268 events)
+Secondary result "org.sample.KotlinBenchmark._010_varargArr:asm":
+PrintAssembly processed: 40583 total address lines.
+Perf output processed (skipped 52.570 seconds):
+ Column 1: cycles (50335 events)
 
 Hottest code regions (>10.00% "cycles" events):
  Event counts are percents of total event count.
 
 ....[Hottest Region 1]..............................................................................
-c2, level 4, org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub, version 6, compile id 630 
+c2, level 4, org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub, version 4, compile id 620 
 
-            0x000071027c0fecc8: ee83 c52d | 4585 ed0f | 852d 0300 
-            0x000071027c0fecd4: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@33 (line 123)
-            0x000071027c0fecd4: 00bd 0200 | 0000 e98b 
-            0x000071027c0fecdc: ;*goto {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::varargSum@31 (line 465)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@80 (line 401)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fecdc: 0200 0090 | 4d89 97b8 | 0100 0041 | 0f0d 8ac0 | 0000 0048 | c700 0100 | 0000 410f | 0d8a 0001 
-            0x000071027c0fecfc: ;   {metadata({type array int})}
-            0x000071027c0fecfc: 0000 c740 | 0898 4e16 | 0041 0f0d | 8a40 0100 | 00c7 400c | 0a00 0000 | 410f 0d8a | 8001 0000 
-   0.62%    0x000071027c0fed1c: 4c89 6010 | 4c89 6018 | 4c89 6020 | 4c89 6028 
-   0.31%    0x000071027c0fed2c: ;*newarray {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@2 (line 402)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-   0.31%    0x000071027c0fed2c: 4c89 6030 | c4e1 f96e | c84c 8b54 | 2450 418b 
-            0x000071027c0fed3c: ;*getfield y {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.openjdk.jmh.infra.Blackhole::consume@7 (line 323)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@20 (line 121)
+            0x00007b9db00fedb0: 004c 8b4c | 2448 450f | b699 9400 
+            0x00007b9db00fedbc: ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@30 (line 123)
+            0x00007b9db00fedbc: 0000 6690 | 4585 db0f | 853c 0100 | 00bd 0100 | 0000 e9ed | 0000 0066 | 0f1f 8400 | 0000 0000 
+            0x00007b9db00feddc: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@33 (line 123)
+            0x00007b9db00feddc: 6666 6690 | 4d89 97b8 | 0100 0041 | 0f0d 8ac0 | 0000 0048 | c700 0100 | 0000 410f | 0d8a 0001 
+            0x00007b9db00fedfc: ;   {metadata({type array int})}
+            0x00007b9db00fedfc: 0000 c740 | 0898 4e16 | 0041 0f0d | 8a40 0100 | 00c7 400c | 0a00 0000 | 410f 0d8a | 8001 0000 
+   3.64%    0x00007b9db00fee1c: 4c89 6010 | 4c89 6018 | 4c89 6020 | 4c89 6028 | 4c89 6030 | 4c89 4c24 | 484c 8904 
+            0x00007b9db00fee38: ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr@2 (line 402)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@17 (line 121)
+            0x00007b9db00fee38: 244c 8b54 | 2448 450f | b6aa 9400 
+            0x00007b9db00fee44: ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@30 (line 123)
+            0x00007b9db00fee44: 0000 4c8b | 5424 5045 
+            0x00007b9db00fee4c: ;*getfield y {reexecute=0 rethrow=0 return_oop=0}
                                 ; - org.sample.KotlinBenchmark::getY@1 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@8 (line 402)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fed3c: 720c 4c8b | 1424 450f | b69a 9400 
-            0x000071027c0fed48: ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@30 (line 123)
-            0x000071027c0fed48: 0000 c4c1 | 796e db44 | 8d14 3644 | 03d6 4403 | d644 03d6 | 4403 d644 | 03d6 4403 | d644 03d6 
-   0.13%    0x000071027c0fed68: 4403 d6c4 | c179 6ed2 
-   2.10%    0x000071027c0fed70: ;*ladd {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@26 (line 122)
-   2.10%    0x000071027c0fed70: 4883 c501 | c4e1 f96e | c544 8d5e | 0944 8d56 | 0841 c1fb | 1f41 c1fa | 1f41 c1eb | 1944 03de 
-   1.60%    0x000071027c0fed90: 41c1 ea19 | 4403 d641 | 83c3 0941 | 83c2 0841 
-            0x000071027c0feda0: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@75 (line 411)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0feda0: 83e3 8044 | 8bce 4489 | 5c24 0845 | 2bcb 4183 
-            0x000071027c0fedb0: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@67 (line 410)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fedb0: e280 448b | de44 8954 | 240c 452b | da41 83c1 | 09c4 c179 | 6ee9 4183 | c308 c4c1 | 796e f344 
-            0x000071027c0fedd0: 8d5e 0744 | 8d56 0641 | c1fb 1f41 | c1fa 1f41 | c1eb 1944 | 03de 41c1 | ea19 4403 | d641 83c3 
-            0x000071027c0fedf0: 0741 83c2 | 0641 83e3 
-            0x000071027c0fedf8: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@59 (line 409)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fedf8: 8044 8bc6 
-   1.57%    0x000071027c0fedfc: ;   {no_reloc}
-   1.57%    0x000071027c0fedfc: 452b c341 
-            0x000071027c0fee00: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@51 (line 408)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fee00: 83e2 8044 | 8bce 452b | ca41 83c0 | 07c4 c179 | 6ef8 4183 | c106 c4c1 | 796e e144 | 8d4e 0541 
-            0x000071027c0fee20: c1f9 1f41 | c1e9 1944 | 03ce 4183 | c105 4183 
-            0x000071027c0fee30: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@43 (line 407)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fee30: e180 448d | 4604 41c1 | f81f 41c1 | e819 4403 | c641 83c0 | 0441 83e0 
-            0x000071027c0fee48: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@36 (line 406)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fee48: 808b ce41 | 2bc9 83c1 | 05c5 796e | c98b ce41 | 2bc8 83c1 | 04c5 796e | c18d 5e03 | c1fb 1fc1 
-            0x000071027c0fee68: eb19 03de | 83c3 0383 
-            0x000071027c0fee70: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@29 (line 405)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fee70: e380 8d4e | 02c1 f91f | c1e9 1903 | ce83 c102 
-   0.12%    0x000071027c0fee80: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@22 (line 404)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-   0.12%    0x000071027c0fee80: 83e1 808b | d62b d383 | c203 8bfe | 2bf9 83c7 | 028b c6ff | c0c1 f81f | c1e8 1903 | c6ff c083 
-            0x000071027c0feea0: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@15 (line 403)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0feea0: e080 8bee | c1fd 1fc1 | ed19 03ee 
-   0.23%    0x000071027c0feeac: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@8 (line 402)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-   0.23%    0x000071027c0feeac: 83e5 8044 | 8bf6 442b | f044 8d2c | 2844 03e9 | 4403 eb45 | 03e8 4503 | e945 03ea | 4503 eb44 
-            0x000071027c0feecc: 036c 240c | 4403 6c24 | 08c4 c179 | 7ed2 452b | d545 8bca | 448b d644 | 2bd5 c4c1 | f97e cb45 
-            0x000071027c0feeec: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@11 (line 402)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0feeec: 8953 1041 | ffc6 4589 
-            0x000071027c0feef4: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@18 (line 403)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0feef4: 7314 4189 
-            0x000071027c0feef8: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@25 (line 404)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0feef8: 7b18 4189 
-            0x000071027c0feefc: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@32 (line 405)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-                                ;   {no_reloc}
-            0x000071027c0feefc: 531c 4d8b | d3c4 4179 | 7ec3 4589 
-            0x000071027c0fef08: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@39 (line 406)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fef08: 5a20 4d8b | dac4 4179 | 7eca 4589 
-            0x000071027c0fef14: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@46 (line 407)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fef14: 5324 4d8b | d3c4 c179 | 7ee3 4589 
-            0x000071027c0fef20: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@54 (line 408)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fef20: 5a28 c4c1 | 797e f845 
-            0x000071027c0fef28: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@62 (line 409)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fef28: 8942 2cc4 | c179 7ef3 
-   0.20%    0x000071027c0fef30: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@70 (line 410)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-   0.20%    0x000071027c0fef30: 4589 5a30 | c4c1 797e | e845 8942 
-            0x000071027c0fef3c: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@78 (line 411)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fef3c: 3441 83c1 
-            0x000071027c0fef40: ;*iadd {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::varargSum@26 (line 466)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@80 (line 401)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fef40: 2d83 c60a | 4c8b 5424 | 5041 8972 
-            0x000071027c0fef4c: ;*goto {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::varargSum@31 (line 465)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@80 (line 401)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fef4c: 0c4d 8b97 
-            0x000071027c0fef50: ; ImmutableOopMap {[0]=Oop [64]=Oop [72]=Oop [80]=Oop }
+                                ; - org.sample.KotlinBenchmark::_010_varargArr@8 (line 402)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@17 (line 121)
+            0x00007b9db00fee4c: 8b52 0c44 
+            0x00007b9db00fee50: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr@11 (line 402)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@17 (line 121)
+            0x00007b9db00fee50: 8950 1048 
+            0x00007b9db00fee54: ;*ladd {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@26 (line 122)
+            0x00007b9db00fee54: 83c5 0145 | 8d72 0945 | 8d42 0845 | 8d5a 0741 | 8d4a 0645 | 8d4a 0541 | 8d7a 0441 | 8d5a 0341 
+            0x00007b9db00fee74: 8d72 0241 | 8bd2 ffc2 
+   0.29%    0x00007b9db00fee7c: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr@18 (line 403)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@17 (line 121)
+   0.29%    0x00007b9db00fee7c: 8950 1489 
+            0x00007b9db00fee80: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr@25 (line 404)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@17 (line 121)
+            0x00007b9db00fee80: 7018 8958 
+            0x00007b9db00fee84: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr@32 (line 405)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@17 (line 121)
+            0x00007b9db00fee84: 1c89 7820 
+   0.27%    0x00007b9db00fee88: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr@46 (line 407)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@17 (line 121)
+   0.27%    0x00007b9db00fee88: 4489 4824 
+   1.24%    0x00007b9db00fee8c: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr@54 (line 408)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@17 (line 121)
+   1.24%    0x00007b9db00fee8c: 8948 2844 
+            0x00007b9db00fee90: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr@62 (line 409)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@17 (line 121)
+            0x00007b9db00fee90: 8958 2c44 
+            0x00007b9db00fee94: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr@70 (line 410)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@17 (line 121)
+            0x00007b9db00fee94: 8940 3044 
+            0x00007b9db00fee98: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr@78 (line 411)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@17 (line 121)
+            0x00007b9db00fee98: 8970 3441 | 83c2 0a4c | 8b5c 2450 
+   0.42%    0x00007b9db00feea4: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@33 (line 123)
+   0.42%    0x00007b9db00feea4: 4589 530c | 4d8b 9750 
+            0x00007b9db00feeac: ; ImmutableOopMap {[0]=Oop [64]=Oop [72]=Oop [80]=Oop }
                                 ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
-                                ; - (reexecute) org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@33 (line 123)
-            0x000071027c0fef50: 5004 0000 
-   0.24%    0x000071027c0fef54: ;   {poll}
-   0.24%    0x000071027c0fef54: 4185 02c4 | c179 7eda | 0f1f 4000 | 4585 d275 
-            0x000071027c0fef64: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@33 (line 123)
-            0x000071027c0fef64: 4cc4 e1f9 | 7ec5 498b | 87b8 0100 | 004c 8bd0 
-   1.56%    0x000071027c0fef74: ;*goto {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::varargSum@31 (line 465)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@80 (line 401)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-   1.56%    0x000071027c0fef74: 4983 c238 | 0f1f 8400 | 0000 0000 | 4d3b 97c8 | 0100 000f | 8253 fdff 
-            0x000071027c0fef8c: ;   {metadata({type array int})}
-            0x000071027c0fef8c: ff48 be98 | 4e16 0e02 | 7100 00ba | 0a00 0000 
-            0x000071027c0fef9c: ;   {runtime_call _new_array_Java}
-            0x000071027c0fef9c: 6666 90e8 
-            0x000071027c0fefa0: ; ImmutableOopMap {[0]=Oop [64]=Oop [72]=Oop [80]=Oop }
+                                ; - (reexecute) org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@33 (line 123)
+                                ;   {poll}
+            0x00007b9db00feeac: 0400 0041 | 8502 4585 | ed75 534c | 8b4c 2448 | 4c8b 0424 | 498b 87b8 | 0100 004c | 8bd0 4983 
+            0x00007b9db00feecc: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@33 (line 123)
+            0x00007b9db00feecc: c238 4d3b | 97c8 0100 | 000f 8205 | ffff ff4c | 8904 244c | 894c 2448 
+            0x00007b9db00feee4: ;   {metadata({type array int})}
+            0x00007b9db00feee4: 48be 984e | 1642 9d7b | 0000 ba0a 
+            0x00007b9db00feef0: ;   {runtime_call _new_array_Java}
+            0x00007b9db00feef0: 0000 00e8 
+            0x00007b9db00feef4: ; ImmutableOopMap {[0]=Oop [64]=Oop [72]=Oop [80]=Oop }
                                 ;*newarray {reexecute=0 rethrow=0 return_oop=1}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum@2 (line 402)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub@17 (line 121)
-            0x000071027c0fefa0: 3c52 b5ff 
-            0x000071027c0fefa4: ;   {other}
-            0x000071027c0fefa4: 0f1f 8400 
+                                ; - org.sample.KotlinBenchmark::_010_varargArr@2 (line 402)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub@17 (line 121)
+            0x00007b9db00feef4: e83d b5ff 
+            0x00007b9db00feef8: ;   {other}
+            0x00007b9db00feef8: 0f1f 8400 
 ....................................................................................................
-  98.88%  <total for region 1>
+  98.49%  <total for region 1>
 
 ....[Hottest Regions]...............................................................................
-  98.88%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub, version 6, compile id 630 
-   0.09%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
-   0.06%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
-   0.05%                        <unknown> 
-   0.05%                        <unknown> 
+  98.49%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub, version 4, compile id 620 
+   0.10%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
+   0.09%                        <unknown> 
+   0.06%                [vdso]  __vdso_clock_gettime 
    0.05%             libjvm.so  SpinPause 
-   0.02%                [vdso]  __vdso_clock_gettime 
-   0.02%             libjvm.so  RelocIterator::initialize(nmethod*, unsigned char*, unsigned char*) 
-   0.02%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
-   0.01%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
-   0.01%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
-   0.01%             libjvm.so  G1ConcurrentMark::clear_statistics(G1HeapRegion*) 
-   0.01%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
-   0.01%             libjvm.so  SharedRuntime::on_slowpath_allocation_exit(JavaThread*) 
-   0.01%             libc.so.6  clock_gettime 
-   0.01%                        <unknown> 
-   0.01%  ld-linux-x86-64.so.2  __tls_get_addr 
-   0.01%                kernel  [unknown] 
-   0.01%                        <unknown> 
-   0.01%             libjvm.so  G1CodeRootSet::length() const 
-   0.66%  <...other 253 warm regions...>
+   0.04%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+   0.04%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
+   0.03%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
+   0.03%             libjvm.so  RelocIterator::initialize(nmethod*, unsigned char*, unsigned char*) 
+   0.02%                kernel  [unknown] 
+   0.02%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
+   0.02%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
+   0.02%  ld-linux-x86-64.so.2  __tls_get_addr 
+   0.02%                        <unknown> 
+   0.02%             libjvm.so  Rdtsc::elapsed_counter() 
+   0.02%             libjvm.so  SharedRuntime::on_slowpath_allocation_exit(JavaThread*) 
+   0.02%             libjvm.so  G1FromCardCache::clear(unsigned int) 
+   0.02%             libjvm.so  G1EvacPhaseWithTrimTimeTracker::G1EvacPhaseWithTrimTimeTracker(G1ParScanThreadState*, TimeInterval<CompositeCounterRepresentation, CompositeElapsedCounterSource>&, TimeInterval<CompositeCounterRepresentation, CompositeElapsedCounterSource>&) 
+   0.02%             libjvm.so  HandleMark::initialize(Thread*) 
+   0.02%                        <unknown> 
+   0.85%  <...other 280 warm regions...>
 ....................................................................................................
  100.00%  <totals>
 
 ....[Hottest Methods (after inlining)]..............................................................
-  98.88%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_010_varargSum_thrpt_jmhStub, version 6, compile id 630 
-   0.25%                        <unknown> 
-   0.09%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
-   0.06%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+  98.49%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_varargArr_jmhTest::_010_varargArr_thrpt_jmhStub, version 4, compile id 620 
+   0.34%                        <unknown> 
+   0.10%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
+   0.06%                [vdso]  __vdso_clock_gettime 
    0.05%             libjvm.so  SpinPause 
-   0.03%                [vdso]  __vdso_clock_gettime 
-   0.02%             libjvm.so  void WeakProcessor::Task::work<G1STWIsAliveClosure, G1KeepAliveClosure>(unsigned int, G1STWIsAliveClosure*, G1KeepAliveClosure*) 
-   0.02%             libjvm.so  RelocIterator::initialize(nmethod*, unsigned char*, unsigned char*) 
-   0.02%             libc.so.6  [unknown] 
-   0.02%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
+   0.04%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
+   0.04%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+   0.03%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
+   0.03%             libjvm.so  RelocIterator::initialize(nmethod*, unsigned char*, unsigned char*) 
+   0.02%  ld-linux-x86-64.so.2  __tls_get_addr 
    0.02%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
-   0.01%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
-   0.01%             libjvm.so  FreeCSetClosure::do_heap_region(G1HeapRegion*) 
-   0.01%             libjvm.so  G1ParScanThreadState::steal_and_trim_queue(GenericTaskQueueSet<OverflowTaskQueue<ScannerTask, (MEMFLAGS)5, 131072u>, (MEMFLAGS)5>*) 
-   0.01%             libjvm.so  G1Allocator::unsafe_max_tlab_alloc() 
-   0.01%             libjvm.so  G1ConcurrentMark::clear_statistics(G1HeapRegion*) 
-   0.01%             libjvm.so  G1RebuildFreeListTask::work(unsigned int) 
-   0.01%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
-   0.01%             libjvm.so  SharedRuntime::on_slowpath_allocation_exit(JavaThread*) 
-   0.01%             libc.so.6  clock_gettime 
-   0.46%  <...other 167 warm methods...>
+   0.02%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
+   0.02%                kernel  [unknown] 
+   0.02%             libjvm.so  Rdtsc::elapsed_counter() 
+   0.02%             libjvm.so  SharedRuntime::on_slowpath_allocation_exit(JavaThread*) 
+   0.02%             libjvm.so  G1EvacPhaseWithTrimTimeTracker::G1EvacPhaseWithTrimTimeTracker(G1ParScanThreadState*, TimeInterval<CompositeCounterRepresentation, CompositeElapsedCounterSource>&, TimeInterval<CompositeCounterRepresentation, CompositeElapsedCounterSource>&) 
+   0.02%             libjvm.so  TypeArrayKlass::allocate_common(int, bool, JavaThread*) 
+   0.02%             libjvm.so  HandleMark::initialize(Thread*) 
+   0.02%             libc.so.6  clock_gettime 
+   0.02%             libjvm.so  G1FromCardCache::clear(unsigned int) 
+   0.61%  <...other 181 warm methods...>
 ....................................................................................................
  100.00%  <totals>
 
 ....[Distribution by Source]........................................................................
-  98.88%           c2, level 4
-   0.74%             libjvm.so
-   0.25%                      
+  98.49%           c2, level 4
+   1.00%             libjvm.so
+   0.34%                      
+   0.06%                [vdso]
    0.06%             libc.so.6
-   0.03%                [vdso]
-   0.01%  ld-linux-x86-64.so.2
-   0.01%                kernel
-   0.01%           interpreter
-   0.00%        perf-12787.map
-   0.00%          runtime stub
-   0.00%           c1, level 3
-   0.00%      Unknown, level 0
+   0.02%                kernel
+   0.02%  ld-linux-x86-64.so.2
+   0.00%           interpreter
 ....................................................................................................
  100.00%  <totals>
 
@@ -590,285 +431,208 @@ c2, level 4, org.sample.jmh_generated.KotlinBenchmark__010_varargSum_jmhTest::_0
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Throughput, ops/time
-# Benchmark: org.sample.KotlinBenchmark._010_varargSum_inter_vars
+# Benchmark: org.sample.KotlinBenchmark._010_varargArr_inter_vars
 
 # Run progress: 66.67% complete, ETA 00:01:43
 # Fork: 1 of 1
 # Preparing profilers: LinuxPerfAsmProfiler 
 # Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
-# Warmup Iteration   1: 71386259.684 ops/s
-# Warmup Iteration   2: 70931737.729 ops/s
-# Warmup Iteration   3: 72049324.951 ops/s
-# Warmup Iteration   4: 71471031.198 ops/s
-# Warmup Iteration   5: 71488507.413 ops/s
-Iteration   1: 71486260.847 ops/s
-Iteration   2: 71490268.099 ops/s
-Iteration   3: 71062705.627 ops/s
-Iteration   4: 71301049.521 ops/s
-Iteration   5: 71435284.294 ops/s
+# Warmup Iteration   1: 142975855.860 ops/s
+# Warmup Iteration   2: 120149199.916 ops/s
+# Warmup Iteration   3: 145058849.778 ops/s
+# Warmup Iteration   4: 120078592.837 ops/s
+# Warmup Iteration   5: 120097730.965 ops/s
+Iteration   1: 120185977.175 ops/s
+Iteration   2: 119440346.787 ops/s
+Iteration   3: 120153889.014 ops/s
+Iteration   4: 120159021.718 ops/s
+Iteration   5: 120169895.920 ops/s
 # Processing profiler results: LinuxPerfAsmProfiler 
 
 
-Result "org.sample.KotlinBenchmark._010_varargSum_inter_vars":
-  71355113.678 ±(99.9%) 695035.967 ops/s [Average]
-  (min, avg, max) = (71062705.627, 71355113.678, 71490268.099), stdev = 180498.634
-  CI (99.9%): [70660077.710, 72050149.645] (assumes normal distribution)
+Result "org.sample.KotlinBenchmark._010_varargArr_inter_vars":
+  120021826.123 ±(99.9%) 1252572.046 ops/s [Average]
+  (min, avg, max) = (119440346.787, 120021826.123, 120185977.175), stdev = 325288.983
+  CI (99.9%): [118769254.077, 121274398.169] (assumes normal distribution)
 
-Secondary result "org.sample.KotlinBenchmark._010_varargSum_inter_vars:asm":
-PrintAssembly processed: 42791 total address lines.
-Perf output processed (skipped 52.690 seconds):
- Column 1: cycles (50218 events)
+Secondary result "org.sample.KotlinBenchmark._010_varargArr_inter_vars:asm":
+PrintAssembly processed: 42150 total address lines.
+Perf output processed (skipped 52.683 seconds):
+ Column 1: cycles (50415 events)
 
 Hottest code regions (>10.00% "cycles" events):
  Event counts are percents of total event count.
 
 ....[Hottest Region 1]..............................................................................
-c2, level 4, org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub, version 6, compile id 639 
+c2, level 4, org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub, version 6, compile id 636 
 
-            0x00007abe980ffaec: 4183 c62d | 4585 d20f | 85ce 0300 
-            0x00007abe980ffaf8: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@33 (line 123)
-            0x00007abe980ffaf8: 0041 ba02 | 0000 004c | 8954 2458 | e941 0100 | 000f 1f80 
-            0x00007abe980ffb0c: ;*goto {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::varargSum@31 (line 465)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@126 (line 427)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffb0c: 0000 0000 | 4d89 9fb8 | 0100 0041 | 0f0d 8bc0 | 0000 0048 | c700 0100 | 0000 410f | 0d8b 0001 
-            0x00007abe980ffb2c: ;   {metadata({type array int})}
-            0x00007abe980ffb2c: 0000 c740 | 0898 4e16 | 0041 0f0d | 8b40 0100 | 00c7 400c | 0a00 0000 | 410f 0d8b | 8001 0000 
-   0.44%    0x00007abe980ffb4c: 4c89 6010 | 4c89 6018 | 4c89 6020 | 4c89 6028 
-   0.29%    0x00007abe980ffb5c: ;*newarray {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@59 (line 428)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-   0.29%    0x00007abe980ffb5c: 4c89 6030 
-   0.29%    0x00007abe980ffb60: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@67 (line 428)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-   0.29%    0x00007abe980ffb60: 8968 1044 | 8b54 2450 
-   0.17%    0x00007abe980ffb68: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@72 (line 429)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-   0.17%    0x00007abe980ffb68: 4489 5014 | 448b 5c24 | 4c44 8958 
-            0x00007abe980ffb74: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@77 (line 430)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffb74: 1844 8b54 | 2440 4489 
-            0x00007abe980ffb7c: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@83 (line 431)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffb7c: 501c 448b | 5c24 3c44 
-            0x00007abe980ffb84: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@89 (line 432)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffb84: 8958 2044 | 8b54 2430 
-   0.06%    0x00007abe980ffb8c: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@95 (line 433)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-   0.06%    0x00007abe980ffb8c: 4489 5024 | 448b 5c24 | 2844 8958 
-            0x00007abe980ffb98: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@102 (line 434)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffb98: 2844 8b54 | 2424 4489 
-            0x00007abe980ffba0: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@109 (line 435)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffba0: 502c 448b | 5c24 1844 
-            0x00007abe980ffba8: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@116 (line 436)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffba8: 8958 3044 | 8b54 2414 
-   0.06%    0x00007abe980ffbb0: ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@20 (line 121)
-   0.06%    0x00007abe980ffbb0: 4489 5034 | 4c8b 1424 | 450f b69a 
-            0x00007abe980ffbbc: ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@30 (line 123)
-            0x00007abe980ffbbc: 9400 0000 | 448b 4c24 | 5444 034c | 2448 4403 | 4c24 4444 | 034c 2438 | 4403 4c24 | 3444 034c 
-            0x00007abe980ffbdc: 242c 4403 | 4c24 2044 | 034c 241c | 4403 4c24 | 1044 034c | 240c 4c8b | 5424 5849 
-            0x00007abe980ffbf8: ;*ladd {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@26 (line 122)
-            0x00007abe980ffbf8: 83c2 014c | 8954 2458 | 448b 5424 | 0845 03d2 | 4403 5424 | 0844 0354 | 2408 4403 | 5424 0844 
-            0x00007abe980ffc18: 0354 2408 | 4403 5424 | 0844 0354 | 2408 4403 | 5424 0844 
-            0x00007abe980ffc2c: ;   {no_reloc}
-            0x00007abe980ffc2c: 0354 2408 | 452b d141 
-            0x00007abe980ffc34: ;*goto {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::varargSum@31 (line 465)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@126 (line 427)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffc34: 83c2 2d4d | 8b97 5004 
-            0x00007abe980ffc3c: ; ImmutableOopMap {[0]=Oop [144]=Oop [152]=Oop [160]=Oop }
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@20 (line 121)
+            0x00007591900feaa8: 004c 8b44 | 2468 450f | b690 9400 
+            0x00007591900feab4: ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@30 (line 123)
+            0x00007591900feab4: 0000 4585 | d20f 858d | 0200 0041 | ba01 0000 | 004c 8944 | 2420 4c89 | 5c24 284c | 8954 2430 
+            0x00007591900fead4: e9dd 0000 | 000f 1f80 
+            0x00007591900feadc: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@33 (line 123)
+            0x00007591900feadc: 0000 0000 | 4d89 8fb8 | 0100 0041 | 0f0d 89c0 | 0000 0048 | c700 0100 | 0000 410f | 0d89 0001 
+            0x00007591900feafc: ;   {metadata({type array int})}
+            0x00007591900feafc: 0000 c740 | 0898 4e16 | 0041 0f0d | 8940 0100 | 00c7 400c | 0a00 0000 | 410f 0d89 | 8001 0000 
+   2.06%    0x00007591900feb1c: 4c89 6010 | 4c89 6018 | 4c89 6020 | 4c89 6028 
+   1.71%    0x00007591900feb2c: ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr_inter_vars@59 (line 428)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@17 (line 121)
+   1.71%    0x00007591900feb2c: 4c89 6030 | 448b 5c24 | 7044 8958 
+            0x00007591900feb38: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr_inter_vars@67 (line 428)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007591900feb38: 1089 6814 | 448b 5424 | 1844 8950 
+            0x00007591900feb44: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr_inter_vars@77 (line 430)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007591900feb44: 1844 8b5c | 2414 4489 
+            0x00007591900feb4c: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr_inter_vars@83 (line 431)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007591900feb4c: 581c 448b | 5424 1044 
+            0x00007591900feb54: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr_inter_vars@89 (line 432)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007591900feb54: 8950 2044 | 8b5c 240c 
+   0.12%    0x00007591900feb5c: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr_inter_vars@95 (line 433)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@17 (line 121)
+   0.12%    0x00007591900feb5c: 4489 5824 | 448b 5424 | 0844 8950 
+            0x00007591900feb68: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr_inter_vars@102 (line 434)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007591900feb68: 2844 8b5c | 2404 4489 
+            0x00007591900feb70: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr_inter_vars@109 (line 435)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007591900feb70: 582c 448b | 1424 4489 
+            0x00007591900feb78: ;*iastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr_inter_vars@116 (line 436)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007591900feb78: 5030 448b | 5c24 7444 
+            0x00007591900feb80: ;*invokevirtual consume {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@20 (line 121)
+            0x00007591900feb80: 8958 344c | 8b54 2420 | 450f b692 
+            0x00007591900feb8c: ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@30 (line 123)
+            0x00007591900feb8c: 9400 0000 | 4c8b 5c24 | 3049 83c3 
+            0x00007591900feb98: ;*ladd {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@26 (line 122)
+            0x00007591900feb98: 014c 895c 
+            0x00007591900feb9c: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@33 (line 123)
+            0x00007591900feb9c: 2430 4d8b | 9f50 0400 
+            0x00007591900feba4: ; ImmutableOopMap {[32]=Oop [40]=Oop [96]=Oop [104]=Oop }
                                 ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
-                                ; - (reexecute) org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@33 (line 123)
+                                ; - (reexecute) org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@33 (line 123)
                                 ;   {poll}
-            0x00007abe980ffc3c: 0000 4185 | 0245 85db | 0f85 2702 
-            0x00007abe980ffc48: ;*goto {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::varargSum@31 (line 465)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@126 (line 427)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffc48: 0000 498b | 87b8 0100 | 004c 8b8c | 24a0 0000 | 0045 8b51 
-            0x00007abe980ffc5c: ;*getfield y {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@1 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@1 (line 417)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffc5c: 0c4c 8bd8 | 4983 c338 | 418d 4a09 | 458d 420a 
-   0.07%    0x00007abe980ffc6c: ;*putfield y {reexecute=0 rethrow=0 return_oop=0}
+            0x00007591900feba4: 0041 8503 | 4585 d20f | 85ac 0000 
+            0x00007591900febb0: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@33 (line 123)
+            0x00007591900febb0: 004c 8b6c 
+            0x00007591900febb4: ;*aload_1 {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@36 (line 124)
+            0x00007591900febb4: 2468 458b 
+            0x00007591900febb8: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@33 (line 123)
+            0x00007591900febb8: 450c 498b | 87b8 0100 | 004c 8bc8 | 4983 c138 | 458d 5009 | 4489 5424 | 7445 8d58 | 0a45 895d 
+            0x00007591900febd8: ;*putfield y {reexecute=0 rethrow=0 return_oop=0}
                                 ; - org.sample.KotlinBenchmark::getY@9 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@52 (line 426)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-   0.07%    0x00007abe980ffc6c: 4589 410c | c1f9 1f45 | 8d4a 08c1 | e919 4103 | ca41 c1f9 | 1f83 c109 | 41c1 e919 | 4503 ca83 
-            0x00007abe980ffc8c: e180 458b | c289 4c24 | 0c44 2bc1 | 4183 c108 
-   0.27%    0x00007abe980ffc9c: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@52 (line 426)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-   0.27%    0x00007abe980ffc9c: 4183 c009 | 4489 4424 | 1441 83e1 | 8041 8bda | 4489 4c24 | 1041 2bd9 | 418d 4a07 
-   0.08%    0x00007abe980ffcb8: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@46 (line 425)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-   0.08%    0x00007abe980ffcb8: 83c3 0889 | 5c24 18c1 | f91f 458d | 4a06 c1e9 | 1941 03ca | 41c1 f91f | 83c1 0741 | c1e9 1945 
-            0x00007abe980ffcd8: 03ca 83e1 | 8044 8954 | 2408 894c | 241c 442b | d141 83c1 | 0641 83c2 
-            0x00007abe980ffcf0: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@40 (line 424)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffcf0: 0744 8954 | 2424 4183 | e180 4489 | 4c24 2044 | 8b54 2408 | 452b d144 | 8b4c 2408 | 4183 c105 
-   0.60%    0x00007abe980ffd10: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@34 (line 423)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-   0.60%    0x00007abe980ffd10: 4183 c206 | 4489 5424 | 2841 c1f9 | 1f44 8b54 | 2408 4183 | c204 41c1 | e919 4403 | 4c24 0841 
-            0x00007abe980ffd30: c1fa 1f41 | 83c1 0541 | c1ea 1944 
-            0x00007abe980ffd3c: ;   {no_reloc}
-            0x00007abe980ffd3c: 0354 2408 | 4183 e180 | 4489 4c24 | 2c44 8b4c | 2408 442b | 4c24 2c41 | 83c2 0441 
-            0x00007abe980ffd58: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@28 (line 422)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffd58: 83c1 0544 | 894c 2430 
-   2.93%    0x00007abe980ffd60: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@22 (line 421)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-   2.93%    0x00007abe980ffd60: 4183 e280 | 4489 5424 | 3444 8b44 | 2408 4183 | c003 41c1 | f81f 41c1 | e819 4403 | 4424 0841 
-            0x00007abe980ffd80: 83c0 0341 
-            0x00007abe980ffd84: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@16 (line 420)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffd84: 83e0 8044 | 8944 2438 | 448b 5424 | 0844 2b54 | 2434 4183 
-            0x00007abe980ffd98: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@22 (line 421)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffd98: c204 4489 | 5424 3c44 | 8b44 2408 | 442b 4424 | 3841 83c0 
-            0x00007abe980ffdac: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@16 (line 420)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffdac: 0344 8944 | 2440 448b | 5424 0841 | 83c2 0241 | c1fa 1f41 | c1ea 1944 | 0354 2408 | 4183 c202 
-   0.74%    0x00007abe980ffdcc: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@11 (line 419)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-   0.74%    0x00007abe980ffdcc: 4183 e280 | 4489 5424 | 4444 8b44 | 2408 41ff | c041 c1f8 | 1f41 c1e8 | 1944 0344 | 2408 41ff 
-            0x00007abe980ffdec: c041 83e0 
-            0x00007abe980ffdf0: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@6 (line 418)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffdf0: 8044 8944 | 2448 448b | 5424 0844 | 2b54 2444 
-   0.81%    0x00007abe980ffe00: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@11 (line 419)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-   0.81%    0x00007abe980ffe00: 4183 c202 | 4489 5424 | 4c44 8b44 | 2408 442b | 4424 4841 
-            0x00007abe980ffe14: ;*irem {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::getY@16 (line 12)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@6 (line 418)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-            0x00007abe980ffe14: ffc0 4489 | 4424 5044 | 8b54 2408 | 41c1 fa1f | 41c1 ea19 | 4403 5424 | 0841 83e2 | 8044 8954 
-            0x00007abe980ffe34: 2454 8b6c | 2408 412b 
-            0x00007abe980ffe3c: ;*goto {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmarkKt::varargSum@31 (line 465)
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@126 (line 427)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
-                                ;   {no_reloc}
-            0x00007abe980ffe3c: ea66 6690 | 4d3b 9fc8 | 0100 000f | 82c3 fcff 
-            0x00007abe980ffe4c: ;*invokevirtual getY {reexecute=0 rethrow=0 return_oop=0}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@52 (line 426)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
+                                ; - org.sample.KotlinBenchmark::_010_varargArr_inter_vars@52 (line 426)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007591900febd8: 0c4c 896c | 2468 458d | 5008 4489 | 1424 458d | 5807 4489 | 5c24 0445 | 8d50 0644 | 8954 2408 
+   2.00%    0x00007591900febf8: 458d 5005 | 4489 5424 | 0c45 8d58 | 0444 895c | 2410 4489 | 4424 7041 
+            0x00007591900fec10: ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::getY@8 (line 12)
+                                ; - org.sample.KotlinBenchmark::_010_varargArr_inter_vars@11 (line 419)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007591900fec10: 83c0 0344 | 8944 2414 | 448b 5c24 | 7041 83c3 
+            0x00007591900fec20: ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::getY@8 (line 12)
+                                ; - org.sample.KotlinBenchmark::_010_varargArr_inter_vars@6 (line 418)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007591900fec20: 0244 895c | 2418 8b6c 
+            0x00007591900fec28: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@33 (line 123)
+            0x00007591900fec28: 2470 ffc5 | 4d3b 8fc8 | 0100 000f | 82a7 feff 
+            0x00007591900fec38: ;*invokevirtual getY {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_varargArr_inter_vars@52 (line 426)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@17 (line 121)
                                 ;   {metadata({type array int})}
-            0x00007abe980ffe4c: ff48 be98 | 4e16 26be | 7a00 00ba | 0a00 0000 
-            0x00007abe980ffe5c: ;   {runtime_call _new_array_Java}
-            0x00007abe980ffe5c: 6666 90e8 
-            0x00007abe980ffe60: ; ImmutableOopMap {[0]=Oop [144]=Oop [152]=Oop [160]=Oop }
+            0x00007591900fec38: ff48 be98 | 4e16 2291 | 7500 00ba | 0a00 0000 
+            0x00007591900fec48: ;   {runtime_call _new_array_Java}
+            0x00007591900fec48: 6666 90e8 
+            0x00007591900fec4c: ; ImmutableOopMap {[32]=Oop [40]=Oop [96]=Oop [104]=Oop }
                                 ;*newarray {reexecute=0 rethrow=0 return_oop=1}
-                                ; - org.sample.KotlinBenchmark::_010_varargSum_inter_vars@59 (line 428)
-                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub@17 (line 121)
+                                ; - org.sample.KotlinBenchmark::_010_varargArr_inter_vars@59 (line 428)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub@17 (line 121)
 ....................................................................................................
-  99.08%  <total for region 1>
+  98.46%  <total for region 1>
 
 ....[Hottest Regions]...............................................................................
-  99.08%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub, version 6, compile id 639 
-   0.06%                        <unknown> 
-   0.05%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
-   0.05%                        <unknown> 
-   0.05%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
-   0.03%                [vdso]  __vdso_clock_gettime 
-   0.03%             libjvm.so  SpinPause 
-   0.02%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
-   0.02%                        <unknown> 
-   0.01%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
-   0.01%             libjvm.so  ObjArrayAllocator::initialize(HeapWordImpl**) const 
-   0.01%             libjvm.so  RelocIterator::initialize(nmethod*, unsigned char*, unsigned char*) 
-   0.01%             libjvm.so  G1FromCardCache::clear(unsigned int) 
-   0.01%             libjvm.so  SharedRuntime::on_slowpath_allocation_exit(JavaThread*) 
+  98.46%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub, version 6, compile id 636 
+   0.08%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
+   0.08%                        <unknown> 
+   0.07%             libjvm.so  SpinPause 
+   0.06%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+   0.04%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
+   0.04%                [vdso]  __vdso_clock_gettime 
+   0.03%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
+   0.03%             libjvm.so  RelocIterator::initialize(nmethod*, unsigned char*, unsigned char*) 
+   0.03%             libjvm.so  G1CardSet::reset_table_scanner() 
+   0.03%             libjvm.so  G1CodeRootSet::nmethods_do(NMethodClosure*) const 
+   0.03%             libjvm.so  G1ConcurrentMark::clear_statistics(G1HeapRegion*) 
+   0.02%             libjvm.so  Rdtsc::elapsed_counter() 
+   0.02%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
+   0.02%             libjvm.so  G1CodeRootSet::length() const 
+   0.02%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
+   0.02%             libjvm.so  xmlStream::write_text(char const*, unsigned long) [clone .part.0] 
+   0.02%             libjvm.so  defaultStream::write(char const*, unsigned long) 
+   0.01%             libjvm.so  G1EvacPhaseWithTrimTimeTracker::~G1EvacPhaseWithTrimTimeTracker() 
    0.01%                        <unknown> 
-   0.01%                        <unknown> 
-   0.01%             libjvm.so  G1CardSet::reset_table_scanner() 
-   0.01%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
-   0.01%             libjvm.so  G1CollectionSet::add_eden_region(G1HeapRegion*) 
-   0.01%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
-   0.51%  <...other 196 warm regions...>
+   0.88%  <...other 268 warm regions...>
 ....................................................................................................
  100.00%  <totals>
 
 ....[Hottest Methods (after inlining)]..............................................................
-  99.08%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_varargSum_inter_vars_jmhTest::_010_varargSum_inter_vars_thrpt_jmhStub, version 6, compile id 639 
-   0.25%                        <unknown> 
-   0.05%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
-   0.05%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+  98.46%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_varargArr_inter_vars_jmhTest::_010_varargArr_inter_vars_thrpt_jmhStub, version 6, compile id 636 
+   0.29%                        <unknown> 
+   0.08%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
+   0.07%             libjvm.so  SpinPause 
+   0.06%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+   0.04%             libc.so.6  [unknown] 
+   0.04%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
+   0.04%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
    0.04%                [vdso]  __vdso_clock_gettime 
-   0.03%             libjvm.so  SpinPause 
-   0.02%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
-   0.02%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
-   0.02%             libc.so.6  [unknown] 
-   0.02%             libjvm.so  RelocIterator::initialize(nmethod*, unsigned char*, unsigned char*) 
-   0.01%             libjvm.so  ObjArrayAllocator::initialize(HeapWordImpl**) const 
-   0.01%             libjvm.so  SharedRuntime::on_slowpath_allocation_exit(JavaThread*) 
-   0.01%             libjvm.so  G1FromCardCache::clear(unsigned int) 
-   0.01%             libjvm.so  G1CollectionSet::add_eden_region(G1HeapRegion*) 
-   0.01%             libjvm.so  Method::bcp_from(unsigned char*) const 
-   0.01%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
-   0.01%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
-   0.01%             libjvm.so  FreeCSetClosure::do_heap_region(G1HeapRegion*) 
-   0.01%             libjvm.so  TruncatedSeq::add(double) 
-   0.01%             libc.so.6  clock_gettime 
-   0.34%  <...other 125 warm methods...>
+   0.04%             libjvm.so  RelocIterator::initialize(nmethod*, unsigned char*, unsigned char*) 
+   0.03%             libjvm.so  defaultStream::write(char const*, unsigned long) 
+   0.03%             libjvm.so  G1CodeRootSet::nmethods_do(NMethodClosure*) const 
+   0.03%             libjvm.so  G1CardSet::reset_table_scanner() 
+   0.03%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
+   0.03%             libjvm.so  G1ConcurrentMark::clear_statistics(G1HeapRegion*) 
+   0.02%             libjvm.so  void WeakProcessor::Task::work<G1STWIsAliveClosure, G1KeepAliveClosure>(unsigned int, G1STWIsAliveClosure*, G1KeepAliveClosure*) 
+   0.02%             libjvm.so  xmlStream::write_text(char const*, unsigned long) [clone .part.0] 
+   0.02%             libjvm.so  Rdtsc::elapsed_counter() 
+   0.02%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
+   0.02%             libjvm.so  G1CodeRootSet::length() const 
+   0.61%  <...other 168 warm methods...>
 ....................................................................................................
  100.00%  <totals>
 
 ....[Distribution by Source]........................................................................
-  99.08%           c2, level 4
-   0.55%             libjvm.so
-   0.25%                      
-   0.05%             libc.so.6
+  98.46%           c2, level 4
+   1.07%             libjvm.so
+   0.29%                      
+   0.13%             libc.so.6
    0.04%                [vdso]
-   0.01%           interpreter
-   0.00%           c1, level 3
-   0.00%                kernel
-   0.00%  ld-linux-x86-64.so.2
-   0.00%        perf-12868.map
+   0.01%                kernel
+   0.01%  ld-linux-x86-64.so.2
+   0.00%           interpreter
+   0.00%        perf-16587.map
 ....................................................................................................
  100.00%  <totals>
 
@@ -888,10 +652,10 @@ works, and factor in a small probability of new VM bugs. Additionally, while com
 different JVMs are already problematic, the performance difference caused by different Blackhole
 modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
-Benchmark                                       Mode  Cnt         Score        Error  Units
-KotlinBenchmark._010_sum10                     thrpt    5  71346611.960 ± 585576.160  ops/s
-KotlinBenchmark._010_sum10:asm                 thrpt                NaN                 ---
-KotlinBenchmark._010_varargSum                 thrpt    5  78378225.740 ± 623404.867  ops/s
-KotlinBenchmark._010_varargSum:asm             thrpt                NaN                 ---
-KotlinBenchmark._010_varargSum_inter_vars      thrpt    5  71355113.678 ± 695035.967  ops/s
-KotlinBenchmark._010_varargSum_inter_vars:asm  thrpt                NaN                 ---
+Benchmark                                       Mode  Cnt          Score         Error  Units
+KotlinBenchmark._010_arr10                     thrpt    5  119983372.680 ±  503808.146  ops/s
+KotlinBenchmark._010_arr10:asm                 thrpt                 NaN                  ---
+KotlinBenchmark._010_varargArr                 thrpt    5  160757734.520 ± 1847638.582  ops/s
+KotlinBenchmark._010_varargArr:asm             thrpt                 NaN                  ---
+KotlinBenchmark._010_varargArr_inter_vars      thrpt    5  120021826.123 ± 1252572.046  ops/s
+KotlinBenchmark._010_varargArr_inter_vars:asm  thrpt                 NaN                  ---
