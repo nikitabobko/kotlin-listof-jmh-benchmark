@@ -1,6 +1,6 @@
 # JMH version: 1.37
 # VM version: JDK 23.0.1, OpenJDK 64-Bit Server VM, 23.0.1+8-FR
-# VM invoker: /Users/Nikita.Bobko/.sdkman/candidates/java/23.0.1-amzn/bin/java
+# VM invoker: /home/bobko/.sdkman/candidates/java/23.0.1-amzn/bin/java
 # VM options: <none>
 # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
 # Warmup: 5 iterations, 10 s each
@@ -10,74 +10,306 @@
 # Benchmark mode: Throughput, ops/time
 # Benchmark: org.sample.KotlinBenchmark._010_kotlin_listOf_vararg
 
-# Run progress: 0,00% complete, ETA 00:05:00
+# Run progress: 0.00% complete, ETA 00:05:00
 # Fork: 1 of 1
-# Warmup Iteration   1: 119788614,632 ops/s
-# Warmup Iteration   2: 121954259,395 ops/s
-# Warmup Iteration   3: 109704123,846 ops/s
-# Warmup Iteration   4: 109596650,092 ops/s
-# Warmup Iteration   5: 109672477,956 ops/s
-Iteration   1: 109653452,412 ops/s
-                 gc.alloc.rate:      8365,803 MB/sec
-                 gc.alloc.rate.norm: 80,000 B/op
-                 gc.count:           72,000 counts
-                 gc.time:            43,000 ms
-
-Iteration   2: 109692825,121 ops/s
-                 gc.alloc.rate:      8368,805 MB/sec
-                 gc.alloc.rate.norm: 80,000 B/op
-                 gc.count:           72,000 counts
-                 gc.time:            43,000 ms
-
-Iteration   3: 109722513,465 ops/s
-                 gc.alloc.rate:      8371,071 MB/sec
-                 gc.alloc.rate.norm: 80,000 B/op
-                 gc.count:           72,000 counts
-                 gc.time:            42,000 ms
-
-Iteration   4: 109766421,864 ops/s
-                 gc.alloc.rate:      8374,374 MB/sec
-                 gc.alloc.rate.norm: 80,000 B/op
-                 gc.count:           71,000 counts
-                 gc.time:            41,000 ms
-
-Iteration   5: 109667858,541 ops/s
-                 gc.alloc.rate:      8366,890 MB/sec
-                 gc.alloc.rate.norm: 80,000 B/op
-                 gc.count:           72,000 counts
-                 gc.time:            42,000 ms
-
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 55898204.796 ops/s
+# Warmup Iteration   2: 57941343.955 ops/s
+# Warmup Iteration   3: 56964450.443 ops/s
+# Warmup Iteration   4: 57905993.440 ops/s
+# Warmup Iteration   5: 58079065.101 ops/s
+Iteration   1: 57998353.345 ops/s
+Iteration   2: 57985196.575 ops/s
+Iteration   3: 57705511.875 ops/s
+Iteration   4: 57947422.993 ops/s
+Iteration   5: 57922038.908 ops/s
+# Processing profiler results: LinuxPerfAsmProfiler 
 
 
 Result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg":
-  109700614,280 ±(99.9%) 174005,479 ops/s [Average]
-  (min, avg, max) = (109653452,412, 109700614,280, 109766421,864), stdev = 45188,670
-  CI (99.9%): [109526608,802, 109874619,759] (assumes normal distribution)
+  57911704.739 ±(99.9%) 458885.927 ops/s [Average]
+  (min, avg, max) = (57705511.875, 57911704.739, 57998353.345), stdev = 119171.218
+  CI (99.9%): [57452818.812, 58370590.666] (assumes normal distribution)
 
-Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg:gc.alloc.rate":
-  8369,388 ±(99.9%) 13,217 MB/sec [Average]
-  (min, avg, max) = (8365,803, 8369,388, 8374,374), stdev = 3,432
-  CI (99.9%): [8356,171, 8382,606] (assumes normal distribution)
+Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg:asm":
+PrintAssembly processed: 44477 total address lines.
+Perf output processed (skipped 52.678 seconds):
+ Column 1: cycles (50300 events)
 
-Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg:gc.alloc.rate.norm":
-  80,000 ±(99.9%) 0,001 B/op [Average]
-  (min, avg, max) = (80,000, 80,000, 80,000), stdev = 0,001
-  CI (99.9%): [80,000, 80,000] (assumes normal distribution)
+Hottest code regions (>10.00% "cycles" events):
+ Event counts are percents of total event count.
 
-Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg:gc.count":
-  359,000 ±(99.9%) 0,001 counts [Sum]
-  (min, avg, max) = (71,000, 71,800, 72,000), stdev = 0,447
-  CI (99.9%): [359,000, 359,000] (assumes normal distribution)
+....[Hottest Region 1]..............................................................................
+c2, level 4, org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub, version 6, compile id 647 
 
-Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg:gc.time":
-  211,000 ±(99.9%) 0,001 ms [Sum]
-  (min, avg, max) = (41,000, 42,200, 43,000), stdev = 0,837
-  CI (99.9%): [211,000, 211,000] (assumes normal distribution)
+            0x00007f7ad0103770: 0200 0049 | 8bf7 49ba | 3066 7ae8 | 7a7f 0000 
+            0x00007f7ad0103780: ;   {other}
+            0x00007f7ad0103780: 41ff d20f | 1f84 0000 | 0000 000f 
+            0x00007f7ad010378c: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@47 (line 107)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad010378c: 1f44 0000 | 4c8b 9424 | a000 0000 
+   0.40%    0x00007f7ad0103798: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@12 (line 102)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+   0.40%    0x00007f7ad0103798: 418b 5a10 | 0f1f 4000 | 4180 7f38 | 000f 85da | 0500 004c | 8b44 2440 | 4189 184c | 8bd3 49c1 
+            0x00007f7ad01037b8: e203 4d8b | d84d 33d3 | 49c1 ea16 | 4d85 d274 | 2085 db74 | 1c49 c1eb | 0948 bf00 | 605a e27a 
+            0x00007f7ad01037d8: 7f00 0049 | 03fb 6690 | 803f 020f | 858e 0800 
+            0x00007f7ad01037e8: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@55 (line 108)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad01037e8: 004c 8b94 | 24a0 0000 | 0041 8b6a 
+            0x00007f7ad01037f4: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@12 (line 102)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad01037f4: 1066 6666 | 0f1f 8400 | 0000 0000 | 4180 7f38 | 000f 85ba | 0500 004c | 8b44 2448 | 4189 284c 
+            0x00007f7ad0103814: 8bd5 49c1 | e203 4d8b | d84d 33d3 | 49c1 ea16 | 4d85 d274 | 2085 ed74 | 1c49 c1eb | 0948 bf00 
+            0x00007f7ad0103834: 605a e27a | 7f00 0049 | 03fb 6690 | 803f 020f | 857c 0800 
+            0x00007f7ad0103848: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@63 (line 109)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103848: 004c 8b94 | 24a0 0000 | 0041 8b5a 
+            0x00007f7ad0103854: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@12 (line 102)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103854: 1066 6666 | 0f1f 8400 | 0000 0000 | 4180 7f38 | 000f 859a | 0500 004c | 8b44 2420 | 4189 184c 
+            0x00007f7ad0103874: 8bd3 49c1 | e203 4d8b | d84d 33d3 
+   0.28%    0x00007f7ad0103880: ;   {no_reloc}
+   0.28%    0x00007f7ad0103880: 49c1 ea16 | 4d85 d274 | 2085 db74 | 1c49 c1eb | 0948 bf00 | 605a e27a | 7f00 0049 | 03fb 6690 
+   0.57%    0x00007f7ad01038a0: 803f 020f | 856e 0800 
+            0x00007f7ad01038a8: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@71 (line 110)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad01038a8: 004c 8b94 | 24a0 0000 | 0041 8b6a | 1066 6666 | 0f1f 8400 | 0000 0000 | 4180 7f38 | 000f 857a 
+            0x00007f7ad01038c8: 0500 004c | 8b44 2418 | 4189 284c | 8bd5 49c1 | e203 4d8b | d84d 33d3 | 49c1 ea16 | 4d85 d274 
+            0x00007f7ad01038e8: 2085 ed74 | 1c49 c1eb | 0948 bf00 | 605a e27a | 7f00 0049 | 03fb 6690 | 803f 020f | 857d 0600 
+            0x00007f7ad0103908: 0049 8b87 | b801 0000 | 4c8b d049 | 83c2 1866 | 0f1f 8400 | 0000 0000 | 4d3b 97c8 | 0100 000f 
+            0x00007f7ad0103928: 832a 0900 
+            0x00007f7ad010392c: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@12 (line 102)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad010392c: 004d 8997 | b801 0000 | 410f 0d8a | c000 0000 | 48c7 0001 
+            0x00007f7ad0103940: ;   {metadata(&apos;java/util/Arrays$ArrayList&apos;)}
+            0x00007f7ad0103940: 0000 00c7 | 4008 c05a | 2a00 4489 | 600c 4c89 
+            0x00007f7ad0103950: ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                ; - java.util.Arrays::asList@0 (line 4184)
+                                ; - kotlin.collections.ArraysUtilJVM::asList@1 (line 13)
+                                ; - kotlin.collections.ArraysKt___ArraysJvmKt::asList@7 (line 133)
+                                ; - kotlin.collections.CollectionsKt__CollectionsKt::listOf@12 (line 78)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@81 (line 101)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103950: 6010 448b | 5424 5844 
+            0x00007f7ad0103958: ;*synchronization entry
+                                ; - java.util.Arrays$ArrayList::&lt;init&gt;@-1 (line 4198)
+                                ; - java.util.Arrays::asList@5 (line 4184)
+                                ; - kotlin.collections.ArraysUtilJVM::asList@1 (line 13)
+                                ; - kotlin.collections.ArraysKt___ArraysJvmKt::asList@7 (line 133)
+                                ; - kotlin.collections.CollectionsKt__CollectionsKt::listOf@12 (line 78)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@81 (line 101)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103958: 8950 104c | 8b94 2498 | 0000 0045 | 0fb6 8294 
+            0x00007f7ad0103968: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@12 (line 102)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103968: 0000 004d | 8b9f 5004 
+            0x00007f7ad0103970: ; ImmutableOopMap {r10=Oop [0]=Oop [8]=Oop [152]=Oop [160]=Oop }
+                                ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                                ; - (reexecute) org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@33 (line 123)
+                                ;   {poll}
+            0x00007f7ad0103970: 0000 4185 | 0345 85c0 | 0f85 3f09 
+            0x00007f7ad010397c: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@33 (line 123)
+            0x00007f7ad010397c: 0000 4c8b | 4424 0848 | 8b6c 2450 | 498b 87b8 | 0100 004c | 8bd8 4983 | c338 6666 | 0f1f 8400 
+            0x00007f7ad010399c: 0000 0000 | 4d3b 9fc8 | 0100 000f | 83cc 0800 
+            0x00007f7ad01039ac: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@12 (line 102)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad01039ac: 004d 899f | b801 0000 | 410f 0d8b | c000 0000 | 48c7 0001 | 0000 0041 | 0f0d 8b00 
+            0x00007f7ad01039c8: ;   {metadata(&apos;java/lang/String&apos;[])}
+            0x00007f7ad01039c8: 0100 00c7 | 4008 18ff | 1600 410f | 0d8b 4001 | 0000 c740 | 0c0a 0000 | 0041 0f0d | 8b80 0100 
+            0x00007f7ad01039e8: 004c 8960 | 104c 8960 | 184c 8960 | 204c 8960 | 284c 8960 
+            0x00007f7ad01039fc: ;*anewarray {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@2 (line 102)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad01039fc: 304c 8b9c | 24a0 0000 | 0041 8b5b 
+            0x00007f7ad0103a08: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@9 (line 102)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103a08: 104c 8be8 | 4983 c510 | 4180 7f38 | 000f 856a | 0400 004c | 8994 2498 | 0000 004c | 8944 2408 
+   0.55%    0x00007f7ad0103a28: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@12 (line 102)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+   0.55%    0x00007f7ad0103a28: 4189 5d00 | 4c8b d049 
+            0x00007f7ad0103a30: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@79 (line 111)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103a30: 83c2 344c | 8954 2418 | 4c8b d049 
+            0x00007f7ad0103a3c: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@71 (line 110)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103a3c: 83c2 304c | 8954 2420 | 4c8b f049 
+            0x00007f7ad0103a48: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@19 (line 103)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103a48: 83c6 144c | 8bd0 4983 
+            0x00007f7ad0103a50: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@26 (line 104)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103a50: c218 4c89 | 5424 604c | 8bd0 4983 
+            0x00007f7ad0103a5c: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@33 (line 105)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103a5c: c21c 4c89 | 5424 284c | 8bd0 4983 
+            0x00007f7ad0103a68: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@40 (line 106)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103a68: c220 4c89 | 5424 3048 | 8984 2490 | 0000 004c | 8bd0 4983 
+            0x00007f7ad0103a7c: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@47 (line 107)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103a7c: c224 4c89 | 5424 384c | 8bd0 4983 
+            0x00007f7ad0103a88: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@55 (line 108)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103a88: c228 4c89 | 5424 404c | 8bd0 4983 
+            0x00007f7ad0103a94: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@63 (line 109)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103a94: c22c 4c89 | 5424 4848 | 896c 2410 
+   0.28%    0x00007f7ad0103aa0: ;*ladd {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@26 (line 122)
+   0.28%    0x00007f7ad0103aa0: 4883 c501 | 4889 6c24 | 504c 8bd3 | 49c1 e203 | 488b e848 | c1ed 0389 | 6c24 584d | 8bdd 4d33 
+            0x00007f7ad0103ac0: d349 c1ea | 164d 85d2 
+            0x00007f7ad0103ac8: ;   {no_reloc}
+            0x00007f7ad0103ac8: 741f 85db | 741b 49c1 | eb09 48bf | 0060 5ae2 | 7a7f 0000 | 4903 fb90 | 803f 020f | 857c 0600 
+            0x00007f7ad0103ae8: 004c 8b94 | 24a0 0000 | 0041 8b6a 
+            0x00007f7ad0103af4: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@12 (line 102)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103af4: 1066 6666 | 0f1f 8400 | 0000 0000 | 4180 7f38 | 000f 85c1 | 0300 0041 | 892e 4c8b | d549 c1e2 
+            0x00007f7ad0103b14: 034d 8bde | 4d33 d349 | c1ea 1690 | 4d85 d274 | 2485 ed74 | 2049 c1eb | 0948 bf00 | 605a e27a 
+            0x00007f7ad0103b34: 7f00 0049 | 03fb 660f | 1f44 0000 | 803f 020f | 856e 0600 
+            0x00007f7ad0103b48: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@19 (line 103)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103b48: 004c 8b94 | 24a0 0000 | 0041 8b5a 
+            0x00007f7ad0103b54: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@12 (line 102)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103b54: 1066 6666 | 0f1f 8400 | 0000 0000 | 4180 7f38 | 000f 859a | 0300 0048 | 8b6c 2460 | 895d 004c 
+            0x00007f7ad0103b74: 8bdb 49c1 | e303 4c8b | d54d 33da | 49c1 eb16 | 4d85 db74 | 2085 db74 | 1c49 c1ea | 0948 bf00 
+            0x00007f7ad0103b94: 605a e27a | 7f00 0049 | 03fa 6690 | 803f 020f | 855c 0600 
+            0x00007f7ad0103ba8: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@26 (line 104)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103ba8: 004c 8b94 | 24a0 0000 | 0041 8b6a 
+            0x00007f7ad0103bb4: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@12 (line 102)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103bb4: 1066 6666 | 0f1f 8400 | 0000 0000 | 4180 7f38 | 000f 857a 
+            0x00007f7ad0103bc8: ;   {no_reloc}
+            0x00007f7ad0103bc8: 0300 004c | 8b44 2428 | 4189 284c | 8bd5 49c1 | e203 4d8b | d84d 33d3 | 49c1 ea16 | 4d85 d274 
+            0x00007f7ad0103be8: 2085 ed74 | 1c49 c1eb | 0948 bf00 | 605a e27a | 7f00 0049 | 03fb 6690 | 803f 020f | 85ce 0300 
+            0x00007f7ad0103c08: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@33 (line 105)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103c08: 004c 8b94 | 24a0 0000 | 0041 8b5a 
+            0x00007f7ad0103c14: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@12 (line 102)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103c14: 1066 6666 | 0f1f 8400 | 0000 0000 | 4180 7f38 | 000f 85dc | 0000 004c | 8b44 2430 | 4189 184c 
+            0x00007f7ad0103c34: 8bd3 49c1 | e203 4d8b | d84d 33d3 | 49c1 ea16 | 4d85 d274 | 2085 db74 | 1c49 c1eb | 0948 bf00 
+            0x00007f7ad0103c54: 605a e27a | 7f00 0049 | 03fb 6690 | 803f 020f | 85bc 0300 
+            0x00007f7ad0103c68: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@40 (line 106)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103c68: 004c 8b94 | 24a0 0000 | 0041 8b6a | 1066 6666 | 0f1f 8400 | 0000 0000 | 4180 7f38 | 000f 85ba 
+            0x00007f7ad0103c88: 0000 004c | 8b44 2438 | 4189 284c | 8bd5 49c1 | e203 4d8b | d84d 33d3 | 49c1 ea16 | 4d85 d20f 
+            0x00007f7ad0103ca8: 84e3 faff | ff85 ed0f | 84db faff | ff49 c1eb | 0948 bf00 | 605a e27a | 7f00 0049 | 03fb 803f 
+            0x00007f7ad0103cc8: ;   {no_reloc}
+            0x00007f7ad0103cc8: 020f 84c1 | faff ff4d 
+            0x00007f7ad0103cd0: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@12 (line 102)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103cd0: 8b57 404d | 8b5f 48f0 | 8344 24c0 | 0066 6690 | 803f 000f | 84a7 faff | ff44 8827 | 4d85 d20f 
+            0x00007f7ad0103cf0: 847e faff | ff4b 897c 
+            0x00007f7ad0103cf8: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@47 (line 107)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub@17 (line 121)
+            0x00007f7ad0103cf8: 13f8 4983 
+            0x00007f7ad0103cfc: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg@12 (line 102)
+....................................................................................................
+  98.77%  <total for region 1>
+
+....[Hottest Regions]...............................................................................
+  98.77%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub, version 6, compile id 647 
+   0.07%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
+   0.06%                        <unknown> 
+   0.04%             libjvm.so  SpinPause 
+   0.04%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+   0.03%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
+   0.03%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
+   0.03%                [vdso]  __vdso_clock_gettime 
+   0.02%  ld-linux-x86-64.so.2  __tls_get_addr 
+   0.02%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
+   0.02%             libjvm.so  G1CardSet::reset_table_scanner() 
+   0.02%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
+   0.02%             libjvm.so  RelocIterator::initialize(nmethod*, unsigned char*, unsigned char*) 
+   0.02%                        <unknown> 
+   0.01%             libjvm.so  ConstantPool::name_and_type_ref_index_at(int, Bytecodes::Code) 
+   0.01%             libjvm.so  HandleMark::initialize(Thread*) 
+   0.01%             libjvm.so  G1CodeRootSet::nmethods_do(NMethodClosure*) const 
+   0.01%                kernel  [unknown] 
+   0.01%             libjvm.so  G1CodeRootSet::length() const 
+   0.01%             libjvm.so  G1FromCardCache::clear(unsigned int) 
+   0.75%  <...other 253 warm regions...>
+....................................................................................................
+ 100.00%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+  98.77%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_jmhTest::_010_kotlin_listOf_vararg_thrpt_jmhStub, version 6, compile id 647 
+   0.22%                        <unknown> 
+   0.08%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
+   0.04%             libjvm.so  SpinPause 
+   0.04%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+   0.03%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
+   0.03%                [vdso]  __vdso_clock_gettime 
+   0.03%             libc.so.6  [unknown] 
+   0.03%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
+   0.02%             libjvm.so  void WeakProcessor::Task::work<G1STWIsAliveClosure, G1KeepAliveClosure>(unsigned int, G1STWIsAliveClosure*, G1KeepAliveClosure*) 
+   0.02%  ld-linux-x86-64.so.2  __tls_get_addr 
+   0.02%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
+   0.02%             libjvm.so  RelocIterator::initialize(nmethod*, unsigned char*, unsigned char*) 
+   0.02%             libjvm.so  G1CardSet::reset_table_scanner() 
+   0.02%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
+   0.02%             libjvm.so  G1FromCardCache::clear(unsigned int) 
+   0.02%             libjvm.so  defaultStream::write(char const*, unsigned long) 
+   0.01%             libjvm.so  ConstantPool::name_and_type_ref_index_at(int, Bytecodes::Code) 
+   0.01%             libjvm.so  HandleMark::initialize(Thread*) 
+   0.01%             libjvm.so  G1CodeRootSet::nmethods_do(NMethodClosure*) const 
+   0.53%  <...other 165 warm methods...>
+....................................................................................................
+ 100.00%  <totals>
+
+....[Distribution by Source]........................................................................
+  98.78%           c2, level 4
+   0.86%             libjvm.so
+   0.22%                      
+   0.07%             libc.so.6
+   0.03%                [vdso]
+   0.02%  ld-linux-x86-64.so.2
+   0.01%                kernel
+   0.00%           interpreter
+....................................................................................................
+ 100.00%  <totals>
+
 
 
 # JMH version: 1.37
 # VM version: JDK 23.0.1, OpenJDK 64-Bit Server VM, 23.0.1+8-FR
-# VM invoker: /Users/Nikita.Bobko/.sdkman/candidates/java/23.0.1-amzn/bin/java
+# VM invoker: /home/bobko/.sdkman/candidates/java/23.0.1-amzn/bin/java
 # VM options: <none>
 # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
 # Warmup: 5 iterations, 10 s each
@@ -87,74 +319,251 @@ Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg:gc.time":
 # Benchmark mode: Throughput, ops/time
 # Benchmark: org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars
 
-# Run progress: 33,33% complete, ETA 00:03:20
+# Run progress: 33.33% complete, ETA 00:03:28
 # Fork: 1 of 1
-# Warmup Iteration   1: 169752826,956 ops/s
-# Warmup Iteration   2: 174501420,549 ops/s
-# Warmup Iteration   3: 174960258,971 ops/s
-# Warmup Iteration   4: 173906932,544 ops/s
-# Warmup Iteration   5: 174620703,669 ops/s
-Iteration   1: 174715144,463 ops/s
-                 gc.alloc.rate:      13329,540 MB/sec
-                 gc.alloc.rate.norm: 80,000 B/op
-                 gc.count:           89,000 counts
-                 gc.time:            57,000 ms
-
-Iteration   2: 174429426,087 ops/s
-                 gc.alloc.rate:      13307,755 MB/sec
-                 gc.alloc.rate.norm: 80,000 B/op
-                 gc.count:           90,000 counts
-                 gc.time:            59,000 ms
-
-Iteration   3: 174624748,956 ops/s
-                 gc.alloc.rate:      13322,666 MB/sec
-                 gc.alloc.rate.norm: 80,000 B/op
-                 gc.count:           90,000 counts
-                 gc.time:            58,000 ms
-
-Iteration   4: 174752528,520 ops/s
-                 gc.alloc.rate:      13332,368 MB/sec
-                 gc.alloc.rate.norm: 80,000 B/op
-                 gc.count:           89,000 counts
-                 gc.time:            58,000 ms
-
-Iteration   5: 175082617,533 ops/s
-                 gc.alloc.rate:      13357,571 MB/sec
-                 gc.alloc.rate.norm: 80,000 B/op
-                 gc.count:           91,000 counts
-                 gc.time:            58,000 ms
-
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 95427044.185 ops/s
+# Warmup Iteration   2: 96629395.145 ops/s
+# Warmup Iteration   3: 100299768.206 ops/s
+# Warmup Iteration   4: 100021612.678 ops/s
+# Warmup Iteration   5: 100468066.015 ops/s
+Iteration   1: 100127323.916 ops/s
+Iteration   2: 100509316.061 ops/s
+Iteration   3: 100021841.687 ops/s
+Iteration   4: 99966911.619 ops/s
+Iteration   5: 100027164.578 ops/s
+# Processing profiler results: LinuxPerfAsmProfiler 
 
 
 Result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars":
-  174720893,112 ±(99.9%) 915439,732 ops/s [Average]
-  (min, avg, max) = (174429426,087, 174720893,112, 175082617,533), stdev = 237736,791
-  CI (99.9%): [173805453,380, 175636332,844] (assumes normal distribution)
+  100130511.572 ±(99.9%) 845296.798 ops/s [Average]
+  (min, avg, max) = (99966911.619, 100130511.572, 100509316.061), stdev = 219520.894
+  CI (99.9%): [99285214.775, 100975808.370] (assumes normal distribution)
 
-Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.alloc.rate":
-  13329,980 ±(99.9%) 69,807 MB/sec [Average]
-  (min, avg, max) = (13307,755, 13329,980, 13357,571), stdev = 18,129
-  CI (99.9%): [13260,173, 13399,787] (assumes normal distribution)
+Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:asm":
+PrintAssembly processed: 41147 total address lines.
+Perf output processed (skipped 52.555 seconds):
+ Column 1: cycles (50292 events)
 
-Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.alloc.rate.norm":
-  80,000 ±(99.9%) 0,001 B/op [Average]
-  (min, avg, max) = (80,000, 80,000, 80,000), stdev = 0,001
-  CI (99.9%): [80,000, 80,000] (assumes normal distribution)
+Hottest code regions (>10.00% "cycles" events):
+ Event counts are percents of total event count.
 
-Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.count":
-  449,000 ±(99.9%) 0,001 counts [Sum]
-  (min, avg, max) = (89,000, 89,800, 91,000), stdev = 0,837
-  CI (99.9%): [449,000, 449,000] (assumes normal distribution)
+....[Hottest Region 1]..............................................................................
+c2, level 4, org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub, version 4, compile id 635 
 
-Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.time":
-  290,000 ±(99.9%) 0,001 ms [Sum]
-  (min, avg, max) = (57,000, 58,000, 59,000), stdev = 0,707
-  CI (99.9%): [290,000, 290,000] (assumes normal distribution)
+            0x00007826c40fe350: ; implicit exception: dispatches to 0x00007826c40fe6c8
+            0x00007826c40fe350: 450f b698 
+            0x00007826c40fe354: ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@30 (line 123)
+            0x00007826c40fe354: 9400 0000 | 0f1f 8400 | 0000 0000 | 4585 db0f | 8534 0200 | 0041 bb01 | 0000 004c | 8944 2440 
+            0x00007826c40fe374: 4c89 5424 | 284c 895c | 2430 6690 | e96b 0000 | 0066 6666 | 0f1f 8400 
+            0x00007826c40fe38c: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@33 (line 123)
+            0x00007826c40fe38c: 0000 0000 | 4d89 97b8 | 0100 0041 | 0f0d 8ac0 | 0000 0048 | c700 0100 
+            0x00007826c40fe3a4: ;   {metadata(&apos;java/util/Arrays$ArrayList&apos;)}
+            0x00007826c40fe3a4: 0000 c740 | 08c0 5a2a | 0044 8960 | 0c44 8960 
+            0x00007826c40fe3b4: ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                ; - java.util.Arrays::asList@0 (line 4184)
+                                ; - kotlin.collections.ArraysUtilJVM::asList@1 (line 13)
+                                ; - kotlin.collections.ArraysKt___ArraysJvmKt::asList@7 (line 133)
+                                ; - kotlin.collections.CollectionsKt__CollectionsKt::listOf@12 (line 78)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@127 (line 127)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe3b4: 1448 8b5c | 2430 4883 
+            0x00007826c40fe3bc: ;*ladd {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@26 (line 122)
+            0x00007826c40fe3bc: c301 4c8b | 5424 2049 | c1ea 0344 
+            0x00007826c40fe3c8: ;*synchronization entry
+                                ; - java.util.Arrays$ArrayList::&lt;init&gt;@-1 (line 4198)
+                                ; - java.util.Arrays::asList@5 (line 4184)
+                                ; - kotlin.collections.ArraysUtilJVM::asList@1 (line 13)
+                                ; - kotlin.collections.ArraysKt___ArraysJvmKt::asList@7 (line 133)
+                                ; - kotlin.collections.CollectionsKt__CollectionsKt::listOf@12 (line 78)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@127 (line 127)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe3c8: 8950 104c | 8b44 2440 | 450f b690 
+            0x00007826c40fe3d4: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@33 (line 123)
+            0x00007826c40fe3d4: 9400 0000 | 4d8b 9f50 
+            0x00007826c40fe3dc: ; ImmutableOopMap {[40]=Oop [64]=Oop [112]=Oop [128]=Oop }
+                                ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                                ; - (reexecute) org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@33 (line 123)
+                                ;   {poll}
+            0x00007826c40fe3dc: 0400 0041 | 8503 4585 | d20f 85b7 
+            0x00007826c40fe3e8: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@33 (line 123)
+            0x00007826c40fe3e8: 0100 0048 
+            0x00007826c40fe3ec: ;*aload_1 {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@36 (line 124)
+            0x00007826c40fe3ec: 895c 2430 | 4c8b 9424 | 8000 0000 | 458b 5210 | 4489 5424 
+            0x00007826c40fe400: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@1 (line 117)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe400: 784c 8b94 | 2480 0000 | 0045 8b5a | 1044 895c 
+            0x00007826c40fe410: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@6 (line 118)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe410: 247c 458b | 5210 4489 
+            0x00007826c40fe418: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@11 (line 119)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe418: 1424 4c8b | 9424 8000 | 0000 458b | 5a10 4489 
+            0x00007826c40fe428: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@16 (line 120)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe428: 5c24 0445 | 8b52 1044 
+            0x00007826c40fe430: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@22 (line 121)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe430: 8954 2408 | 4c8b 9424 | 8000 0000 | 458b 5a10 | 4489 5c24 
+            0x00007826c40fe444: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@28 (line 122)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe444: 0c45 8b52 | 1044 8954 
+            0x00007826c40fe44c: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@34 (line 123)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe44c: 2410 4c8b | 9424 8000 | 0000 458b | 5a10 4489 
+            0x00007826c40fe45c: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@40 (line 124)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe45c: 5c24 1445 | 8b52 1044 
+            0x00007826c40fe464: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@46 (line 125)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe464: 8954 2418 | 4c8b 9424 | 8000 0000 | 418b 6a10 | 498b 87b8 | 0100 004c | 8bd0 4983 | c238 4d3b 
+            0x00007826c40fe484: 97c8 0100 | 000f 83ea 
+            0x00007826c40fe48c: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@33 (line 123)
+            0x00007826c40fe48c: 0000 004d | 8997 b801 | 0000 410f | 0d8a c000 | 0000 48c7 | 0001 0000 | 0041 0f0d | 8a00 0100 
+            0x00007826c40fe4ac: ;   {metadata(&apos;java/lang/String&apos;[])}
+            0x00007826c40fe4ac: 00c7 4008 | 18ff 1600 | 410f 0d8a | 4001 0000 | c740 0c0a | 0000 0041 | 0f0d 8a80 | 0100 004c 
+            0x00007826c40fe4cc: 8960 104c | 8960 184c | 8960 204c | 8960 284c 
+            0x00007826c40fe4dc: ;*anewarray {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@59 (line 128)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe4dc: 8960 3048 | 8944 2420 | 448b 4424 | 7844 8940 
+            0x00007826c40fe4ec: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@68 (line 128)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe4ec: 1044 8b5c | 247c 4489 
+            0x00007826c40fe4f4: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@73 (line 129)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe4f4: 5814 448b | 0424 4489 
+            0x00007826c40fe4fc: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@78 (line 130)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe4fc: 4018 448b | 5c24 0444 
+            0x00007826c40fe504: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@84 (line 131)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe504: 8958 1c44 | 8b44 2408 
+   0.08%    0x00007826c40fe50c: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@90 (line 132)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+   0.08%    0x00007826c40fe50c: 4489 4020 | 448b 5c24 | 0c44 8958 
+            0x00007826c40fe518: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@96 (line 133)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe518: 2444 8b44 | 2410 4489 
+            0x00007826c40fe520: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@103 (line 134)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe520: 4028 448b | 5c24 1444 
+            0x00007826c40fe528: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@110 (line 135)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+            0x00007826c40fe528: 8958 2c44 | 8b44 2418 
+   0.03%    0x00007826c40fe530: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@117 (line 136)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+   0.03%    0x00007826c40fe530: 4489 4030 | 8968 3449 | 8b87 b801 | 0000 4c8b | d049 83c2 
+            0x00007826c40fe544: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@33 (line 123)
+            0x00007826c40fe544: 184d 3b97 | c801 0000 | 0f82 3efe 
+            0x00007826c40fe550: ;*synchronization entry
+                                ; - java.util.Arrays::asList@-1 (line 4184)
+                                ; - kotlin.collections.ArraysUtilJVM::asList@1 (line 13)
+                                ; - kotlin.collections.ArraysKt___ArraysJvmKt::asList@7 (line 133)
+                                ; - kotlin.collections.CollectionsKt__CollectionsKt::listOf@12 (line 78)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_listOf_vararg_inter_vars@127 (line 127)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub@17 (line 121)
+                                ;   {metadata(&apos;java/util/Arrays$ArrayList&apos;)}
+            0x00007826c40fe550: ffff 48be | c05a 2a52 | 2678 0000 | 4c8b 5424 | 284c 8914 
+            0x00007826c40fe564: ;   {runtime_call _new_instance_Java}
+            0x00007826c40fe564: 2466 90e8 
+....................................................................................................
+  98.67%  <total for region 1>
+
+....[Hottest Regions]...............................................................................
+  98.67%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub, version 4, compile id 635 
+   0.08%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
+   0.08%                        <unknown> 
+   0.06%                        <unknown> 
+   0.05%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+   0.05%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
+   0.04%             libjvm.so  SpinPause 
+   0.04%                [vdso]  __vdso_clock_gettime 
+   0.03%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
+   0.03%             libjvm.so  ObjArrayAllocator::initialize(HeapWordImpl**) const 
+   0.02%             libjvm.so  G1ConcurrentMark::clear_statistics(G1HeapRegion*) 
+   0.02%                        <unknown> 
+   0.02%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
+   0.02%             libjvm.so  G1CodeRootSet::nmethods_do(NMethodClosure*) const 
+   0.02%             libjvm.so  G1EvacPhaseWithTrimTimeTracker::~G1EvacPhaseWithTrimTimeTracker() 
+   0.02%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
+   0.02%             libjvm.so  InstanceKlass::allocate_objArray(int, int, JavaThread*) 
+   0.01%             libjvm.so  G1CardSet::reset_table_scanner() 
+   0.01%             libjvm.so  G1EvacPhaseWithTrimTimeTracker::G1EvacPhaseWithTrimTimeTracker(G1ParScanThreadState*, TimeInterval<CompositeCounterRepresentation, CompositeElapsedCounterSource>&, TimeInterval<CompositeCounterRepresentation, CompositeElapsedCounterSource>&) 
+   0.01%             libjvm.so  HandleMark::initialize(Thread*) 
+   0.71%  <...other 228 warm regions...>
+....................................................................................................
+ 100.00%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+  98.67%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_kotlin_listOf_vararg_inter_vars_jmhTest::_010_kotlin_listOf_vararg_inter_vars_thrpt_jmhStub, version 4, compile id 635 
+   0.28%                        <unknown> 
+   0.08%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
+   0.05%                [vdso]  __vdso_clock_gettime 
+   0.05%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+   0.05%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
+   0.04%             libjvm.so  SpinPause 
+   0.03%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
+   0.03%             libjvm.so  ObjArrayAllocator::initialize(HeapWordImpl**) const 
+   0.02%             libjvm.so  G1ConcurrentMark::clear_statistics(G1HeapRegion*) 
+   0.02%             libjvm.so  void WeakProcessor::Task::work<G1STWIsAliveClosure, G1KeepAliveClosure>(unsigned int, G1STWIsAliveClosure*, G1KeepAliveClosure*) 
+   0.02%             libjvm.so  InstanceKlass::allocate_objArray(int, int, JavaThread*) 
+   0.02%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
+   0.02%             libjvm.so  G1EvacPhaseWithTrimTimeTracker::~G1EvacPhaseWithTrimTimeTracker() 
+   0.02%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
+   0.02%             libjvm.so  G1CodeRootSet::nmethods_do(NMethodClosure*) const 
+   0.02%             libc.so.6  [unknown] 
+   0.01%             libjvm.so  OptoRuntime::new_array_C(Klass*, int, JavaThread*) 
+   0.01%             libjvm.so  HandleMark::initialize(Thread*) 
+   0.01%             libc.so.6  pthread_mutex_lock 
+   0.52%  <...other 159 warm methods...>
+....................................................................................................
+ 100.00%  <totals>
+
+....[Distribution by Source]........................................................................
+  98.67%           c2, level 4
+   0.91%             libjvm.so
+   0.28%                      
+   0.07%             libc.so.6
+   0.05%                [vdso]
+   0.01%  ld-linux-x86-64.so.2
+   0.01%           interpreter
+   0.00%                kernel
+....................................................................................................
+ 100.00%  <totals>
+
 
 
 # JMH version: 1.37
 # VM version: JDK 23.0.1, OpenJDK 64-Bit Server VM, 23.0.1+8-FR
-# VM invoker: /Users/Nikita.Bobko/.sdkman/candidates/java/23.0.1-amzn/bin/java
+# VM invoker: /home/bobko/.sdkman/candidates/java/23.0.1-amzn/bin/java
 # VM options: <none>
 # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
 # Warmup: 5 iterations, 10 s each
@@ -164,72 +573,272 @@ Secondary result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_var
 # Benchmark mode: Throughput, ops/time
 # Benchmark: org.sample.KotlinBenchmark._010_kotlin_myListOf10
 
-# Run progress: 66,67% complete, ETA 00:01:40
+# Run progress: 66.67% complete, ETA 00:01:43
 # Fork: 1 of 1
-# Warmup Iteration   1: 171734741,548 ops/s
-# Warmup Iteration   2: 171925500,287 ops/s
-# Warmup Iteration   3: 174206606,137 ops/s
-# Warmup Iteration   4: 174196941,431 ops/s
-# Warmup Iteration   5: 173913301,479 ops/s
-Iteration   1: 174445061,596 ops/s
-                 gc.alloc.rate:      13308,951 MB/sec
-                 gc.alloc.rate.norm: 80,000 B/op
-                 gc.count:           90,000 counts
-                 gc.time:            60,000 ms
-
-Iteration   2: 173831521,181 ops/s
-                 gc.alloc.rate:      13262,143 MB/sec
-                 gc.alloc.rate.norm: 80,000 B/op
-                 gc.count:           89,000 counts
-                 gc.time:            59,000 ms
-
-Iteration   3: 174168448,309 ops/s
-                 gc.alloc.rate:      13287,861 MB/sec
-                 gc.alloc.rate.norm: 80,000 B/op
-                 gc.count:           90,000 counts
-                 gc.time:            60,000 ms
-
-Iteration   4: 173984629,753 ops/s
-                 gc.alloc.rate:      13273,818 MB/sec
-                 gc.alloc.rate.norm: 80,000 B/op
-                 gc.count:           89,000 counts
-                 gc.time:            59,000 ms
-
-Iteration   5: 174540337,334 ops/s
-                 gc.alloc.rate:      13316,192 MB/sec
-                 gc.alloc.rate.norm: 80,000 B/op
-                 gc.count:           90,000 counts
-                 gc.time:            59,000 ms
-
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 95254039.171 ops/s
+# Warmup Iteration   2: 99876488.134 ops/s
+# Warmup Iteration   3: 97396994.079 ops/s
+# Warmup Iteration   4: 100149007.520 ops/s
+# Warmup Iteration   5: 100287008.865 ops/s
+Iteration   1: 100100504.345 ops/s
+Iteration   2: 100294236.446 ops/s
+Iteration   3: 100186762.342 ops/s
+Iteration   4: 100122718.127 ops/s
+Iteration   5: 100533071.388 ops/s
+# Processing profiler results: LinuxPerfAsmProfiler 
 
 
 Result "org.sample.KotlinBenchmark._010_kotlin_myListOf10":
-  174193999,635 ±(99.9%) 1153364,533 ops/s [Average]
-  (min, avg, max) = (173831521,181, 174193999,635, 174540337,334), stdev = 299525,107
-  CI (99.9%): [173040635,102, 175347364,167] (assumes normal distribution)
+  100247458.529 ±(99.9%) 679621.216 ops/s [Average]
+  (min, avg, max) = (100100504.345, 100247458.529, 100533071.388), stdev = 176495.472
+  CI (99.9%): [99567837.313, 100927079.746] (assumes normal distribution)
 
-Secondary result "org.sample.KotlinBenchmark._010_kotlin_myListOf10:gc.alloc.rate":
-  13289,793 ±(99.9%) 87,965 MB/sec [Average]
-  (min, avg, max) = (13262,143, 13289,793, 13316,192), stdev = 22,844
-  CI (99.9%): [13201,828, 13377,758] (assumes normal distribution)
+Secondary result "org.sample.KotlinBenchmark._010_kotlin_myListOf10:asm":
+PrintAssembly processed: 42019 total address lines.
+Perf output processed (skipped 52.668 seconds):
+ Column 1: cycles (50351 events)
 
-Secondary result "org.sample.KotlinBenchmark._010_kotlin_myListOf10:gc.alloc.rate.norm":
-  80,000 ±(99.9%) 0,001 B/op [Average]
-  (min, avg, max) = (80,000, 80,000, 80,000), stdev = 0,001
-  CI (99.9%): [80,000, 80,000] (assumes normal distribution)
+Hottest code regions (>10.00% "cycles" events):
+ Event counts are percents of total event count.
 
-Secondary result "org.sample.KotlinBenchmark._010_kotlin_myListOf10:gc.count":
-  448,000 ±(99.9%) 0,001 counts [Sum]
-  (min, avg, max) = (89,000, 89,600, 90,000), stdev = 0,548
-  CI (99.9%): [448,000, 448,000] (assumes normal distribution)
+....[Hottest Region 1]..............................................................................
+c2, level 4, org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub, version 6, compile id 657 
 
-Secondary result "org.sample.KotlinBenchmark._010_kotlin_myListOf10:gc.time":
-  297,000 ±(99.9%) 0,001 ms [Sum]
-  (min, avg, max) = (59,000, 59,400, 60,000), stdev = 0,548
-  CI (99.9%): [297,000, 297,000] (assumes normal distribution)
+            0x00007f009c0fedd0: ; implicit exception: dispatches to 0x00007f009c0ff148
+            0x00007f009c0fedd0: 450f b698 
+            0x00007f009c0fedd4: ;*getfield isDone {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@30 (line 123)
+            0x00007f009c0fedd4: 9400 0000 | 0f1f 8400 | 0000 0000 | 4585 db0f | 8534 0200 | 0041 bb01 | 0000 004c | 8944 2440 
+            0x00007f009c0fedf4: 4c89 5424 | 284c 895c | 2430 6690 | e96b 0000 | 0066 6666 | 0f1f 8400 
+            0x00007f009c0fee0c: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@33 (line 123)
+            0x00007f009c0fee0c: 0000 0000 | 4d89 97b8 | 0100 0041 | 0f0d 8ac0 | 0000 0048 | c700 0100 
+            0x00007f009c0fee24: ;   {metadata(&apos;java/util/Arrays$ArrayList&apos;)}
+            0x00007f009c0fee24: 0000 c740 | 08c0 5a2a | 0044 8960 | 0c44 8960 
+            0x00007f009c0fee34: ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                ; - java.util.Arrays::asList@0 (line 4184)
+                                ; - kotlin.collections.ArraysUtilJVM::asList@1 (line 13)
+                                ; - kotlin.collections.ArraysKt___ArraysJvmKt::asList@7 (line 133)
+                                ; - kotlin.collections.CollectionsKt__CollectionsKt::listOf@12 (line 78)
+                                ; - org.sample.KotlinBenchmarkKt::myListOf10@69 (line 402)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@40 (line 143)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0fee34: 1448 8b5c | 2430 4883 
+            0x00007f009c0fee3c: ;*ladd {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@26 (line 122)
+            0x00007f009c0fee3c: c301 4c8b | 5424 2049 | c1ea 0344 
+            0x00007f009c0fee48: ;*synchronization entry
+                                ; - java.util.Arrays$ArrayList::&lt;init&gt;@-1 (line 4198)
+                                ; - java.util.Arrays::asList@5 (line 4184)
+                                ; - kotlin.collections.ArraysUtilJVM::asList@1 (line 13)
+                                ; - kotlin.collections.ArraysKt___ArraysJvmKt::asList@7 (line 133)
+                                ; - kotlin.collections.CollectionsKt__CollectionsKt::listOf@12 (line 78)
+                                ; - org.sample.KotlinBenchmarkKt::myListOf10@69 (line 402)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@40 (line 143)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0fee48: 8950 104c | 8b44 2440 | 450f b690 
+            0x00007f009c0fee54: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@33 (line 123)
+            0x00007f009c0fee54: 9400 0000 | 4d8b 9f50 
+            0x00007f009c0fee5c: ; ImmutableOopMap {[40]=Oop [64]=Oop [112]=Oop [128]=Oop }
+                                ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                                ; - (reexecute) org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@33 (line 123)
+                                ;   {poll}
+            0x00007f009c0fee5c: 0400 0041 | 8503 4585 | d20f 85b7 
+            0x00007f009c0fee68: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@33 (line 123)
+            0x00007f009c0fee68: 0100 0048 
+            0x00007f009c0fee6c: ;*aload_1 {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@36 (line 124)
+            0x00007f009c0fee6c: 895c 2430 | 4c8b 9424 | 8000 0000 | 458b 5210 | 4489 5424 
+            0x00007f009c0fee80: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@1 (line 144)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0fee80: 784c 8b94 | 2480 0000 | 0045 8b5a | 1044 895c 
+            0x00007f009c0fee90: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@5 (line 145)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0fee90: 247c 458b | 5210 4489 
+            0x00007f009c0fee98: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@9 (line 146)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0fee98: 1424 4c8b | 9424 8000 | 0000 458b | 5a10 4489 
+            0x00007f009c0feea8: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@13 (line 147)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0feea8: 5c24 0445 | 8b52 1044 
+            0x00007f009c0feeb0: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@17 (line 148)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0feeb0: 8954 2408 | 4c8b 9424 | 8000 0000 | 458b 5a10 | 4489 5c24 
+            0x00007f009c0feec4: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@21 (line 149)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0feec4: 0c45 8b52 | 1044 8954 
+            0x00007f009c0feecc: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@25 (line 150)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0feecc: 2410 4c8b | 9424 8000 | 0000 458b | 5a10 4489 
+            0x00007f009c0feedc: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@29 (line 151)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0feedc: 5c24 1445 | 8b52 1044 
+            0x00007f009c0feee4: ;*getfield x {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@33 (line 152)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0feee4: 8954 2418 | 4c8b 9424 | 8000 0000 | 418b 6a10 | 498b 87b8 | 0100 004c | 8bd0 4983 | c238 4d3b 
+            0x00007f009c0fef04: 97c8 0100 | 000f 83ea 
+            0x00007f009c0fef0c: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@33 (line 123)
+            0x00007f009c0fef0c: 0000 004d | 8997 b801 | 0000 410f | 0d8a c000 | 0000 48c7 | 0001 0000 | 0041 0f0d | 8a00 0100 
+            0x00007f009c0fef2c: ;   {metadata(&apos;java/lang/Object&apos;[])}
+            0x00007f009c0fef2c: 00c7 4008 | 583a 1600 | 410f 0d8a | 4001 0000 | c740 0c0a | 0000 0041 | 0f0d 8a80 | 0100 004c 
+            0x00007f009c0fef4c: 8960 104c | 8960 184c | 8960 204c | 8960 284c 
+            0x00007f009c0fef5c: ;*anewarray {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::myListOf10@2 (line 402)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@40 (line 143)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0fef5c: 8960 3048 | 8944 2420 | 448b 4424 | 7844 8940 
+            0x00007f009c0fef6c: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::myListOf10@11 (line 402)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@40 (line 143)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0fef6c: 1044 8b5c | 247c 4489 
+            0x00007f009c0fef74: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::myListOf10@16 (line 402)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@40 (line 143)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0fef74: 5814 448b | 0424 4489 
+            0x00007f009c0fef7c: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::myListOf10@21 (line 402)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@40 (line 143)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0fef7c: 4018 448b | 5c24 0444 
+            0x00007f009c0fef84: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::myListOf10@26 (line 402)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@40 (line 143)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0fef84: 8958 1c44 | 8b44 2408 
+   0.10%    0x00007f009c0fef8c: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::myListOf10@32 (line 402)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@40 (line 143)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+   0.10%    0x00007f009c0fef8c: 4489 4020 | 448b 5c24 | 0c44 8958 
+            0x00007f009c0fef98: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::myListOf10@38 (line 402)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@40 (line 143)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0fef98: 2444 8b44 | 2410 4489 
+            0x00007f009c0fefa0: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::myListOf10@45 (line 402)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@40 (line 143)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0fefa0: 4028 448b | 5c24 1444 
+            0x00007f009c0fefa8: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::myListOf10@52 (line 402)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@40 (line 143)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+            0x00007f009c0fefa8: 8958 2c44 | 8b44 2418 
+   0.04%    0x00007f009c0fefb0: ;*aastore {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.KotlinBenchmarkKt::myListOf10@59 (line 402)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@40 (line 143)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+   0.04%    0x00007f009c0fefb0: 4489 4030 | 8968 3449 | 8b87 b801 | 0000 4c8b | d049 83c2 
+            0x00007f009c0fefc4: ;*ifeq {reexecute=0 rethrow=0 return_oop=0}
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@33 (line 123)
+            0x00007f009c0fefc4: 184d 3b97 | c801 0000 | 0f82 3efe 
+            0x00007f009c0fefd0: ;*synchronization entry
+                                ; - java.util.Arrays::asList@-1 (line 4184)
+                                ; - kotlin.collections.ArraysUtilJVM::asList@1 (line 13)
+                                ; - kotlin.collections.ArraysKt___ArraysJvmKt::asList@7 (line 133)
+                                ; - kotlin.collections.CollectionsKt__CollectionsKt::listOf@12 (line 78)
+                                ; - org.sample.KotlinBenchmarkKt::myListOf10@69 (line 402)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@40 (line 143)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+                                ;   {metadata(&apos;java/util/Arrays$ArrayList&apos;)}
+            0x00007f009c0fefd0: ffff 48be | c05a 2a2a | 007f 0000 | 4c8b 5424 | 284c 8914 
+            0x00007f009c0fefe4: ;   {runtime_call _new_instance_Java}
+            0x00007f009c0fefe4: 2466 90e8 
+            0x00007f009c0fefe8: ; ImmutableOopMap {[0]=Oop [32]=Oop [40]=Oop [64]=Oop [112]=Oop [128]=Oop }
+                                ;*new {reexecute=0 rethrow=0 return_oop=1}
+                                ; - java.util.Arrays::asList@0 (line 4184)
+                                ; - kotlin.collections.ArraysUtilJVM::asList@1 (line 13)
+                                ; - kotlin.collections.ArraysKt___ArraysJvmKt::asList@7 (line 133)
+                                ; - kotlin.collections.CollectionsKt__CollectionsKt::listOf@12 (line 78)
+                                ; - org.sample.KotlinBenchmarkKt::myListOf10@69 (line 402)
+                                ; - org.sample.KotlinBenchmark::_010_kotlin_myListOf10@40 (line 143)
+                                ; - org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub@17 (line 121)
+....................................................................................................
+  98.59%  <total for region 1>
+
+....[Hottest Regions]...............................................................................
+  98.59%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub, version 6, compile id 657 
+   0.10%                        <unknown> 
+   0.08%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
+   0.07%             libjvm.so  SpinPause 
+   0.05%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+   0.04%                [vdso]  __vdso_clock_gettime 
+   0.04%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
+   0.04%             libjvm.so  G1ConcurrentMark::clear_statistics(G1HeapRegion*) 
+   0.04%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
+   0.04%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
+   0.02%             libjvm.so  Rdtsc::elapsed_counter() 
+   0.02%                        <unknown> 
+   0.02%                        <unknown> 
+   0.02%             libjvm.so  G1EvacPhaseWithTrimTimeTracker::~G1EvacPhaseWithTrimTimeTracker() 
+   0.02%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
+   0.02%             libjvm.so  G1RebuildFreeListTask::work(unsigned int) 
+   0.02%             libc.so.6  pthread_mutex_trylock 
+   0.01%             libjvm.so  FreeListAllocator::reset() 
+   0.01%             libjvm.so  G1FromCardCache::clear(unsigned int) 
+   0.01%             libjvm.so  G1GCPhaseTimes::phase_name(G1GCPhaseTimes::GCParPhases) 
+   0.74%  <...other 246 warm regions...>
+....................................................................................................
+ 100.00%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+  98.59%           c2, level 4  org.sample.jmh_generated.KotlinBenchmark__010_kotlin_myListOf10_jmhTest::_010_kotlin_myListOf10_thrpt_jmhStub, version 6, compile id 657 
+   0.25%                        <unknown> 
+   0.08%             libjvm.so  HeapRegionManager::par_iterate(HeapRegionClosure*, HeapRegionClaimer*, unsigned int) const 
+   0.07%             libjvm.so  SpinPause 
+   0.05%             libjvm.so  ElfSymbolTable::lookup(unsigned char*, int*, int*, int*, ElfFuncDescTable*) 
+   0.05%                [vdso]  __vdso_clock_gettime 
+   0.05%             libjvm.so  G1MergeHeapRootsTask::G1MergeCardSetClosure::do_heap_region(G1HeapRegion*) 
+   0.04%             libjvm.so  HeapRegionClaimer::claim_region(unsigned int) 
+   0.04%             libjvm.so  G1ConcurrentMark::clear_statistics(G1HeapRegion*) 
+   0.04%             libjvm.so  G1CodeRootSet::reset_table_scanner() 
+   0.02%             libjvm.so  G1RebuildFreeListTask::work(unsigned int) 
+   0.02%             libjvm.so  G1ScanCollectionSetRegionClosure::do_heap_region(G1HeapRegion*) 
+   0.02%             libjvm.so  Rdtsc::elapsed_counter() 
+   0.02%             libjvm.so  G1EvacPhaseWithTrimTimeTracker::~G1EvacPhaseWithTrimTimeTracker() 
+   0.02%             libjvm.so  void WeakProcessor::Task::work<G1STWIsAliveClosure, G1KeepAliveClosure>(unsigned int, G1STWIsAliveClosure*, G1KeepAliveClosure*) 
+   0.02%             libc.so.6  pthread_mutex_trylock 
+   0.02%             libjvm.so  ObjArrayAllocator::initialize(HeapWordImpl**) const 
+   0.01%             libjvm.so  FreeCSetClosure::do_heap_region(G1HeapRegion*) 
+   0.01%             libjvm.so  FreeListAllocator::reset() 
+   0.01%             libjvm.so  G1FromCardCache::clear(unsigned int) 
+   0.57%  <...other 176 warm methods...>
+....................................................................................................
+ 100.00%  <totals>
+
+....[Distribution by Source]........................................................................
+  98.59%           c2, level 4
+   1.01%             libjvm.so
+   0.25%                      
+   0.08%             libc.so.6
+   0.05%                [vdso]
+   0.01%  ld-linux-x86-64.so.2
+   0.00%                kernel
+   0.00%           interpreter
+   0.00%           c1, level 3
+....................................................................................................
+ 100.00%  <totals>
 
 
-# Run complete. Total time: 00:05:00
+
+# Run complete. Total time: 00:05:10
 
 REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
 why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
@@ -243,19 +852,10 @@ works, and factor in a small probability of new VM bugs. Additionally, while com
 different JVMs are already problematic, the performance difference caused by different Blackhole
 modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
-Benchmark                                                                 Mode  Cnt          Score         Error   Units
-KotlinBenchmark._010_kotlin_listOf_vararg                                thrpt    5  109700614,280 ±  174005,479   ops/s
-KotlinBenchmark._010_kotlin_listOf_vararg:gc.alloc.rate                  thrpt    5       8369,388 ±      13,217  MB/sec
-KotlinBenchmark._010_kotlin_listOf_vararg:gc.alloc.rate.norm             thrpt    5         80,000 ±       0,001    B/op
-KotlinBenchmark._010_kotlin_listOf_vararg:gc.count                       thrpt    5        359,000                counts
-KotlinBenchmark._010_kotlin_listOf_vararg:gc.time                        thrpt    5        211,000                    ms
-KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars                     thrpt    5  174720893,112 ±  915439,732   ops/s
-KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.alloc.rate       thrpt    5      13329,980 ±      69,807  MB/sec
-KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.alloc.rate.norm  thrpt    5         80,000 ±       0,001    B/op
-KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.count            thrpt    5        449,000                counts
-KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:gc.time             thrpt    5        290,000                    ms
-KotlinBenchmark._010_kotlin_myListOf10                                   thrpt    5  174193999,635 ± 1153364,533   ops/s
-KotlinBenchmark._010_kotlin_myListOf10:gc.alloc.rate                     thrpt    5      13289,793 ±      87,965  MB/sec
-KotlinBenchmark._010_kotlin_myListOf10:gc.alloc.rate.norm                thrpt    5         80,000 ±       0,001    B/op
-KotlinBenchmark._010_kotlin_myListOf10:gc.count                          thrpt    5        448,000                counts
-KotlinBenchmark._010_kotlin_myListOf10:gc.time                           thrpt    5        297,000                    ms
+Benchmark                                                  Mode  Cnt          Score        Error  Units
+KotlinBenchmark._010_kotlin_listOf_vararg                 thrpt    5   57911704.739 ± 458885.927  ops/s
+KotlinBenchmark._010_kotlin_listOf_vararg:asm             thrpt                 NaN                 ---
+KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars      thrpt    5  100130511.572 ± 845296.798  ops/s
+KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars:asm  thrpt                 NaN                 ---
+KotlinBenchmark._010_kotlin_myListOf10                    thrpt    5  100247458.529 ± 679621.216  ops/s
+KotlinBenchmark._010_kotlin_myListOf10:asm                thrpt                 NaN                 ---
