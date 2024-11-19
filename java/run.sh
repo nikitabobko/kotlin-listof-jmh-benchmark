@@ -6,4 +6,4 @@ set -o pipefail # Any command failed in the pipe fails the whole pipe
 cd "$(dirname "$0")"
 
 ./build.sh
-java -jar target/benchmarks.jar 2>&1 | tee log
+java -jar target/benchmarks.jar 2>&1 | tee "log-$OSTYPE.txt"
