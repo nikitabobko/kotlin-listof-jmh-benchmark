@@ -109,6 +109,6 @@ different JVMs are already problematic, the performance difference caused by dif
 modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
 Benchmark                                              Mode  Cnt          Score         Error  Units
-KotlinBenchmark._010_kotlin_listOf_vararg             thrpt    5  109384795,619 ±  189368,253  ops/s
 KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars  thrpt    5  175987914,077 ±  507404,161  ops/s
 KotlinBenchmark._010_kotlin_myListOf10                thrpt    5  173993829,913 ± 3974846,274  ops/s
+KotlinBenchmark._010_kotlin_listOf_vararg             thrpt    5  109384795,619 ±  189368,253  ops/s
