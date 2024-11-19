@@ -1,0 +1,114 @@
+# JMH version: 1.37
+# VM version: JDK 17.0.10, OpenJDK 64-Bit Server VM, 17.0.10+7-LTS
+# VM invoker: /Users/Nikita.Bobko/.sdkman/candidates/java/17.0.10-amzn/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.sample.KotlinBenchmark._010_sum10
+
+# Run progress: 0,00% complete, ETA 00:05:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 139354450,675 ops/s
+# Warmup Iteration   2: 133802220,183 ops/s
+# Warmup Iteration   3: 122899722,882 ops/s
+# Warmup Iteration   4: 125135627,944 ops/s
+# Warmup Iteration   5: 124270794,450 ops/s
+Iteration   1: 125484666,810 ops/s
+Iteration   2: 124433035,484 ops/s
+Iteration   3: 124842123,979 ops/s
+Iteration   4: 124629938,391 ops/s
+Iteration   5: 123943505,790 ops/s
+
+
+Result "org.sample.KotlinBenchmark._010_sum10":
+  124666654,091 ±(99.9%) 2177234,960 ops/s [Average]
+  (min, avg, max) = (123943505,790, 124666654,091, 125484666,810), stdev = 565421,005
+  CI (99.9%): [122489419,130, 126843889,051] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.10, OpenJDK 64-Bit Server VM, 17.0.10+7-LTS
+# VM invoker: /Users/Nikita.Bobko/.sdkman/candidates/java/17.0.10-amzn/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.sample.KotlinBenchmark._010_varargSum
+
+# Run progress: 33,33% complete, ETA 00:03:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 211306997,645 ops/s
+# Warmup Iteration   2: 211163536,937 ops/s
+# Warmup Iteration   3: 219003438,315 ops/s
+# Warmup Iteration   4: 219239036,513 ops/s
+# Warmup Iteration   5: 219223427,227 ops/s
+Iteration   1: 219123520,905 ops/s
+Iteration   2: 219103598,937 ops/s
+Iteration   3: 219610501,182 ops/s
+Iteration   4: 219655141,115 ops/s
+Iteration   5: 219430266,667 ops/s
+
+
+Result "org.sample.KotlinBenchmark._010_varargSum":
+  219384605,761 ±(99.9%) 1006766,990 ops/s [Average]
+  (min, avg, max) = (219103598,937, 219384605,761, 219655141,115), stdev = 261454,190
+  CI (99.9%): [218377838,771, 220391372,751] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.10, OpenJDK 64-Bit Server VM, 17.0.10+7-LTS
+# VM invoker: /Users/Nikita.Bobko/.sdkman/candidates/java/17.0.10-amzn/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.sample.KotlinBenchmark._010_varargSum_inter_vars
+
+# Run progress: 66,67% complete, ETA 00:01:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 138914772,274 ops/s
+# Warmup Iteration   2: 132164836,855 ops/s
+# Warmup Iteration   3: 128058796,486 ops/s
+# Warmup Iteration   4: 127591876,832 ops/s
+# Warmup Iteration   5: 128199904,999 ops/s
+Iteration   1: 125362642,615 ops/s
+Iteration   2: 125876056,786 ops/s
+Iteration   3: 125959291,548 ops/s
+Iteration   4: 126957570,942 ops/s
+Iteration   5: 124566080,290 ops/s
+
+
+Result "org.sample.KotlinBenchmark._010_varargSum_inter_vars":
+  125744328,436 ±(99.9%) 3373146,299 ops/s [Average]
+  (min, avg, max) = (124566080,290, 125744328,436, 126957570,942), stdev = 875995,382
+  CI (99.9%): [122371182,137, 129117474,735] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:05:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                   Mode  Cnt          Score         Error  Units
+KotlinBenchmark._010_sum10                 thrpt    5  124666654,091 ± 2177234,960  ops/s
+KotlinBenchmark._010_varargSum             thrpt    5  219384605,761 ± 1006766,990  ops/s
+KotlinBenchmark._010_varargSum_inter_vars  thrpt    5  125744328,436 ± 3373146,299  ops/s
