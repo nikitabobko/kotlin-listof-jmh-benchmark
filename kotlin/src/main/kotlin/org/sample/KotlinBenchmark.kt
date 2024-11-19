@@ -11,6 +11,8 @@ open class KotlinBenchmark {
     var y: Int = 0
         get() = field++
 
+    var z = 42
+
     // @Benchmark()
     // fun baseline() {}
 
@@ -396,68 +398,83 @@ open class KotlinBenchmark {
     //     )
     // }
 
+    // @Benchmark
+    // fun _010_varargArr(): List<Int> {
+    //     return varargArr(
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //     )
+    // }
+
+    // @Benchmark
+    // fun _010_varargArr_inter_vars(): List<Int> {
+    //     val _01 = y
+    //     val _02 = y
+    //     val _03 = y
+    //     val _04 = y
+    //     val _05 = y
+    //     val _06 = y
+    //     val _07 = y
+    //     val _08 = y
+    //     val _09 = y
+    //     val _10 = y
+    //     return varargArr(
+    //         _01,
+    //         _02,
+    //         _03,
+    //         _04,
+    //         _05,
+    //         _06,
+    //         _07,
+    //         _08,
+    //         _09,
+    //         _10,
+    //     )
+    // }
+
+    // @Benchmark
+    // fun _010_arr10(): List<Int> {
+    //     return arr10(
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //         y,
+    //     )
+    // }
+
     @Benchmark
-    fun _010_varargArr(): IntArray {
-        return varargArr(
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-        )
+    fun _050_arrayOf(): Any? {
+        return arrayOf(java.lang.Integer.valueOf(z), java.lang.Integer.valueOf(z), java.lang.Integer.valueOf(z), java.lang.Integer.valueOf(z), java.lang.Integer.valueOf(z))
     }
 
     @Benchmark
-    fun _010_varargArr_inter_vars(): IntArray {
-        val _01 = y
-        val _02 = y
-        val _03 = y
-        val _04 = y
-        val _05 = y
-        val _06 = y
-        val _07 = y
-        val _08 = y
-        val _09 = y
-        val _10 = y
-        return varargArr(
-            _01,
-            _02,
-            _03,
-            _04,
-            _05,
-            _06,
-            _07,
-            _08,
-            _09,
-            _10,
-        )
-    }
-
-    @Benchmark
-    fun _010_arr10(): IntArray {
-        return arr10(
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-        )
+    fun _050_arrayOf_interVars(): Any? {
+        val x1 = java.lang.Integer.valueOf(z)
+        val x2 = java.lang.Integer.valueOf(z)
+        val x3 = java.lang.Integer.valueOf(z)
+        val x4 = java.lang.Integer.valueOf(z)
+        val x5 = java.lang.Integer.valueOf(z)
+        return arrayOf(x1, x2, x3, x4, x5)
     }
 
 }
 
-fun arr10(_01: Int, _02: Int, _03: Int, _04: Int, _05: Int, _06: Int, _07: Int, _08: Int, _09: Int, _10: Int): IntArray {
+fun <T> arr10(_01: T, _02: T, _03: T, _04: T, _05: T, _06: T, _07: T, _08: T, _09: T, _10: T): List<T> {
     return varargArr(_01, _02, _03, _04, _05, _06, _07, _08, _09, _10)
 }
 
-fun varargArr(vararg x: Int): IntArray = x
+fun <T> varargArr(vararg x: T): List<T> = x.asList()
