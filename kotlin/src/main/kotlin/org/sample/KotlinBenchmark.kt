@@ -397,8 +397,8 @@ open class KotlinBenchmark {
     // }
 
     @Benchmark
-    fun _010_varargArr(): IntArray {
-        return varargArr(
+    fun _010_intArrayOf(): IntArray {
+        return intArrayOf(
             y,
             y,
             y,
@@ -413,7 +413,7 @@ open class KotlinBenchmark {
     }
 
     @Benchmark
-    fun _010_varargArr_inter_vars(): IntArray {
+    fun _010_intArrayOf_inter_vars(): IntArray {
         val _01 = y
         val _02 = y
         val _03 = y
@@ -424,7 +424,7 @@ open class KotlinBenchmark {
         val _08 = y
         val _09 = y
         val _10 = y
-        return varargArr(
+        return intArrayOf(
             _01,
             _02,
             _03,
@@ -438,26 +438,4 @@ open class KotlinBenchmark {
         )
     }
 
-    @Benchmark
-    fun _010_arr10(): IntArray {
-        return arr10(
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-            y,
-        )
-    }
-
 }
-
-fun arr10(_01: Int, _02: Int, _03: Int, _04: Int, _05: Int, _06: Int, _07: Int, _08: Int, _09: Int, _10: Int): IntArray {
-    return varargArr(_01, _02, _03, _04, _05, _06, _07, _08, _09, _10)
-}
-
-fun varargArr(vararg x: Int): IntArray = x
