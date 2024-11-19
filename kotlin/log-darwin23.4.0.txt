@@ -8,26 +8,26 @@
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Throughput, ops/time
-# Benchmark: org.sample.KotlinBenchmark._010_arr10
+# Benchmark: org.sample.KotlinBenchmark._010_intArrayOf
 
-# Run progress: 0,00% complete, ETA 00:05:00
+# Run progress: 0,00% complete, ETA 00:03:20
 # Fork: 1 of 1
-# Warmup Iteration   1: 506626263,313 ops/s
-# Warmup Iteration   2: 531939820,539 ops/s
-# Warmup Iteration   3: 417894514,113 ops/s
-# Warmup Iteration   4: 415958016,677 ops/s
-# Warmup Iteration   5: 417612517,096 ops/s
-Iteration   1: 424017409,140 ops/s
-Iteration   2: 424444832,260 ops/s
-Iteration   3: 424294568,455 ops/s
-Iteration   4: 424237836,178 ops/s
-Iteration   5: 424239940,792 ops/s
+# Warmup Iteration   1: 328718679,241 ops/s
+# Warmup Iteration   2: 334088709,732 ops/s
+# Warmup Iteration   3: 302252618,925 ops/s
+# Warmup Iteration   4: 301028744,200 ops/s
+# Warmup Iteration   5: 302177172,265 ops/s
+Iteration   1: 301665904,227 ops/s
+Iteration   2: 301570559,023 ops/s
+Iteration   3: 301668091,023 ops/s
+Iteration   4: 301790396,223 ops/s
+Iteration   5: 301992683,557 ops/s
 
 
-Result "org.sample.KotlinBenchmark._010_arr10":
-  424246917,365 ±(99.9%) 591064,743 ops/s [Average]
-  (min, avg, max) = (424017409,140, 424246917,365, 424444832,260), stdev = 153497,637
-  CI (99.9%): [423655852,622, 424837982,108] (assumes normal distribution)
+Result "org.sample.KotlinBenchmark._010_intArrayOf":
+  301737526,810 ±(99.9%) 626039,110 ops/s [Average]
+  (min, avg, max) = (301570559,023, 301737526,810, 301992683,557), stdev = 162580,369
+  CI (99.9%): [301111487,701, 302363565,920] (assumes normal distribution)
 
 
 # JMH version: 1.37
@@ -40,61 +40,29 @@ Result "org.sample.KotlinBenchmark._010_arr10":
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Throughput, ops/time
-# Benchmark: org.sample.KotlinBenchmark._010_varargArr
+# Benchmark: org.sample.KotlinBenchmark._010_intArrayOf_inter_vars
 
-# Run progress: 33,33% complete, ETA 00:03:20
+# Run progress: 50,00% complete, ETA 00:01:40
 # Fork: 1 of 1
-# Warmup Iteration   1: 321089165,354 ops/s
-# Warmup Iteration   2: 331369584,220 ops/s
-# Warmup Iteration   3: 297729149,215 ops/s
-# Warmup Iteration   4: 298286413,598 ops/s
-# Warmup Iteration   5: 298675504,460 ops/s
-Iteration   1: 297841687,707 ops/s
-Iteration   2: 298208362,297 ops/s
-Iteration   3: 298816041,975 ops/s
-Iteration   4: 296771823,580 ops/s
-Iteration   5: 298142781,151 ops/s
+# Warmup Iteration   1: 516310473,640 ops/s
+# Warmup Iteration   2: 535099633,439 ops/s
+# Warmup Iteration   3: 425777481,216 ops/s
+# Warmup Iteration   4: 425768022,340 ops/s
+# Warmup Iteration   5: 425349387,313 ops/s
+Iteration   1: 424490882,134 ops/s
+Iteration   2: 426492805,473 ops/s
+Iteration   3: 424839019,441 ops/s
+Iteration   4: 425598796,691 ops/s
+Iteration   5: 424686153,434 ops/s
 
 
-Result "org.sample.KotlinBenchmark._010_varargArr":
-  297956139,342 ±(99.9%) 2890284,152 ops/s [Average]
-  (min, avg, max) = (296771823,580, 297956139,342, 298816041,975), stdev = 750597,616
-  CI (99.9%): [295065855,190, 300846423,494] (assumes normal distribution)
+Result "org.sample.KotlinBenchmark._010_intArrayOf_inter_vars":
+  425221531,435 ±(99.9%) 3178391,210 ops/s [Average]
+  (min, avg, max) = (424490882,134, 425221531,435, 426492805,473), stdev = 825418,104
+  CI (99.9%): [422043140,225, 428399922,644] (assumes normal distribution)
 
 
-# JMH version: 1.37
-# VM version: JDK 17.0.10, OpenJDK 64-Bit Server VM, 17.0.10+7-LTS
-# VM invoker: /Users/Nikita.Bobko/.sdkman/candidates/java/17.0.10-amzn/bin/java
-# VM options: <none>
-# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
-# Warmup: 5 iterations, 10 s each
-# Measurement: 5 iterations, 10 s each
-# Timeout: 10 min per iteration
-# Threads: 1 thread, will synchronize iterations
-# Benchmark mode: Throughput, ops/time
-# Benchmark: org.sample.KotlinBenchmark._010_varargArr_inter_vars
-
-# Run progress: 66,67% complete, ETA 00:01:40
-# Fork: 1 of 1
-# Warmup Iteration   1: 515202996,775 ops/s
-# Warmup Iteration   2: 533649908,065 ops/s
-# Warmup Iteration   3: 423759068,563 ops/s
-# Warmup Iteration   4: 426462336,504 ops/s
-# Warmup Iteration   5: 424996095,087 ops/s
-Iteration   1: 425111275,511 ops/s
-Iteration   2: 425357098,271 ops/s
-Iteration   3: 424706657,126 ops/s
-Iteration   4: 425533048,485 ops/s
-Iteration   5: 425290873,469 ops/s
-
-
-Result "org.sample.KotlinBenchmark._010_varargArr_inter_vars":
-  425199790,573 ±(99.9%) 1210227,055 ops/s [Average]
-  (min, avg, max) = (424706657,126, 425199790,573, 425533048,485), stdev = 314292,123
-  CI (99.9%): [423989563,518, 426410017,628] (assumes normal distribution)
-
-
-# Run complete. Total time: 00:05:00
+# Run complete. Total time: 00:03:20
 
 REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
 why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
@@ -108,7 +76,6 @@ works, and factor in a small probability of new VM bugs. Additionally, while com
 different JVMs are already problematic, the performance difference caused by different Blackhole
 modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
-Benchmark                                   Mode  Cnt          Score         Error  Units
-KotlinBenchmark._010_arr10                 thrpt    5  424246917,365 ±  591064,743  ops/s
-KotlinBenchmark._010_varargArr             thrpt    5  297956139,342 ± 2890284,152  ops/s
-KotlinBenchmark._010_varargArr_inter_vars  thrpt    5  425199790,573 ± 1210227,055  ops/s
+Benchmark                                    Mode  Cnt          Score         Error  Units
+KotlinBenchmark._010_intArrayOf             thrpt    5  301737526,810 ±  626039,110  ops/s
+KotlinBenchmark._010_intArrayOf_inter_vars  thrpt    5  425221531,435 ± 3178391,210  ops/s
