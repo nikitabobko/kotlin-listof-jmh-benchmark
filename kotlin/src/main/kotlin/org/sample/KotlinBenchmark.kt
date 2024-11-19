@@ -96,63 +96,63 @@ open class KotlinBenchmark {
     //     return arrayList
     // }
 
-    @Benchmark
-    fun _010_kotlin_listOf_vararg(): List<String> {
-        return listOf(
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-        )
-    }
+    // @Benchmark
+    // fun _010_kotlin_listOf_vararg(): List<String> {
+    //     return listOf(
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //     )
+    // }
 
-    @Benchmark
-    fun _010_kotlin_listOf_vararg_inter_vars(): List<String> {
-        val _01 = x
-        val _02 = x
-        val _03 = x
-        val _04 = x
-        val _05 = x
-        val _06 = x
-        val _07 = x
-        val _08 = x
-        val _09 = x
-        val _10 = x
-        return listOf(
-            _01,
-            _02,
-            _03,
-            _04,
-            _05,
-            _06,
-            _07,
-            _08,
-            _09,
-            _10,
-        )
-    }
+    // @Benchmark
+    // fun _010_kotlin_listOf_vararg_inter_vars(): List<String> {
+    //     val _01 = x
+    //     val _02 = x
+    //     val _03 = x
+    //     val _04 = x
+    //     val _05 = x
+    //     val _06 = x
+    //     val _07 = x
+    //     val _08 = x
+    //     val _09 = x
+    //     val _10 = x
+    //     return listOf(
+    //         _01,
+    //         _02,
+    //         _03,
+    //         _04,
+    //         _05,
+    //         _06,
+    //         _07,
+    //         _08,
+    //         _09,
+    //         _10,
+    //     )
+    // }
 
-    @Benchmark
-    fun _010_kotlin_myListOf10(): List<String> {
-        return myListOf10(
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-            x,
-        )
-    }
+    // @Benchmark
+    // fun _010_kotlin_myListOf10(): List<String> {
+    //     return myListOf10(
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //         x,
+    //     )
+    // }
 
     // @Benchmark
     // fun _010_kotlin_listOf_vararg_int(): List<Int> {
@@ -396,8 +396,74 @@ open class KotlinBenchmark {
     //     )
     // }
 
+    @Benchmark
+    fun _010_varargSum(): Int {
+        return varargSum(
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+        )
+    }
+
+    @Benchmark
+    fun _010_varargSum_inter_vars(): Int {
+        val _01 = y
+        val _02 = y
+        val _03 = y
+        val _04 = y
+        val _05 = y
+        val _06 = y
+        val _07 = y
+        val _08 = y
+        val _09 = y
+        val _10 = y
+        return varargSum(
+            _01,
+            _02,
+            _03,
+            _04,
+            _05,
+            _06,
+            _07,
+            _08,
+            _09,
+            _10,
+        )
+    }
+
+    @Benchmark
+    fun _010_sum10(): Int {
+        return sum10(
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+            y,
+        )
+    }
+
 }
 
-fun <T> myListOf10(_01: T, _02: T, _03: T, _04: T, _05: T, _06: T, _07: T, _08: T, _09: T, _10: T): List<T> {
-    return listOf(_01, _02, _03, _04, _05, _06, _07, _08, _09, _10)
+fun sum10(_01: Int, _02: Int, _03: Int, _04: Int, _05: Int, _06: Int, _07: Int, _08: Int, _09: Int, _10: Int): Int {
+    return varargSum(_01, _02, _03, _04, _05, _06, _07, _08, _09, _10)
+}
+
+fun varargSum(vararg x: Int): Int {
+    var result = 0
+    for (i in x) {
+        result += i
+    }
+    return result
 }
