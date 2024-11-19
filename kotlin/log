@@ -1,6 +1,6 @@
 # JMH version: 1.37
-# VM version: JDK 17.0.10, OpenJDK 64-Bit Server VM, 17.0.10+7-LTS
-# VM invoker: /Users/Nikita.Bobko/.sdkman/candidates/java/17.0.10-amzn/bin/java
+# VM version: JDK 23.0.1, OpenJDK 64-Bit Server VM, 23.0.1+8-FR
+# VM invoker: /Users/Nikita.Bobko/.sdkman/candidates/java/23.0.1-amzn/bin/java
 # VM options: <none>
 # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
 # Warmup: 5 iterations, 10 s each
@@ -12,27 +12,27 @@
 
 # Run progress: 0,00% complete, ETA 00:05:00
 # Fork: 1 of 1
-# Warmup Iteration   1: 121198997,453 ops/s
-# Warmup Iteration   2: 120454033,808 ops/s
-# Warmup Iteration   3: 107630394,032 ops/s
-# Warmup Iteration   4: 107656567,696 ops/s
-# Warmup Iteration   5: 109178547,333 ops/s
-Iteration   1: 109403230,458 ops/s
-Iteration   2: 109424405,842 ops/s
-Iteration   3: 109379514,664 ops/s
-Iteration   4: 109414739,880 ops/s
-Iteration   5: 109302087,253 ops/s
+# Warmup Iteration   1: 118660280,161 ops/s
+# Warmup Iteration   2: 121507966,820 ops/s
+# Warmup Iteration   3: 109580172,387 ops/s
+# Warmup Iteration   4: 109568397,695 ops/s
+# Warmup Iteration   5: 109480037,389 ops/s
+Iteration   1: 109385969,161 ops/s
+Iteration   2: 109476011,503 ops/s
+Iteration   3: 109596436,261 ops/s
+Iteration   4: 109544048,173 ops/s
+Iteration   5: 109706066,669 ops/s
 
 
 Result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg":
-  109384795,619 ±(99.9%) 189368,253 ops/s [Average]
-  (min, avg, max) = (109302087,253, 109384795,619, 109424405,842), stdev = 49178,334
-  CI (99.9%): [109195427,366, 109574163,873] (assumes normal distribution)
+  109541706,354 ±(99.9%) 466011,630 ops/s [Average]
+  (min, avg, max) = (109385969,161, 109541706,354, 109706066,669), stdev = 121021,740
+  CI (99.9%): [109075694,723, 110007717,984] (assumes normal distribution)
 
 
 # JMH version: 1.37
-# VM version: JDK 17.0.10, OpenJDK 64-Bit Server VM, 17.0.10+7-LTS
-# VM invoker: /Users/Nikita.Bobko/.sdkman/candidates/java/17.0.10-amzn/bin/java
+# VM version: JDK 23.0.1, OpenJDK 64-Bit Server VM, 23.0.1+8-FR
+# VM invoker: /Users/Nikita.Bobko/.sdkman/candidates/java/23.0.1-amzn/bin/java
 # VM options: <none>
 # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
 # Warmup: 5 iterations, 10 s each
@@ -44,27 +44,27 @@ Result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg":
 
 # Run progress: 33,33% complete, ETA 00:03:20
 # Fork: 1 of 1
-# Warmup Iteration   1: 174406460,049 ops/s
-# Warmup Iteration   2: 176961169,805 ops/s
-# Warmup Iteration   3: 176330031,045 ops/s
-# Warmup Iteration   4: 175833879,270 ops/s
-# Warmup Iteration   5: 176072242,448 ops/s
-Iteration   1: 176113388,815 ops/s
-Iteration   2: 176037854,588 ops/s
-Iteration   3: 175782382,858 ops/s
-Iteration   4: 176068241,183 ops/s
-Iteration   5: 175937702,943 ops/s
+# Warmup Iteration   1: 168765703,571 ops/s
+# Warmup Iteration   2: 175425334,504 ops/s
+# Warmup Iteration   3: 174719837,446 ops/s
+# Warmup Iteration   4: 175278484,654 ops/s
+# Warmup Iteration   5: 174926575,715 ops/s
+Iteration   1: 175324429,105 ops/s
+Iteration   2: 175110905,735 ops/s
+Iteration   3: 173580617,399 ops/s
+Iteration   4: 171461670,093 ops/s
+Iteration   5: 174213491,743 ops/s
 
 
 Result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars":
-  175987914,077 ±(99.9%) 507404,161 ops/s [Average]
-  (min, avg, max) = (175782382,858, 175987914,077, 176113388,815), stdev = 131771,249
-  CI (99.9%): [175480509,917, 176495318,238] (assumes normal distribution)
+  173938222,815 ±(99.9%) 5975859,803 ops/s [Average]
+  (min, avg, max) = (171461670,093, 173938222,815, 175324429,105), stdev = 1551911,814
+  CI (99.9%): [167962363,012, 179914082,618] (assumes normal distribution)
 
 
 # JMH version: 1.37
-# VM version: JDK 17.0.10, OpenJDK 64-Bit Server VM, 17.0.10+7-LTS
-# VM invoker: /Users/Nikita.Bobko/.sdkman/candidates/java/17.0.10-amzn/bin/java
+# VM version: JDK 23.0.1, OpenJDK 64-Bit Server VM, 23.0.1+8-FR
+# VM invoker: /Users/Nikita.Bobko/.sdkman/candidates/java/23.0.1-amzn/bin/java
 # VM options: <none>
 # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
 # Warmup: 5 iterations, 10 s each
@@ -76,22 +76,22 @@ Result "org.sample.KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars":
 
 # Run progress: 66,67% complete, ETA 00:01:40
 # Fork: 1 of 1
-# Warmup Iteration   1: 173564550,049 ops/s
-# Warmup Iteration   2: 176248649,382 ops/s
-# Warmup Iteration   3: 174739772,879 ops/s
-# Warmup Iteration   4: 175559373,628 ops/s
-# Warmup Iteration   5: 175672546,020 ops/s
-Iteration   1: 175436740,571 ops/s
-Iteration   2: 174115974,971 ops/s
-Iteration   3: 172988293,011 ops/s
-Iteration   4: 173007793,127 ops/s
-Iteration   5: 174420347,884 ops/s
+# Warmup Iteration   1: 171500361,055 ops/s
+# Warmup Iteration   2: 175575139,850 ops/s
+# Warmup Iteration   3: 175634988,683 ops/s
+# Warmup Iteration   4: 175897355,532 ops/s
+# Warmup Iteration   5: 175114337,599 ops/s
+Iteration   1: 175988763,528 ops/s
+Iteration   2: 175583039,385 ops/s
+Iteration   3: 175999533,775 ops/s
+Iteration   4: 175573555,392 ops/s
+Iteration   5: 175715482,513 ops/s
 
 
 Result "org.sample.KotlinBenchmark._010_kotlin_myListOf10":
-  173993829,913 ±(99.9%) 3974846,274 ops/s [Average]
-  (min, avg, max) = (172988293,011, 173993829,913, 175436740,571), stdev = 1032254,955
-  CI (99.9%): [170018983,639, 177968676,187] (assumes normal distribution)
+  175772074,918 ±(99.9%) 810097,652 ops/s [Average]
+  (min, avg, max) = (175573555,392, 175772074,918, 175999533,775), stdev = 210379,788
+  CI (99.9%): [174961977,267, 176582172,570] (assumes normal distribution)
 
 
 # Run complete. Total time: 00:05:00
@@ -109,6 +109,6 @@ different JVMs are already problematic, the performance difference caused by dif
 modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
 
 Benchmark                                              Mode  Cnt          Score         Error  Units
-KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars  thrpt    5  175987914,077 ±  507404,161  ops/s
-KotlinBenchmark._010_kotlin_myListOf10                thrpt    5  173993829,913 ± 3974846,274  ops/s
-KotlinBenchmark._010_kotlin_listOf_vararg             thrpt    5  109384795,619 ±  189368,253  ops/s
+KotlinBenchmark._010_kotlin_listOf_vararg             thrpt    5  109541706,354 ±  466011,630  ops/s
+KotlinBenchmark._010_kotlin_listOf_vararg_inter_vars  thrpt    5  173938222,815 ± 5975859,803  ops/s
+KotlinBenchmark._010_kotlin_myListOf10                thrpt    5  175772074,918 ±  810097,652  ops/s
