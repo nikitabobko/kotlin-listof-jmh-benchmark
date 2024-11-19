@@ -9,6 +9,6 @@ cd "$(dirname "$0")"
 
 for dir in java kotlin; do
     cd $dir
-        java -jar target/benchmarks.jar 2>&1 | tee log
+        ./run.sh
     cd - > /dev/null
 done
