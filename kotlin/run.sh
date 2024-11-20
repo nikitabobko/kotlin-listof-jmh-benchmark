@@ -5,5 +5,4 @@ set -o pipefail # Any command failed in the pipe fails the whole pipe
 # set -x # Print shell commands as they are executed (or you can try -v which is less verbose)
 cd "$(dirname "$0")"
 
-./build.sh
-java -jar target/benchmarks.jar 2>&1 | tee "log-$OSTYPE.txt"
+java -jar target/benchmarks.jar "$@" 2>&1 | tee "log-$OSTYPE.txt"

@@ -1,15 +1,20 @@
 package org.sample
 
 import org.openjdk.jmh.annotations.*
+import java.util.concurrent.TimeUnit
 
 @State(Scope.Thread)
-@Fork(1) // todo drop fork for final testing
+@Fork(1) // -f 1
+@Warmup(iterations = 2, time = 1) // -wi 2 -w 1
+@Measurement(time = 1) // -r 1
+@OutputTimeUnit(TimeUnit.MICROSECONDS) // -tu us
 open class KotlinBenchmark {
-    @field:Volatile
-    var x: String = "foo"
 
-    var y: Int = 0
-        get() = field++
+    // @field:Volatile
+    // var x: String = "foo"
+
+    // var y: Int = 0
+    //     get() = field++
 
     var z = 42
 
@@ -472,9 +477,3 @@ open class KotlinBenchmark {
     }
 
 }
-
-fun <T> arr10(_01: T, _02: T, _03: T, _04: T, _05: T, _06: T, _07: T, _08: T, _09: T, _10: T): List<T> {
-    return varargArr(_01, _02, _03, _04, _05, _06, _07, _08, _09, _10)
-}
-
-fun <T> varargArr(vararg x: T): List<T> = x.asList()
